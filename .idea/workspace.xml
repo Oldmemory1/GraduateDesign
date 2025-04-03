@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/example1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clamScanner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/copy_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/findAllSignatures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/getTimeStamp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_create_fake_signature.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_modify_timeStamp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_rename_random_section.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_upx_encryption.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sigthief.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCode1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testTimeStamp.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_02 20:57">
+      <change afterPath="$PROJECT_DIR$/HelloWorld2.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/operation_insert_useless_data_to_end.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modify_machine_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modify_machine_type.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +45,11 @@
     "Python.main.executor": "Run",
     "Python.maliciousCodeAvoid1.executor": "Run",
     "Python.operation_create_fake_signature.executor": "Run",
+    "Python.operation_insert_useless_data_to_end.executor": "Run",
+    "Python.operation_modify_language.executor": "Run",
+    "Python.operation_modify_machine_type.executor": "Run",
+    "Python.operation_upx_encryption.executor": "Run",
+    "Python.string2.executor": "Run",
     "Python.test1.executor": "Run",
     "Python.testCode1.executor": "Run",
     "Python.testTimeStamp.executor": "Run",
@@ -88,6 +81,31 @@
       <option name="presentableId" value="Default" />
       <updated>1743565680364</updated>
     </task>
+    <task id="LOCAL-00001" summary="2025_04_02 19:52">
+      <option name="closed" value="true" />
+      <created>1743594772805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743594772805</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2025_04_02 19:59">
+      <option name="closed" value="true" />
+      <created>1743595192522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743595192522</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2025_04_02 20:57">
+      <option name="closed" value="true" />
+      <created>1743598657492</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743598657492</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,5 +118,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2025_04_02 19:52" />
+    <MESSAGE value="2025_04_02 19:59" />
+    <MESSAGE value="2025_04_02 20:57" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_02 20:57" />
   </component>
 </project>
