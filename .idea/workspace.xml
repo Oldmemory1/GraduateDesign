@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_03 11:08">
-      <change afterPath="$PROJECT_DIR$/buffer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 10:53">
+      <change afterPath="$PROJECT_DIR$/gdi42.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modify_checksum.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modify_checksum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +53,16 @@
     "Python.buffer.executor": "Run",
     "Python.copy_file.executor": "Run",
     "Python.findAllSignatures.executor": "Run",
+    "Python.getCheckSum.executor": "Run",
     "Python.main.executor": "Run",
     "Python.maliciousCodeAvoid1.executor": "Run",
+    "Python.modifier.executor": "Run",
     "Python.operation_create_fake_signature.executor": "Run",
     "Python.operation_insert_useless_data_to_end.executor": "Run",
     "Python.operation_modify_language.executor": "Run",
     "Python.operation_modify_machine_type.executor": "Run",
     "Python.operation_upx_encryption.executor": "Run",
+    "Python.random.executor": "Run",
     "Python.string2.executor": "Run",
     "Python.test.executor": "Run",
     "Python.test1.executor": "Run",
@@ -68,19 +72,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/anaconda/envs/dev1/python.exe",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "last_opened_file_path": "D:/毕业设计/example1",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\毕业设计\example1" />
+      <recent name="D:\毕业设计\example1\process\trusted" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -125,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743649687530</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2025_04_07 10:53">
+      <option name="closed" value="true" />
+      <created>1743994414912</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743994414912</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +157,7 @@
     <MESSAGE value="2025_04_02 19:59" />
     <MESSAGE value="2025_04_02 20:57" />
     <MESSAGE value="2025_04_03 11:08" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_03 11:08" />
+    <MESSAGE value="2025_04_07 10:53" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 10:53" />
   </component>
 </project>
