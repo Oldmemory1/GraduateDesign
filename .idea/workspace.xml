@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 10:53">
-      <change afterPath="$PROJECT_DIR$/gdi42.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 15:27">
+      <change afterPath="$PROJECT_DIR$/benign_string_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_strings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binary_str1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/get_data_section.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modify_checksum.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modify_checksum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +51,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.FindAllSignatures.executor": "Run",
+    "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
     "Python.copy_file.executor": "Run",
     "Python.findAllSignatures.executor": "Run",
     "Python.getCheckSum.executor": "Run",
+    "Python.get_data_section.executor": "Run",
     "Python.main.executor": "Run",
     "Python.maliciousCodeAvoid1.executor": "Run",
     "Python.modifier.executor": "Run",
@@ -81,6 +84,35 @@
       <recent name="D:\毕业设计\example1" />
       <recent name="D:\毕业设计\example1\process\trusted" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="benign_string_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="example1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/benign_string_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.benign_string_generator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -138,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743994414912</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2025_04_07 15:27">
+      <option name="closed" value="true" />
+      <created>1744010836872</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744010836872</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +198,7 @@
     <MESSAGE value="2025_04_02 20:57" />
     <MESSAGE value="2025_04_03 11:08" />
     <MESSAGE value="2025_04_07 10:53" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 10:53" />
+    <MESSAGE value="2025_04_07 15:27" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 15:27" />
   </component>
 </project>
