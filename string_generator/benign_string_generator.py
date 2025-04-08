@@ -9,7 +9,7 @@ if __name__=="__main__":
     list1 = []
     i = 1
     while i<=256:
-        list1.append(generate_random_string(1024))
+        list1.append(generate_random_string(2048))
         i = i+1
     print("[")
     for j in list1:
