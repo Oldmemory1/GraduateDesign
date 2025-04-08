@@ -54,10 +54,10 @@ def modify_pe_timestamp_and_output(input_file, output_file, new_timestamp=None):
 
     #print(f"New Timestamp: {new_timestamp} ({time.ctime(new_timestamp)})")
 #获取一个文件的时间戳
-def getTimeStamp(file):
+def getTimeStamp(input_file):
     import pefile
     import datetime
-    pe = pefile.PE(file)
+    pe = pefile.PE(input_file)
     timestamp = pe.FILE_HEADER.TimeDateStamp
     print(f"Timestamp:{timestamp}")
 if __name__=="__main__":

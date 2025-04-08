@@ -7,6 +7,7 @@ def getCheckSum(input_file):
     pe = pefile.PE(input_file)
     # 获取原始校验和
     original_checksum = pe.OPTIONAL_HEADER.CheckSum
+    pe.close()
     print("Checksum:%s" %original_checksum)
 # 修改校验和 但是最后会复制一个文件回来
 def modify_pe_checksum(input_file,new_checksum=None):
