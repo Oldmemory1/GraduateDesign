@@ -10,4 +10,4 @@ def upx_encryption(input_file):
     os.system(command)
 
 if __name__ == "__main__":
-    upx_encryption(r"D:\毕业设计\example1\upx_shell\HelloWorld1.exe")
+    upx_encryption(r"/upx_shell/HelloWorld1.exe")

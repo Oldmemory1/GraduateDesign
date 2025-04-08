@@ -6,7 +6,7 @@ from findAllSignatures import get_all_file_paths
 
 
 def create_fake_signature(input_file,output_file):
-    all_signatures = get_all_file_paths(r"D:\毕业设计\example1\signatures")
+    all_signatures = get_all_file_paths(r"/signatures")
     """
         for path in all_signatures:
         print(path)
@@ -23,4 +23,4 @@ def create_fake_signature(input_file,output_file):
 
 
 if __name__ == "__main__":
-    create_fake_signature(r"D:\毕业设计\example1\sample\sample1.exe",r"D:\毕业设计\example1\sample\sample1_m1.exe")
+    create_fake_signature(r"/sample/sample1.exe", r"D:\毕业设计\example1\sample\sample1_m1.exe")

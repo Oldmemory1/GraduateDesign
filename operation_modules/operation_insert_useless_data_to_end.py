@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     # 示例用法
     append_to_pe(
-        input_file='HelloWorld2.exe',
-        output_file='HelloWorld3.exe',
+        input_file='../HelloWorld2.exe',
+        output_file='../HelloWorld3.exe',
         append_data=str2*128  # 要附加的字符串
     )
 

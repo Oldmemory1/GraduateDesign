@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 16:15">
-      <change afterPath="$PROJECT_DIR$/get_all_sections_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/findAllSignatures.py" beforeDir="false" afterPath="$PROJECT_DIR$/findAllSignatures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_create_fake_signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_create_fake_signature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modify_checksum.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modify_checksum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_rename_random_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_rename_random_section.py" afterDir="false" />
-    </list>
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_08 12:52" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744013715022</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2025_04_08 12:52">
+      <option name="closed" value="true" />
+      <created>1744087960487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744087960488</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +213,7 @@
     <MESSAGE value="2025_04_07 10:53" />
     <MESSAGE value="2025_04_07 15:27" />
     <MESSAGE value="2025_04_07 16:15" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 16:15" />
+    <MESSAGE value="2025_04_08 12:52" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_08 12:52" />
   </component>
 </project>
