@@ -35,9 +35,9 @@ def rename_random_section(input_file, output_file):
     pe.close()
     #print(f"文件已保存为: {output_file}")
 
-"""
+
 if __name__ == "__main__":
-    input_path = "HelloWorld1.exe"  # 输入PE文件路径
-    output_path = "modified.exe"  # 输出文件路径
+    input_path = r"D:\毕业设计\example1\sample\sample1_m1.exe"  # 输入PE文件路径
+    output_path = r"D:\毕业设计\example1\sample\sample1_m2.exe"  # 输出文件路径
     rename_random_section(input_path, output_path)
-"""
+

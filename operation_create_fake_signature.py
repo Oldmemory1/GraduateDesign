@@ -23,4 +23,4 @@ def create_fake_signature(input_file,output_file):
 
 
 if __name__ == "__main__":
-    create_fake_signature(r"D:\毕业设计\example1\before\HelloWorld1.exe",r"D:\毕业设计\example1\destination_file\HelloWorld1.exe")
+    create_fake_signature(r"D:\毕业设计\example1\sample\sample1.exe",r"D:\毕业设计\example1\sample\sample1_m1.exe")

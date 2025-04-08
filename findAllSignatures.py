@@ -1,6 +1,6 @@
 import os
 
-
+#获取签名目录下的所有签名
 def get_all_file_paths(target_dir):
     file_paths = []
 

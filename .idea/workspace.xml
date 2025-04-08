@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 15:27">
-      <change afterPath="$PROJECT_DIR$/benign_string_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/benign_strings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binary_str1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_data_section.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_07 16:15">
+      <change afterPath="$PROJECT_DIR$/get_all_sections_name.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findAllSignatures.py" beforeDir="false" afterPath="$PROJECT_DIR$/findAllSignatures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_create_fake_signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_create_fake_signature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modify_checksum.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modify_checksum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_rename_random_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_rename_random_section.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,14 +58,17 @@
     "Python.copy_file.executor": "Run",
     "Python.findAllSignatures.executor": "Run",
     "Python.getCheckSum.executor": "Run",
+    "Python.get_all_sections_name.executor": "Run",
     "Python.get_data_section.executor": "Run",
     "Python.main.executor": "Run",
     "Python.maliciousCodeAvoid1.executor": "Run",
     "Python.modifier.executor": "Run",
     "Python.operation_create_fake_signature.executor": "Run",
     "Python.operation_insert_useless_data_to_end.executor": "Run",
+    "Python.operation_modify_checksum.executor": "Run",
     "Python.operation_modify_language.executor": "Run",
     "Python.operation_modify_machine_type.executor": "Run",
+    "Python.operation_rename_random_section.executor": "Run",
     "Python.operation_upx_encryption.executor": "Run",
     "Python.random.executor": "Run",
     "Python.string2.executor": "Run",
@@ -178,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744010836872</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2025_04_07 16:15">
+      <option name="closed" value="true" />
+      <created>1744013715022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744013715022</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +212,7 @@
     <MESSAGE value="2025_04_03 11:08" />
     <MESSAGE value="2025_04_07 10:53" />
     <MESSAGE value="2025_04_07 15:27" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 15:27" />
+    <MESSAGE value="2025_04_07 16:15" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_07 16:15" />
   </component>
 </project>

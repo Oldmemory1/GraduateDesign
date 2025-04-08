@@ -23,4 +23,4 @@ def modify_pe_checksum(input_file, output_file, new_checksum=None):
 
 if __name__ == "__main__":
 
-    modify_pe_checksum("HelloWorld2.exe","modifiedHello2.exe",0)
+    modify_pe_checksum(r"D:\毕业设计\example1\sample\sample1_m2.exe",r"D:\毕业设计\example1\sample\sample1_m3.exe",0)
