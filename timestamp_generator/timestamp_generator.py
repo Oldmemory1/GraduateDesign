@@ -7,9 +7,10 @@ def generate_random_timestamp():
     one_year_ago = current_ts - 31536000
     # 生成随机时间戳
     random_ts = random.randint(one_year_ago, current_ts)
-
+    return random_ts
 
 
 if __name__ == "__main__":
-    print("随机时间戳（秒）:", random_ts)
-    print("对应UTC时间:", time.gmtime(random_ts))
+    value =  generate_random_timestamp()
+    print("随机时间戳（秒）:",value)
+    print("对应UTC时间:", time.gmtime(value))
