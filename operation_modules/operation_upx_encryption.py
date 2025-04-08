@@ -1,6 +1,6 @@
 import os
 import time
-
+# upx加壳处理 直接作用于目标文件
 def upx_encryption(input_file):
     # upx加壳直接处理目标文件 处理后的文件位于目标路径
     log1 = "D:\\毕业设计\\example1\\logs\\%s-%s-%s" % (

@@ -1,6 +1,9 @@
+import warnings
+
 import pefile
 
 def modify_pe_machine(input_file, output_file, new_machine):
+    warnings.warn("deprecated because it broken the pe file!",DeprecationWarning)
     # 加载 PE 文件
     pe = pefile.PE(input_file)
 

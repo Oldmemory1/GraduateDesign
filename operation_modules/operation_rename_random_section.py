@@ -11,7 +11,7 @@ def generate_random_section_name():
     """生成8个字符的随机名称（字母和数字组合）"""
     characters = string.ascii_letters + string.digits  # 包含大小写字母和数字
     return ''.join(random.choices(characters, k=8))
-
+#修改某个节的名字 但是最后会复制一个文件回来
 def rename_random_section(input_file):
     # 加载PE文件
     pe = pefile.PE(input_file)
@@ -47,9 +47,7 @@ def rename_random_section(input_file):
     copy_file(address1,input_file)
     os.remove(address1)
     # print(f"文件已保存为: {output_file}")
-
-
-
+#修改某个节的名字 但是最后会放在目标位置
 def rename_random_section_and_output(input_file, output_file):
     # 加载PE文件
     pe = pefile.PE(input_file)
