@@ -6,7 +6,7 @@ import pefile
 import random
 import string
 
-
+# completed
 def generate_random_section_name():
     """生成8个字符的随机名称（字母和数字组合）"""
     characters = string.ascii_letters + string.digits  # 包含大小写字母和数字

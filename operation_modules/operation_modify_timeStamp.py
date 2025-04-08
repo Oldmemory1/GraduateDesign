@@ -1,10 +1,10 @@
 import os
 from datetime import datetime
-
 from copy_file import copy_file
 import pefile
 import time
-#修改时间戳 但是最后会复制一个文件回来
+# completed
+# 修改时间戳 但是最后会复制一个文件回来
 def modify_pe_timestamp(input_file,new_timestamp=None):
     # 加载PE文件
     pe = pefile.PE(input_file)
@@ -34,7 +34,7 @@ def modify_pe_timestamp(input_file,new_timestamp=None):
     # 复制过来新生成的文件
     copy_file(address1, input_file)
     os.remove(address1)
-#修改时间戳 但是最后会放置在目标位置
+# 修改时间戳 但是最后会放置在目标位置
 def modify_pe_timestamp_and_output(input_file, output_file, new_timestamp=None):
     # 加载PE文件
     pe = pefile.PE(input_file)
