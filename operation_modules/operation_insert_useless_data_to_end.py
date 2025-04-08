@@ -48,7 +48,6 @@ def append_to_pe_and_output(input_file, output_file, append_data):
 
 
 if __name__ == "__main__":
-
     # 示例用法
     append_to_pe(
         input_file=r"D:\毕业设计\example1\source_file\sample1.exe",
