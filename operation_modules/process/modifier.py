@@ -290,7 +290,7 @@ if __name__ == "__main__":
     # use for testing/debugging actions
     import hashlib
 
-    filename = r"D:\毕业设计\example1\sample\sample1_m4.exe"
+    filename = r"/sample/sample1_m4.exe"
     with open(filename, "rb") as f:
         bytez = f.read()
 

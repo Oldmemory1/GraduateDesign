@@ -1,0 +1,7 @@
+.abitcsa
+.bbitcsb
+.cbitcsc
+.dbitcsd
+.ebitcse
+.fbitscf
+.gbitcsg
