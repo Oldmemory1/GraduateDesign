@@ -31,13 +31,13 @@ def get_pe_data_section(file_path):
         print(f"发生错误: {e}")
         return None
 
-
-# 使用示例
-file_path = r'D:\毕业设计\example1\vs_BuildTools.exe'  # 替换为实际路径
-data_section_content = get_pe_data_section(file_path)
-print(data_section_content)
-if data_section_content is not None:
-    # 示例：将数据保存到文件
-    with open('data_section.bin', 'wb') as f:
-        f.write(data_section_content)
-    print("数据段内容已保存到 data_section.bin")
+if __name__ == "__main__":
+    # 使用示例
+    file_path = r'D:\毕业设计\example1\vs_BuildTools.exe'  # 替换为实际路径
+    data_section_content = get_pe_data_section(file_path)
+    print(data_section_content)
+    if data_section_content is not None:
+        # 示例：将数据保存到文件
+        with open('data_section.bin', 'wb') as f:
+            f.write(data_section_content)
+        print("数据段内容已保存到 data_section.bin")

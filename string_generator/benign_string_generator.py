@@ -1,5 +1,8 @@
+import os
 import random
 import string
+
+
 
 
 def generate_random_string(length):
@@ -9,9 +12,17 @@ if __name__=="__main__":
     list1 = []
     i = 1
     while i<=256:
-        list1.append(generate_random_string(2048))
+        list1.append(generate_random_string(4096))
         i = i+1
-    print("[")
+    output_str = ""
+    output_str = output_str + "["
     for j in list1:
-        print("'"+j+"'"+",")
-    print("]")
+        output_str = output_str +"'"
+        output_str = output_str + j
+        output_str = output_str + "'"
+        output_str = output_str + ","
+    output_str =output_str + "]"
+    file_path = "4096.txt"
+    with open(file_path, 'a', encoding='utf-8') as file:
+        file.write(output_str)
+    file.close()
