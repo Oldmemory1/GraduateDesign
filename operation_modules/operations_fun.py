@@ -2,6 +2,7 @@ import time
 
 from init.reset_test_enviroment import init_environment
 from operation_modify_timeStamp import modify_pe_timestamp
+from operation_modules.operation_create_fake_signature import create_fake_signature
 from operation_modules.operation_insert_useless_data_to_end import append_to_pe
 from operation_rename_random_section import rename_random_section
 from operation_modify_timeStamp import getTimeStamp
@@ -24,6 +25,7 @@ def fun1(file):
     modify_pe_checksum(input_file=file)
     getCheckSum(input_file=file)
     append_to_pe(input_file=file, append_data=get_random_string(string_list=strings_4096bytes))
+    create_fake_signature(input_file=file)
 if __name__=="__main__":
     fun1(file = r"D:\毕业设计\example1\source_file\sample1.exe")
 
