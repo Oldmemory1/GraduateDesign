@@ -35,7 +35,7 @@ def modify_pe_checksum(input_file,new_checksum=None):
     # 删除原有文件
     os.remove(input_file)
     # 复制过来新生成的文件
-    copy_file(address1, input_file)
+    copy_file(source_address=address1, destination_address=input_file)
     os.remove(address1)
 # 修改校验和 但是最后会放置在目标位置
 def modify_pe_checksum_and_output(input_file, output_file, new_checksum=None):

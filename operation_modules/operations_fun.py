@@ -25,5 +25,5 @@ def fun1(file):
     getCheckSum(input_file=file)
     append_to_pe(input_file=file, append_data=get_random_string(string_list=strings_4096bytes))
 if __name__=="__main__":
-    fun1(r"D:\毕业设计\example1\source_file\sample1.exe")
+    fun1(file = r"D:\毕业设计\example1\source_file\sample1.exe")
 

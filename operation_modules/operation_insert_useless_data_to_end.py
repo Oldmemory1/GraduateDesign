@@ -31,7 +31,7 @@ def append_to_pe(input_file,append_data):
 
     os.remove(input_file)
     # 复制过来新生成的文件
-    copy_file(address1, input_file)
+    copy_file(source_address=address1, destination_address=input_file)
     os.remove(address1)
 # 尾部添加无用字节 但是最后会放置在目标位置
 def append_to_pe_and_output(input_file, output_file, append_data):
