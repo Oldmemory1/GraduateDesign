@@ -1,8 +1,8 @@
 import hashlib
+import logging
 
 from init.reset_test_enviroment import init_environment
-from operation_modules.operation_create_fake_signature import create_fake_signature
-import logging
+from operation_modules.operation_modify_checksum import modify_pe_checksum
 
 logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
@@ -11,17 +11,16 @@ logging.basicConfig(
     filename=r"D:\毕业设计\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
     filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
 )
-
-def action_create_fake_signature(input_file_,enable_log=False):
+def action_modify_checksum(input_file_,new_checksum_=None,enable_log=False):
     if enable_log:
         with open(input_file_, "rb") as f1:
             bytez = f1.read()
         f1.close()
         m1 = hashlib.sha256()
         m1.update(bytez)
-        logging.info("action_create_fake_signature before file:" + m1.hexdigest())
+        logging.info("action_modify_checksum before file:" + m1.hexdigest())
 
-    create_fake_signature(input_file=input_file_)
+    modify_pe_checksum(input_file=input_file_,new_checksum=new_checksum_)
 
     if enable_log:
         with open(input_file_, "rb") as f2:
@@ -29,9 +28,8 @@ def action_create_fake_signature(input_file_,enable_log=False):
         f2.close()
         m2 = hashlib.sha256()
         m2.update(bytez)
-        logging.info("action_create_fake_signature after file:" + m2.hexdigest())
-
+        logging.info("action_modify_checksum after file:" + m2.hexdigest())
 if __name__=="__main__":
     init_environment()
     input_file =r"D:\毕业设计\example1\source_file\sample1.exe"
-    action_create_fake_signature(input_file_=input_file,enable_log=True)
+    action_modify_checksum(input_file,None,enable_log=True)

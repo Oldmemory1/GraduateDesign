@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 10:14 deprecate modifier.py">
-      <change afterPath="$PROJECT_DIR$/deprecated_modules/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deprecated_modules/process/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/record.log" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/operation_create_fake_signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_create_fake_signature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action_create_fake_signature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/all_section_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/all_section_names.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/modifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/modifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/section_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/section_names.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/small_dll_imports.json" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/small_dll_imports.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +60,7 @@
     "Python 测试.Python 测试 (test_operations.py 内).executor": "Run",
     "Python.FindAllSignatures.executor": "Run",
     "Python.action_create_fake_signature.executor": "Run",
+    "Python.action_insert_useless_data_to_end.executor": "Run",
     "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
     "Python.commons.executor": "Run",
@@ -214,7 +206,7 @@
       <updated>1743565680364</updated>
       <workItem from="1744166515800" duration="833000" />
       <workItem from="1744167370171" duration="154000" />
-      <workItem from="1744168072918" duration="662000" />
+      <workItem from="1744168072918" duration="2463000" />
     </task>
     <task id="LOCAL-00001" summary="2025_04_02 19:52">
       <option name="closed" value="true" />
@@ -424,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744162704684</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py">
+      <option name="closed" value="true" />
+      <created>1744168971834</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744168971834</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_02 19:59" />
     <MESSAGE value="2025_04_02 20:57" />
     <MESSAGE value="2025_04_03 11:08" />
     <MESSAGE value="2025_04_07 10:53" />
@@ -467,9 +466,11 @@
     <MESSAGE value="2025_04_09 08:44 remaster modifier.py" />
     <MESSAGE value="2025_04_09 08:56 remaster modifier.py" />
     <MESSAGE value="2025_04_09 09:38 remaster modifier.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 09:38 remaster modifier.py" />
+    <MESSAGE value="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744168929366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744168725398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
   </component>
 </project>
