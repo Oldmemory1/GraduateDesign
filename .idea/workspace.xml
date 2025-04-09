@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 08:44 remaster modifier.py">
+      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_break_optional_header_checksum_1.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +40,9 @@
     &quot;accountId&quot;: &quot;3525c01e-fd9a-494b-b1b1-cd5189bbd516&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -343,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744112744208</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2025_04_09 08:44 remaster modifier.py">
+      <option name="closed" value="true" />
+      <created>1744159506574</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1744159506574</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -381,6 +394,7 @@
     <MESSAGE value="2025_04_08 19:28 remaster modifier.py" />
     <MESSAGE value="2025_04_08 19:43 remaster modifier.py" />
     <MESSAGE value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
+    <MESSAGE value="2025_04_09 08:44 remaster modifier.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 08:44 remaster modifier.py" />
   </component>
 </project>
