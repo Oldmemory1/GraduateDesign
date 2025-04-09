@@ -9,7 +9,7 @@ def upx_encryption(input_file):
     log1 = log1 + ".log"
     command = "D:\\毕业设计\\example1\\upx_shell\\upx.exe %s > %s" %(input_file,log1)
     os.system(command)
-    os.remove(log1)
+    #os.remove(log1)
 
 if __name__ == "__main__":
     upx_encryption(r"D:\毕业设计\example1\source_file\sample1.exe")
