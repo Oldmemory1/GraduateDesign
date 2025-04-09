@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 16:24 modify actions_list.py">
-      <change afterPath="$PROJECT_DIR$/actions/action_add_section_benign_data_1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py">
+      <change afterPath="$PROJECT_DIR$/actions/action_break_optional_header_checksum_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -470,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744187077047</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py">
+      <option name="closed" value="true" />
+      <created>1744187441647</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1744187441647</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_08 12:52" />
     <MESSAGE value="2025_04_08 14:30" />
     <MESSAGE value="2025_04_08 15:39" />
     <MESSAGE value="2025_04_08 15:54" />
@@ -513,11 +521,12 @@
     <MESSAGE value="2025_04_09 14:41 add comments to actions_list.py" />
     <MESSAGE value="2025_04_09 16:23 add action_add_bytes_to_section_cave_1.py" />
     <MESSAGE value="2025_04_09 16:24 modify actions_list.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 16:24 modify actions_list.py" />
+    <MESSAGE value="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$action_add_section_benign_data_1.coverage" NAME="action_add_section_benign_data_1 覆盖结果" MODIFIED="1744187312233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_add_section_benign_data_1.coverage" NAME="action_add_section_benign_data_1 覆盖结果" MODIFIED="1744187375632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744174672152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_benign_data_overlay_1.coverage" NAME="action_add_benign_data_overlay_1 覆盖结果" MODIFIED="1744186979637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_timestamp.coverage" NAME="action_modify_timestamp 覆盖结果" MODIFIED="1744178918188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />

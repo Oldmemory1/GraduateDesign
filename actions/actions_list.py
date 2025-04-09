@@ -10,4 +10,5 @@ actions_list=[
     "action_add_benign_data_overlay_1",
     "action_add_bytes_to_section_cave_1",
     "action_add_section_benign_data_1",
+    "action_break_optional_header_checksum_1",
 ]
