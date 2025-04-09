@@ -14,4 +14,7 @@ actions_list=[
     "action_modify_optional_header_1",
     "action_modify_timestamp_1",
     "action_remove_debug",
+    "action_rename_section_1"
 ]
+if __name__ == "__main__":
+    print(len(actions_list))

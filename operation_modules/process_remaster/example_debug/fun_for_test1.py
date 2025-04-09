@@ -13,7 +13,7 @@ from operation_modules.process_remaster.operation_modify_machine_type_1 import m
 from operation_modules.process_remaster.operation_modify_optional_header_1 import modify_optional_header
 from operation_modules.process_remaster.operation_modify_timestamp_1 import modify_timestamp
 from operation_modules.process_remaster.operation_remove_debug_1 import remove_debug
-from operation_modules.process_remaster.operation_rename_section_1 import rename_section
+from operation_modules.process_remaster.operation_rename_section_1 import rename_section_1
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 
 
@@ -53,7 +53,7 @@ def fun_test(input_file):
     #bytez1 = modify_optional_header(bytez)
     #bytez1 = modify_timestamp(bytez)
     #bytez1 = remove_debug(bytez)
-    bytez1 = rename_section(bytez)
+    bytez1 = rename_section_1(bytez)
     m = hashlib.sha256()
     m.update(bytez1)
 
