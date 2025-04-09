@@ -4,6 +4,8 @@ actions_list=[
     "modify_checksum",
     "modify_timestamp",
     "rename_random_section",
+    # but if we execute this action, other action can not be executed because they will break signature
     "upx_encryption",
+    # the encryption can only be executed once
     "action_add_benign_data_overlay_1"
 ]
