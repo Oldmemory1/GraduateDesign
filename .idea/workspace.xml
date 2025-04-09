@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py">
-      <change afterPath="$PROJECT_DIR$/actions/action_modify_optional_header_1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py">
+      <change afterPath="$PROJECT_DIR$/actions/action_modify_timestamp_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/record.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/record.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +70,7 @@
     "Python.action_modify_checksum.executor": "Run",
     "Python.action_modify_optional_header_1.executor": "Run",
     "Python.action_modify_timestamp.executor": "Run",
+    "Python.action_modify_timestamp_1.executor": "Run",
     "Python.action_rename_random_section.executor": "Run",
     "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
@@ -136,11 +138,11 @@
       <recent name="D:\毕业设计\example1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\毕业设计\example1\actions" />
       <recent name="D:\毕业设计\example1\deprecated_modules" />
       <recent name="D:\毕业设计\example1\operation_modules" />
       <recent name="D:\毕业设计\example1\operation_modules\other_operations" />
       <recent name="D:\毕业设计\example1\deprecated" />
-      <recent name="D:\毕业设计\example1\operation_modules\commons" />
     </key>
   </component>
   <component name="RunManager">
@@ -489,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744188307815</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py">
+      <option name="closed" value="true" />
+      <created>1744188780766</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1744188780766</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_08 15:39" />
     <MESSAGE value="2025_04_08 15:54" />
     <MESSAGE value="2025_04_08 16:01" />
     <MESSAGE value="2025_04_08 16:04" />
@@ -532,7 +541,8 @@
     <MESSAGE value="2025_04_09 16:24 modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py" />
+    <MESSAGE value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
@@ -546,6 +556,7 @@
     <SUITE FILE_PATH="coverage/example1$operations_fun.coverage" NAME="operations_fun 覆盖结果" MODIFIED="1744179773565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules" />
     <SUITE FILE_PATH="coverage/example1$action_rename_random_section.coverage" NAME="action_rename_random_section 覆盖结果" MODIFIED="1744179182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744168725398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_modify_timestamp_1.coverage" NAME="action_modify_timestamp_1 覆盖结果" MODIFIED="1744196723148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_checksum.coverage" NAME="action_modify_checksum 覆盖结果" MODIFIED="1744174884972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
   </component>
 </project>

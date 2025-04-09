@@ -12,4 +12,5 @@ actions_list=[
     "action_add_section_benign_data_1",
     "action_break_optional_header_checksum_1",
     "action_modify_optional_header_1"
+    "action_modify_timestamp_1"
 ]
