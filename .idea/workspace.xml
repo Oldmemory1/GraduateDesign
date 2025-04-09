@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_08 12:52" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -19,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -42,44 +48,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.FindAllSignatures.executor": "Run",
-    "Python.benign_string_generator.executor": "Run",
-    "Python.buffer.executor": "Run",
-    "Python.copy_file.executor": "Run",
-    "Python.findAllSignatures.executor": "Run",
-    "Python.getCheckSum.executor": "Run",
-    "Python.get_all_sections_name.executor": "Run",
-    "Python.get_data_section.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.maliciousCodeAvoid1.executor": "Run",
-    "Python.modifier.executor": "Run",
-    "Python.operation_create_fake_signature.executor": "Run",
-    "Python.operation_insert_useless_data_to_end.executor": "Run",
-    "Python.operation_modify_checksum.executor": "Run",
-    "Python.operation_modify_language.executor": "Run",
-    "Python.operation_modify_machine_type.executor": "Run",
-    "Python.operation_rename_random_section.executor": "Run",
-    "Python.operation_upx_encryption.executor": "Run",
-    "Python.random.executor": "Run",
-    "Python.string2.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test1.executor": "Run",
-    "Python.testCode1.executor": "Run",
-    "Python.testTimeStamp.executor": "Run",
-    "Python.virusTotalScanner.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/毕业设计/example1",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python 测试.Python 测试 (operation_test.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_module.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_operations.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python.FindAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benign_string_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.buffer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.copy_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.findAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getCheckSum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_a_random_string_from_strings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_all_sections_name.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maliciousCodeAvoid1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.modifier.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_create_fake_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_checksum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_language.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_machine_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_timeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_rename_random_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_upx_encryption.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operations_fun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reset_test_enviroment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.string2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_1024.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_128.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_2048.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_256.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_512.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_64.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testCode1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testTimeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timestamp_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virusTotalScanner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/毕业设计/example1/operation_modules/process_remaster&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\毕业设计\example1\operation_modules\process_remaster" />
+      <recent name="D:\毕业设计\example1\operation_modules\commons" />
+      <recent name="D:\毕业设计\example1\init" />
+      <recent name="D:\毕业设计\example1\source_file" />
       <recent name="D:\毕业设计\example1" />
-      <recent name="D:\毕业设计\example1\process\trusted" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\毕业设计\example1\operation_modules" />
+      <recent name="D:\毕业设计\example1\operation_modules\commons" />
+      <recent name="D:\毕业设计\example1\string_generator\generated_strings" />
+      <recent name="D:\毕业设计\example1\string_generator" />
+      <recent name="D:\毕业设计\example1\virus_scanner_module" />
     </key>
   </component>
   <component name="RunManager">
@@ -96,7 +128,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/benign_string_generator.py" />
+      <option name="SCRIPT_NAME" value="D:\毕业设计\example1\string_generator\benign_string_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,7 +223,127 @@
       <option name="project" value="LOCAL" />
       <updated>1744087960488</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2025_04_08 14:30">
+      <option name="closed" value="true" />
+      <created>1744093844415</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744093844415</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2025_04_08 15:39">
+      <option name="closed" value="true" />
+      <created>1744098041339</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744098041339</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2025_04_08 15:54">
+      <option name="closed" value="true" />
+      <created>1744098861939</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744098861939</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2025_04_08 16:01">
+      <option name="closed" value="true" />
+      <created>1744099296136</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744099296136</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2025_04_08 16:04">
+      <option name="closed" value="true" />
+      <created>1744099504551</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744099504551</updated>
+    </task>
+    <task id="LOCAL-00014" summary="2025_04_08 16:54">
+      <option name="closed" value="true" />
+      <created>1744102479849</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744102479849</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2025_04_08 18:22">
+      <option name="closed" value="true" />
+      <created>1744107761984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744107761984</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2025_04_08 18:27">
+      <option name="closed" value="true" />
+      <created>1744108036876</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744108036876</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2025_04_08 18:41">
+      <option name="closed" value="true" />
+      <created>1744108890939</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744108890939</updated>
+    </task>
+    <task id="LOCAL-00018" summary="2025_04_08 18:47">
+      <option name="closed" value="true" />
+      <created>1744109248300</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1744109248300</updated>
+    </task>
+    <task id="LOCAL-00019" summary="2025_04_08 18:56">
+      <option name="closed" value="true" />
+      <created>1744109782897</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744109782897</updated>
+    </task>
+    <task id="LOCAL-00020" summary="2025_04_08 19:06">
+      <option name="closed" value="true" />
+      <created>1744110372716</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1744110372716</updated>
+    </task>
+    <task id="LOCAL-00021" summary="2025_04_08 19:28 remaster modifier.py">
+      <option name="closed" value="true" />
+      <created>1744111721127</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744111721127</updated>
+    </task>
+    <task id="LOCAL-00022" summary="2025_04_08 19:43 remaster modifier.py">
+      <option name="closed" value="true" />
+      <created>1744112606954</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1744112606954</updated>
+    </task>
+    <task id="LOCAL-00023" summary="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py">
+      <option name="closed" value="true" />
+      <created>1744112744207</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1744112744208</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +366,21 @@
     <MESSAGE value="2025_04_07 15:27" />
     <MESSAGE value="2025_04_07 16:15" />
     <MESSAGE value="2025_04_08 12:52" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_08 12:52" />
+    <MESSAGE value="2025_04_08 14:30" />
+    <MESSAGE value="2025_04_08 15:39" />
+    <MESSAGE value="2025_04_08 15:54" />
+    <MESSAGE value="2025_04_08 16:01" />
+    <MESSAGE value="2025_04_08 16:04" />
+    <MESSAGE value="2025_04_08 16:54" />
+    <MESSAGE value="2025_04_08 18:22" />
+    <MESSAGE value="2025_04_08 18:27" />
+    <MESSAGE value="2025_04_08 18:41" />
+    <MESSAGE value="2025_04_08 18:47" />
+    <MESSAGE value="2025_04_08 18:56" />
+    <MESSAGE value="2025_04_08 19:06" />
+    <MESSAGE value="2025_04_08 19:28 remaster modifier.py" />
+    <MESSAGE value="2025_04_08 19:43 remaster modifier.py" />
+    <MESSAGE value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
   </component>
 </project>
