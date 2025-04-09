@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py">
-      <change afterPath="$PROJECT_DIR$/actions/action_modify_timestamp_1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py">
+      <change afterPath="$PROJECT_DIR$/actions/action_remove_debug.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/record.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/record.log" afterDir="false" />
     </list>
@@ -24,6 +24,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -71,6 +82,7 @@
     "Python.action_modify_optional_header_1.executor": "Run",
     "Python.action_modify_timestamp.executor": "Run",
     "Python.action_modify_timestamp_1.executor": "Run",
+    "Python.action_remove_debug.executor": "Run",
     "Python.action_rename_random_section.executor": "Run",
     "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
@@ -499,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744188780766</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py">
+      <option name="closed" value="true" />
+      <created>1744196786026</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1744196786026</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_08 15:54" />
     <MESSAGE value="2025_04_08 16:01" />
     <MESSAGE value="2025_04_08 16:04" />
     <MESSAGE value="2025_04_08 16:54" />
@@ -542,7 +561,8 @@
     <MESSAGE value="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
+    <MESSAGE value="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
@@ -550,6 +570,7 @@
     <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744174672152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_benign_data_overlay_1.coverage" NAME="action_add_benign_data_overlay_1 覆盖结果" MODIFIED="1744186979637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_timestamp.coverage" NAME="action_modify_timestamp 覆盖结果" MODIFIED="1744178918188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_remove_debug.coverage" NAME="action_remove_debug 覆盖结果" MODIFIED="1744196975905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_break_optional_header_checksum_1.coverage" NAME="action_break_optional_header_checksum_1 覆盖结果" MODIFIED="1744188225031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_optional_header_1.coverage" NAME="action_modify_optional_header_1 覆盖结果" MODIFIED="1744188701806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_upx_encryption.coverage" NAME="action_upx_encryption 覆盖结果" MODIFIED="1744179461382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
