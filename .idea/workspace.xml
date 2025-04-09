@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 08:44 remaster modifier.py">
-      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_break_optional_header_checksum_1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 08:56 remaster modifier.py">
+      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/dump_temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copy_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/init/reset_test_enviroment.py" beforeDir="false" afterPath="$PROJECT_DIR$/init/reset_test_enviroment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/operation_modify_timeStamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_modify_timeStamp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/operation_rename_random_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_rename_random_section.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/modifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process/modifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_benign_data_overlay_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_benign_data_overlay_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,56 +65,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python 测试.Python 测试 (operation_test.py 内).executor&quot;: &quot;Run&quot;,
-    &quot;Python 测试.Python 测试 (test_module.py 内).executor&quot;: &quot;Run&quot;,
-    &quot;Python 测试.Python 测试 (test_operations.py 内).executor&quot;: &quot;Run&quot;,
-    &quot;Python.FindAllSignatures.executor&quot;: &quot;Run&quot;,
-    &quot;Python.benign_string_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.buffer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.commons.executor&quot;: &quot;Run&quot;,
-    &quot;Python.copy_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.findAllSignatures.executor&quot;: &quot;Run&quot;,
-    &quot;Python.getCheckSum.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_a_random_string_from_strings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_all_sections_name.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_data_section.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maliciousCodeAvoid1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.modifier.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_create_fake_signature.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_modify_checksum.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_modify_language.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_modify_machine_type.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_modify_timeStamp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_rename_random_section.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operation_upx_encryption.executor&quot;: &quot;Run&quot;,
-    &quot;Python.operations_fun.executor&quot;: &quot;Run&quot;,
-    &quot;Python.random.executor&quot;: &quot;Run&quot;,
-    &quot;Python.reset_test_enviroment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.string2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_1024.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_128.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_2048.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_256.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_512.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings_length_64.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testCode1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testTimeStamp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.timestamp_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.virusTotalScanner.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/毕业设计/example1/operation_modules/process_remaster&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python 测试.Python 测试 (operation_test.py 内).executor": "Run",
+    "Python 测试.Python 测试 (test_module.py 内).executor": "Run",
+    "Python 测试.Python 测试 (test_operations.py 内).executor": "Run",
+    "Python.FindAllSignatures.executor": "Run",
+    "Python.benign_string_generator.executor": "Run",
+    "Python.buffer.executor": "Run",
+    "Python.commons.executor": "Run",
+    "Python.copy_file.executor": "Run",
+    "Python.dump_temp.executor": "Run",
+    "Python.findAllSignatures.executor": "Run",
+    "Python.fun_for_test1.executor": "Run",
+    "Python.getCheckSum.executor": "Run",
+    "Python.get_a_random_string_from_strings.executor": "Run",
+    "Python.get_all_sections_name.executor": "Run",
+    "Python.get_data_section.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.maliciousCodeAvoid1.executor": "Run",
+    "Python.modifier.executor": "Run",
+    "Python.operation_create_fake_signature.executor": "Run",
+    "Python.operation_insert_useless_data_to_end.executor": "Run",
+    "Python.operation_modify_checksum.executor": "Run",
+    "Python.operation_modify_language.executor": "Run",
+    "Python.operation_modify_machine_type.executor": "Run",
+    "Python.operation_modify_timeStamp.executor": "Run",
+    "Python.operation_rename_random_section.executor": "Run",
+    "Python.operation_test.executor": "Run",
+    "Python.operation_upx_encryption.executor": "Run",
+    "Python.operations_fun.executor": "Run",
+    "Python.random.executor": "Run",
+    "Python.reset_test_enviroment.executor": "Run",
+    "Python.string2.executor": "Run",
+    "Python.strings_length_1024.executor": "Run",
+    "Python.strings_length_128.executor": "Run",
+    "Python.strings_length_2048.executor": "Run",
+    "Python.strings_length_256.executor": "Run",
+    "Python.strings_length_512.executor": "Run",
+    "Python.strings_length_64.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test1.executor": "Run",
+    "Python.testCode1.executor": "Run",
+    "Python.testTimeStamp.executor": "Run",
+    "Python.timestamp_generator.executor": "Run",
+    "Python.virusTotalScanner.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/毕业设计/example1/operation_modules/process_remaster",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\毕业设计\example1\operation_modules\process_remaster" />
@@ -356,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744159506574</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="2025_04_09 08:56 remaster modifier.py">
+      <option name="closed" value="true" />
+      <created>1744160171275</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744160171275</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,6 +417,7 @@
     <MESSAGE value="2025_04_08 19:43 remaster modifier.py" />
     <MESSAGE value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
     <MESSAGE value="2025_04_09 08:44 remaster modifier.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 08:44 remaster modifier.py" />
+    <MESSAGE value="2025_04_09 08:56 remaster modifier.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 08:56 remaster modifier.py" />
   </component>
 </project>

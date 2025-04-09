@@ -1,7 +1,7 @@
 import os
 import time
 
-from copy_file import copy_file
+from operation_modules.copy_file import copy_file
 import pefile
 import random
 import string

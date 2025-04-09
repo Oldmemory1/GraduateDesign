@@ -1,18 +1,12 @@
-import array
-import json
-import os
 import random
-import string
-import subprocess
-import sys
-import tempfile
-from os import listdir
-from os.path import isfile, join
-import pefile
+
 import lief
-import re
-from string1 import str1
-from binary_str1 import binaryStr1
+
+from string_generator.generated_strings.get_a_random_string_from_strings import get_random_string
+
+
+#completed 已测试完成
+
 def search_cave(
         bytez,
         name,
@@ -50,7 +44,7 @@ def search_cave(
 
 
 
-def add_bytes_to_section_cave(bytez):
+def add_bytes_to_section_cave(bytez,string_list):
         caves = []
         binary = lief.PE.parse(list(bytez))
         base_addr = binary.optional_header.imagebase
@@ -76,9 +70,7 @@ def add_bytes_to_section_cave(bytez):
 
         if caves:
             random_selected_cave = random.choice(caves)
-            begin = random.randint(0, int(len(str1) / 2))
-            end = random.randint(int(len(str1) / 2), len(str1))
-            s1 = str1[begin:end]
+            s1=get_random_string(string_list=string_list)
             benign_binary_section_content = bytearray(s1, encoding="utf-8")
             add_bytes = bytearray(benign_binary_section_content)[:random_selected_cave[-1]]
 

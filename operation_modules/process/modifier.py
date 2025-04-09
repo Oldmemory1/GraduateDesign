@@ -11,6 +11,8 @@ from os.path import isfile, join
 import pefile
 import lief
 import re
+
+from init.reset_test_enviroment import init_environment
 from string1 import str1
 from binary_str1 import binaryStr1
 
@@ -116,7 +118,7 @@ class ModifyBinary:
 
         binary = lief.PE.parse(list(self.bytez))
 
-        binary.header.machine = candidate[random.randint(0, len(candidate))]
+        binary.header.machine = candidate[random.randint(0, len(candidate)-1)]
 
         self.bytez = self._binary_to_bytez(binary)
 
@@ -290,22 +292,26 @@ if __name__ == "__main__":
     # use for testing/debugging actions
     import hashlib
 
-    filename = r"/sample/sample1_m4.exe"
-    with open(filename, "rb") as f:
+    init_environment()
+    input_file1 = r"D:\毕业设计\example1\source_file\sample1.exe"
+    output_file1 = r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\debug_result\sample1_result.exe"
+
+    with open(input_file1, "rb") as f:
         bytez = f.read()
 
     m = hashlib.sha256()
     m.update(bytez)
     print(f"original hash: {m.hexdigest()}")
 
-
     bi = ModifyBinary(bytez)
-    bytez1 =bi.append_benign_data_overlay()
+    bytez1 = bi.add_imports()
     m = hashlib.sha256()
     m.update(bytez1)
-    outputFileName = r"D:\毕业设计\example1\sample\sample1_m4.exe"
-    with open(outputFileName,"wb+") as f1:
+
+    with open(output_file1, "wb+") as f1:
         f1.write(bytez1)
     print(f"modified hash: {m.hexdigest()}")
 
-    #embed()
+    # embed()
+
+

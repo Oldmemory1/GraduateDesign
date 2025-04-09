@@ -1,24 +1,14 @@
-import array
-import json
-import os
 import random
-import string
-import subprocess
-import sys
-import tempfile
-from os import listdir
-from os.path import isfile, join
-import pefile
+import warnings
+
 import lief
-import re
 
 from operation_modules.process_remaster.binary_to_bytez import binary_to_bytez
 from operation_modules.process_remaster.commons import COMMON_IMPORTS
-from string1 import str1
-from binary_str1 import binaryStr1
 
-
+# completed 已测试完成
 def add_imports(bytez):
+    warnings.warn("temporarily deprecated because it may break the pe file!", DeprecationWarning)
     binary = lief.PE.parse(list(bytez))
 
     # draw a library at random
