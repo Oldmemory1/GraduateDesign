@@ -4,5 +4,6 @@ actions_list=[
     "modify_checksum",
     "modify_timestamp",
     "rename_random_section",
-    "upx_encryption"
+    "upx_encryption",
+    "action_add_benign_data_overlay_1"
 ]

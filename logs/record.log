@@ -16,3 +16,5 @@
 2025-04-09 14:17:19 - root - INFO - action_upx_encryption after file:235bcb46d8d6e4130ed0fa20d0602f8a0d860c4bfa8173451472fe57c717cfa9
 2025-04-09 14:17:43 - root - INFO - action_upx_encryption before file:3dc04b683963e8a719983bf011f545dbb3442a504e1bcde2db11d1ac22f6b7fd
 2025-04-09 14:17:43 - root - INFO - action_upx_encryption after file:235bcb46d8d6e4130ed0fa20d0602f8a0d860c4bfa8173451472fe57c717cfa9
+2025-04-09 14:38:57 - root - INFO - action_add_benign_data_overlay_1 before file:3dc04b683963e8a719983bf011f545dbb3442a504e1bcde2db11d1ac22f6b7fd
+2025-04-09 14:38:57 - root - INFO - action_add_benign_data_overlay_1 after file:7337fa9cf71ae0d99b595e2fcc1c9d09f5619e617c645fd2c349cb56ffdf3d00
