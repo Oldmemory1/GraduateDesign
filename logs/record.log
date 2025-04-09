@@ -26,3 +26,5 @@
 2025-04-09 16:29:37 - root - INFO - action_add_section_benign_data_1 after file:07d8970f6e201a9fb0765dc58fc9cca9a3473390cc4634881041f9fa31ac72ae
 2025-04-09 16:43:47 - root - INFO - action_break_optional_header_checksum_1 before file:3dc04b683963e8a719983bf011f545dbb3442a504e1bcde2db11d1ac22f6b7fd
 2025-04-09 16:43:47 - root - INFO - action_break_optional_header_checksum_1 after file:39339625cdcb661c971c861ac04a78b63f2b0ec5718fab81faa8e76be4823e26
+2025-04-09 16:51:43 - root - INFO - action_modify_optional_header_1 before file:3dc04b683963e8a719983bf011f545dbb3442a504e1bcde2db11d1ac22f6b7fd
+2025-04-09 16:51:44 - root - INFO - action_modify_optional_header_1 after file:c99edcbb37ac873b033c29c0f41dab4984af9c289b71cf5a8240e053bce1a2a0
