@@ -1,3 +1,5 @@
+import random
+
 actions_list=[
     "action_create_fake_signature",
     "action_insert_useless_data_to_end",
@@ -16,5 +18,12 @@ actions_list=[
     "action_remove_debug",
     "action_rename_section_1"
 ]
+def get_random_actions(actions_num):
+    return random.sample(actions_list, actions_num)
+
 if __name__ == "__main__":
-    print(len(actions_list))
+    #print(len(actions_list))
+    #print(type(actions_list))
+    list1 = get_random_actions(5)
+    for i in list1:
+        print(i)
