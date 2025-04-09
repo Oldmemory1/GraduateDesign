@@ -2,7 +2,8 @@ import lief
 
 from operation_modules.process_remaster.binary_to_bytez import binary_to_bytez
 
-
+# completed 已测试完成
+# 删除调试信息 可能因为没有调试信息导致操作无效
 def remove_debug(bytez):
     bytez1 = bytez
     binary = lief.PE.parse(list(bytez))

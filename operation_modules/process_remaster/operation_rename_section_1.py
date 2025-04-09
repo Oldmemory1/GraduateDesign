@@ -4,7 +4,8 @@ import lief
 
 from operation_modules.process_remaster.binary_to_bytez import binary_to_bytez
 from operation_modules.process_remaster.commons import COMMON_SECTION_NAMES
-
+# completed 已测试完成
+# 重命名某个节
 
 def rename_section(bytez):
     binary = lief.PE.parse(list(bytez))

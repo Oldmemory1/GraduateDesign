@@ -4,7 +4,7 @@ import lief
 
 from operation_modules.process_remaster.binary_to_bytez import binary_to_bytez
 from timestamp_generator.timestamp_generator import generate_random_timestamp
-
+# completed 已测试完成
 # 修改时间戳 但是随机生成过去一年之内的任意时间戳
 def modify_timestamp(bytez):
     """

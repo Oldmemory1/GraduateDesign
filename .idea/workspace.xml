@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 08:56 remaster modifier.py">
-      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/dump_temp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 09:38 remaster modifier.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/copy_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init/reset_test_enviroment.py" beforeDir="false" afterPath="$PROJECT_DIR$/init/reset_test_enviroment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/operation_modify_timeStamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_modify_timeStamp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/operation_rename_random_section.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_rename_random_section.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process/modifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process/modifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_benign_data_overlay_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_benign_data_overlay_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744160171275</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="2025_04_09 09:38 remaster modifier.py">
+      <option name="closed" value="true" />
+      <created>1744162704684</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1744162704684</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_02 19:52" />
     <MESSAGE value="2025_04_02 19:59" />
     <MESSAGE value="2025_04_02 20:57" />
     <MESSAGE value="2025_04_03 11:08" />
@@ -418,6 +414,7 @@
     <MESSAGE value="2025_04_08 19:45 remaster modifier.py&#10;change timestamp_generator.py" />
     <MESSAGE value="2025_04_09 08:44 remaster modifier.py" />
     <MESSAGE value="2025_04_09 08:56 remaster modifier.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 08:56 remaster modifier.py" />
+    <MESSAGE value="2025_04_09 09:38 remaster modifier.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 09:38 remaster modifier.py" />
   </component>
 </project>

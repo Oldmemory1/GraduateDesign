@@ -11,6 +11,9 @@ from operation_modules.process_remaster.operation_add_section_benign_data_1 impo
 from operation_modules.process_remaster.operation_break_optional_header_checksum_1 import break_optional_header_checksum
 from operation_modules.process_remaster.operation_modify_machine_type_1 import modify_machine_type
 from operation_modules.process_remaster.operation_modify_optional_header_1 import modify_optional_header
+from operation_modules.process_remaster.operation_modify_timestamp_1 import modify_timestamp
+from operation_modules.process_remaster.operation_remove_debug_1 import remove_debug
+from operation_modules.process_remaster.operation_rename_section_1 import rename_section
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 
 
@@ -47,7 +50,10 @@ def fun_test(input_file):
     #bytez1=add_section_benign_data(bytez,string_list=strings_4096bytes)
     #bytez1 = break_optional_header_checksum(bytez)
     #bytez1 = modify_machine_type(bytez)
-    bytez1 = modify_optional_header(bytez)
+    #bytez1 = modify_optional_header(bytez)
+    #bytez1 = modify_timestamp(bytez)
+    #bytez1 = remove_debug(bytez)
+    bytez1 = rename_section(bytez)
     m = hashlib.sha256()
     m.update(bytez1)
 

@@ -5,6 +5,7 @@ import lief
 from operation_modules.process_remaster.binary_to_bytez import binary_to_bytez
 
 # completed 已测试完成
+# 修改可选首部
 def modify_optional_header(bytez):
     binary = lief.PE.parse(list(bytez))
 
