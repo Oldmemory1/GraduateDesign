@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 13:01 add action_modify_checksum.py">
+      <change afterPath="$PROJECT_DIR$/actions/action_modify_timestamp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/action_rename_random_section.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/actions_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/record.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/record.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +65,9 @@
     "Python.FindAllSignatures.executor": "Run",
     "Python.action_create_fake_signature.executor": "Run",
     "Python.action_insert_useless_data_to_end.executor": "Run",
+    "Python.action_modify_checksum.executor": "Run",
+    "Python.action_modify_timestamp.executor": "Run",
+    "Python.action_rename_random_section.executor": "Run",
     "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
     "Python.commons.executor": "Run",
@@ -206,7 +213,7 @@
       <updated>1743565680364</updated>
       <workItem from="1744166515800" duration="833000" />
       <workItem from="1744167370171" duration="154000" />
-      <workItem from="1744168072918" duration="2463000" />
+      <workItem from="1744168072918" duration="4241000" />
     </task>
     <task id="LOCAL-00001" summary="2025_04_02 19:52">
       <option name="closed" value="true" />
@@ -424,7 +431,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744168971834</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="2025_04_09 13:01 add action_modify_checksum.py">
+      <option name="closed" value="true" />
+      <created>1744174917904</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174917904</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_02 20:57" />
     <MESSAGE value="2025_04_03 11:08" />
     <MESSAGE value="2025_04_07 10:53" />
     <MESSAGE value="2025_04_07 15:27" />
@@ -467,10 +481,14 @@
     <MESSAGE value="2025_04_09 08:56 remaster modifier.py" />
     <MESSAGE value="2025_04_09 09:38 remaster modifier.py" />
     <MESSAGE value="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 11:22 modify action_create_fake_signature.py action_insert_useless_data_to_end.py" />
+    <MESSAGE value="2025_04_09 13:01 add action_modify_checksum.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 13:01 add action_modify_checksum.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744168929366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744174672152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_modify_timestamp.coverage" NAME="action_modify_timestamp 覆盖结果" MODIFIED="1744178918188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_modify_checksum.coverage" NAME="action_modify_checksum 覆盖结果" MODIFIED="1744174884972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$action_rename_random_section.coverage" NAME="action_rename_random_section 覆盖结果" MODIFIED="1744179182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744168725398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
   </component>
 </project>
