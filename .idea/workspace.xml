@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 09:38 remaster modifier.py">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_09 10:14 deprecate modifier.py">
+      <change afterPath="$PROJECT_DIR$/deprecated_modules/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deprecated_modules/process/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/record.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/example_debug/fun_for_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/operation_create_fake_signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_create_fake_signature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action_create_fake_signature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/all_section_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/all_section_names.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/modifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/modifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/section_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/section_names.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process/small_dll_imports.json" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated_modules/process/small_dll_imports.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +68,7 @@
     "Python 测试.Python 测试 (test_module.py 内).executor": "Run",
     "Python 测试.Python 测试 (test_operations.py 内).executor": "Run",
     "Python.FindAllSignatures.executor": "Run",
+    "Python.action_create_fake_signature.executor": "Run",
     "Python.benign_string_generator.executor": "Run",
     "Python.buffer.executor": "Run",
     "Python.commons.executor": "Run",
@@ -103,7 +112,18 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/毕业设计/example1/operation_modules/process_remaster",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "promo.database",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -115,14 +135,37 @@
       <recent name="D:\毕业设计\example1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\毕业设计\example1\deprecated_modules" />
       <recent name="D:\毕业设计\example1\operation_modules" />
+      <recent name="D:\毕业设计\example1\operation_modules\other_operations" />
+      <recent name="D:\毕业设计\example1\deprecated" />
       <recent name="D:\毕业设计\example1\operation_modules\commons" />
-      <recent name="D:\毕业设计\example1\string_generator\generated_strings" />
-      <recent name="D:\毕业设计\example1\string_generator" />
-      <recent name="D:\毕业设计\example1\virus_scanner_module" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="action_create_fake_signature" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="example1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/actions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/actions/action_create_fake_signature.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="benign_string_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="example1" />
       <option name="ENV_FILES" value="" />
@@ -136,6 +179,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="D:\毕业设计\example1\string_generator\benign_string_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -147,6 +191,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.action_create_fake_signature" />
         <item itemvalue="Python.benign_string_generator" />
       </list>
     </recent_temporary>
@@ -154,7 +199,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -166,6 +212,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743565680364</updated>
+      <workItem from="1744166515800" duration="833000" />
+      <workItem from="1744167370171" duration="154000" />
+      <workItem from="1744168072918" duration="662000" />
     </task>
     <task id="LOCAL-00001" summary="2025_04_02 19:52">
       <option name="closed" value="true" />
@@ -378,6 +427,9 @@
     <option name="localTasksCounter" value="27" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -416,5 +468,8 @@
     <MESSAGE value="2025_04_09 08:56 remaster modifier.py" />
     <MESSAGE value="2025_04_09 09:38 remaster modifier.py" />
     <option name="LAST_COMMIT_MESSAGE" value="2025_04_09 09:38 remaster modifier.py" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744168725398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
   </component>
 </project>

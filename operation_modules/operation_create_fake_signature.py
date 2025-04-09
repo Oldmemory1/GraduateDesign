@@ -2,9 +2,12 @@ import os
 import random
 import time
 
-from findAllSignatures import get_all_file_paths
+
 from init.reset_test_enviroment import init_environment
 from operation_modules.copy_file import copy_file
+from operation_modules.findAllSignatures import get_all_file_paths
+
+
 # completed
 # 添加伪造的签名 但是最后会复制一个文件回来
 def create_fake_signature(input_file):
@@ -32,7 +35,7 @@ def create_fake_signature(input_file):
     os.system(command)
     os.remove(input_file)
     copy_file(source_address=address1, destination_address=input_file)
-    #os.remove(address1)
+    os.remove(address1)
 # 添加伪造的签名 但是最后会放置在目标位置
 def create_fake_signature_and_output(input_file,output_file):
     all_signatures = get_all_file_paths(target_dir=r"D:\毕业设计\example1\signatures")
