@@ -24,17 +24,16 @@ from virus_scanner_module.clamScanner import clamScanner
 
 
 class SARSA:
-    def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.1):
+    def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.1,test_mode_=False):
         self.actions_list = actions_list
         self.n_actions = n_actions
         self.alpha = alpha
         self.gamma = gamma
         self.epsilon = epsilon
         self.q_table = np.zeros((n_states, n_actions))
-
-
+        self.test_mode = test_mode_
     def choose_action(self, state):
-        if np.random.uniform() < self.epsilon:
+        if self.test_mode==True or np.random.uniform() < self.epsilon:
             return np.random.choice(self.n_actions)
         else:
             return np.argmax(self.q_table[state])
@@ -241,7 +240,7 @@ if __name__ == "__main__":
     #train_sarsa(agent, episodes=1000)
 
     # 打印训练后的Q表
-    print("\nTrained Q-table:")
-    print(agent.q_table)
+    #print("\nTrained Q-table:")
+    #print(agent.q_table)
 
 
