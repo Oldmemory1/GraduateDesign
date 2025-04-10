@@ -12,11 +12,11 @@ def clamScanner(file_path):
         scan_result = cd.scan_file(file_path)
 
         if scan_result is None:
-            print("[safe]")
+            #print("[safe]")
             return False
         else:
             virus_name = scan_result[file_path][1]
-            print(f"[malicious type]:{virus_name}")
+            #print(f"[malicious type]:{virus_name}")
             return True
 
     except pyclamd.ConnectionError:
@@ -26,3 +26,10 @@ def clamScanner(file_path):
     except Exception as e:
         print(f"Unknown error：{str(e)}")
     return False
+if __name__ == "__main__":
+    file1 = r"D:\BaiduNetdiskDownload\β6.66_Help小白包V5.5.0：真真的冬\beta6.66TEST31.exe"
+    b1 = clamScanner(file1)
+    print(b1)
+    file2 = r"D:\毕业设计\example1\source_file\sample1.exe"
+    b2 = clamScanner(file2)
+    print(b2)
