@@ -1,5 +1,6 @@
 import time
 
+from init.clear_directory import clear_directory
 from init.reset_test_enviroment import init_environment
 from operation_modify_timeStamp import modify_pe_timestamp
 from operation_modules.operation_create_fake_signature import create_fake_signature
@@ -17,6 +18,9 @@ from string_generator.generated_strings.strings_length_2048 import strings_2048b
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 from string_generator.generated_strings.get_a_random_string_from_strings import get_random_string
 from string2 import str2
+from virus_scanner_module.clamScanner import clamScanner
+
+
 def fun1(file):
     init_environment()
     modify_pe_timestamp(input_file=file)
@@ -27,5 +31,7 @@ def fun1(file):
     append_to_pe(input_file=file, append_data=get_random_string(string_list=strings_4096bytes))
     create_fake_signature(input_file=file)
 if __name__=="__main__":
-    fun1(file = r"D:\毕业设计\example1\source_file\sample1.exe")
+    print(clamScanner(r"D:\毕业设计\example1\source_file\sample1.exe"))
+    fun1(file = r"D:\毕业设计\example1\source_file\beta6.66TEST31.exe")
+
 

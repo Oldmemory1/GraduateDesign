@@ -59,6 +59,7 @@ def getTimeStamp(input_file):
     import datetime
     pe = pefile.PE(input_file)
     timestamp = pe.FILE_HEADER.TimeDateStamp
+    pe.close()
     print(f"Timestamp:{timestamp}")
 if __name__=="__main__":
     custom_time = datetime(2000, 1, 1).timestamp()
