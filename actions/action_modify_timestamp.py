@@ -8,7 +8,7 @@ logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\毕业设计\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
+    filename=r"D:\graduate_design\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
     filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
 )
 def action_modify_timestamp(input_file_,enable_log=False,new_timestamp_=None):
@@ -33,5 +33,5 @@ def action_modify_timestamp(input_file_,enable_log=False,new_timestamp_=None):
 
 if __name__=="__main__":
     init_environment()
-    input_file =r"D:\毕业设计\example1\source_file\sample1.exe"
+    input_file =r"D:\graduate_design\example1\source_file\sample1.exe"
     action_modify_timestamp(input_file_=input_file,enable_log=True,new_timestamp_=None)

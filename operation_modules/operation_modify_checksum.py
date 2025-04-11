@@ -28,7 +28,7 @@ def modify_pe_checksum(input_file,new_checksum=None):
     temp_name= temp_name + "-modify_checksum-" + file_name
     #print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\temp"+"\\"+temp_name
+    address1 = r"D:\graduate_design\example1\temp"+"\\"+temp_name
     #print(address1)
     pe.write(address1)
     pe.close()
@@ -55,5 +55,5 @@ def modify_pe_checksum_and_output(input_file, output_file, new_checksum=None):
 
 
 if __name__ == "__main__":
-   modify_pe_checksum(input_file=r"D:\毕业设计\example1\source_file\sample1.exe")
-   getCheckSum(r"D:\毕业设计\example1\source_file\sample1.exe")
+   modify_pe_checksum(input_file=r"D:\graduate_design\example1\source_file\sample1.exe")
+   getCheckSum(r"D:\graduate_design\example1\source_file\sample1.exe")

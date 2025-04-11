@@ -25,7 +25,7 @@ def modify_pe_timestamp(input_file,new_timestamp=None):
     temp_name= temp_name + "-modify_timestamp-" + file_name
     #print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\temp"+"\\"+temp_name
+    address1 = r"D:\graduate_design\example1\temp"+"\\"+temp_name
     #print(address1)
     pe.write(address1)
     pe.close()
@@ -63,7 +63,7 @@ def getTimeStamp(input_file):
     print(f"Timestamp:{timestamp}")
 if __name__=="__main__":
     custom_time = datetime(2000, 1, 1).timestamp()
-    #getTimeStamp(r"D:\毕业设计\example1\source_file\sample1.exe")
-    input_file1 = r"D:\毕业设计\example1\source_file\sample1.exe"
+    #getTimeStamp(r"D:\graduate_design\example1\source_file\sample1.exe")
+    input_file1 = r"D:\graduate_design\example1\source_file\sample1.exe"
     modify_pe_timestamp(input_file=input_file1,new_timestamp=int(custom_time))
-    #getTimeStamp(r"D:\毕业设计\example1\source_file\sample1.exe")
+    #getTimeStamp(r"D:\graduate_design\example1\source_file\sample1.exe")

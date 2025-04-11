@@ -13,7 +13,7 @@ logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\毕业设计\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
+    filename=r"D:\graduate_design\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
     filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
 )
 def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = False):
@@ -31,7 +31,7 @@ def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = Fal
     file_name = os.path.basename(input_file_)
     temp_name = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     temp_name = temp_name + "-action_add_benign_data_overlay_1-" + file_name
-    address1 = r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\temp" + "\\" + temp_name
+    address1 = r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp" + "\\" + temp_name
 
     with open(address1, "wb+") as f2:
         f2.write(bytez1)
@@ -45,7 +45,7 @@ def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = Fal
         logging.info("action_add_benign_data_overlay_1 after file:" + m2.hexdigest())
 if __name__ == "__main__":
         init_environment()
-        input_file = r"D:\毕业设计\example1\source_file\sample1.exe"
+        input_file = r"D:\graduate_design\example1\source_file\sample1.exe"
         action_add_benign_data_overlay_1(input_file_=input_file,
                                          appended_data_=get_random_string(string_list=strings_4096bytes),
                                          enable_log=True)

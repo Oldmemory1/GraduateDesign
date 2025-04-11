@@ -12,4 +12,4 @@ def sample_malicious_test(dir_):
         if not result:
             os.remove(sample_file)
 if __name__ == '__main__':
-    sample_malicious_test(r"D:\毕业设计\example1\sample")
+    sample_malicious_test(r"D:\graduate_design\example1\sample")

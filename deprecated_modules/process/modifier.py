@@ -293,8 +293,8 @@ if __name__ == "__main__":
     import hashlib
 
     init_environment()
-    input_file1 = r"D:\毕业设计\example1\source_file\sample1.exe"
-    output_file1 = r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\debug_result\sample1_result.exe"
+    input_file1 = r"D:\graduate_design\example1\source_file\sample1.exe"
+    output_file1 = r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\debug_result\sample1_result.exe"
 
     with open(input_file1, "rb") as f:
         bytez = f.read()

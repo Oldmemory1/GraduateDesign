@@ -22,4 +22,4 @@ def clear_directory(target_dir):
             print(f"⚠️ 删除失败: {entry_path} - 原因: {e}")
 
 if __name__ == "__main__":
-    clear_directory(r"D:\毕业设计\example1\sample")
+    clear_directory(r"D:\graduate_design\example1\sample")

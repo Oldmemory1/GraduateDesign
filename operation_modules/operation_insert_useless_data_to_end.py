@@ -14,7 +14,7 @@ def append_to_pe(input_file,append_data):
     temp_name = temp_name + "-insert_useless_data_to_end-" + file_name
     # print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\temp" + "\\" + temp_name
+    address1 = r"D:\graduate_design\example1\temp" + "\\" + temp_name
     pe = pefile.PE(input_file)
 
     # 将原始PE内容写入新文件
@@ -50,7 +50,7 @@ def append_to_pe_and_output(input_file, output_file, append_data):
 if __name__ == "__main__":
     # 示例用法
     append_to_pe(
-        input_file=r"D:\毕业设计\example1\source_file\sample1.exe",
+        input_file=r"D:\graduate_design\example1\source_file\sample1.exe",
         append_data=str2*128  # 要附加的字符串
     )
 

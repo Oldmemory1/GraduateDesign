@@ -33,7 +33,7 @@ def get_pe_data_section(file_path):
 
 if __name__ == "__main__":
     # 使用示例
-    file_path = r'D:\毕业设计\example1\vs_BuildTools.exe'  # 替换为实际路径
+    file_path = r'D:\graduate_design\example1\vs_BuildTools.exe'  # 替换为实际路径
     data_section_content = get_pe_data_section(file_path)
     #print(data_section_content)
     if data_section_content is not None:

@@ -26,7 +26,7 @@ logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\毕业设计\example1\logs\sarsa_record.log",        # 输出到文件（不指定则默认输出到控制台）
+    filename=r"D:\graduate_design\example1\logs\sarsa_record.log",        # 输出到文件（不指定则默认输出到控制台）
     filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
 )
 
@@ -50,7 +50,7 @@ def do_action(action_name,episode,enable_log_):
     elif action_name == "action_add_benign_data_overlay_1":
         action_add_benign_data_overlay_1(input_file_=episode,
                                          appended_data_=get_random_string(
-                                             string_list=strings_4096bytes),
+                                             string_list=strings_4096bytes)*256,
                                          enable_log=enable_log_)
     elif action_name == "action_add_bytes_to_section_cave_1":
         action_add_bytes_to_section_cave_1(input_file_=episode, string_list_=strings_4096bytes,
@@ -101,7 +101,10 @@ class SARSA:
 
             action = self.choose_action(state)
             action_name = self.actions_list[action]
-            do_action(action_name=action_name,episode=episode,enable_log_=enable_log_)
+            try:
+                do_action(action_name=action_name, episode=episode, enable_log_=enable_log_)
+            except Exception as e:
+                print(e)
             if action_name =="action_create_fake_signature":
                 count = 5
                 use_signature = True
@@ -151,7 +154,10 @@ class SARSA:
                     state = next_state
                     action = next_action
                     action_name_1 = self.actions_list[action]
-                    do_action(action_name=action_name_1, episode=episode, enable_log_=enable_log_)
+                    try:
+                        do_action(action_name=action_name_1, episode=episode, enable_log_=enable_log_)
+                    except Exception as e:
+                        print(e)
                     print(os.path.basename(episode) + " choose action:" + action_name_1)
                     if action_name_1 == "action_create_fake_signature":
                         count = 5
@@ -168,7 +174,7 @@ if __name__ == "__main__":
         print(i)
     agent = SARSA(actions_list=actions_list_,n_states=n_states_, n_actions=n_actions_)
     #train_sarsa(agent, episodes=1000)
-    agent.train(train_dataset_dir=r"D:\毕业设计\example1\sample",enable_log_=False)
+    agent.train(train_dataset_dir=r"D:\graduate_design\example1\sample",enable_log_=False)
     # 打印训练后的Q表
     print("\nTrained Q-table:")
     print(agent.q_table)

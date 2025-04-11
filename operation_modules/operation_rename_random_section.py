@@ -37,7 +37,7 @@ def rename_random_section(input_file):
     temp_name= temp_name + "-raname_random_section-" + file_name
     #print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\temp"+"\\"+temp_name
+    address1 = r"D:\graduate_design\example1\temp"+"\\"+temp_name
     #print(address1)
     pe.write(address1)
     pe.close()
@@ -76,6 +76,6 @@ def rename_random_section_and_output(input_file, output_file):
 
 
 if __name__ == "__main__":
-    input_path = r"D:\毕业设计\example1\source_file\sample1.exe"  # 输入PE文件路径
+    input_path = r"D:\graduate_design\example1\source_file\sample1.exe"  # 输入PE文件路径
     rename_random_section(input_path)
 

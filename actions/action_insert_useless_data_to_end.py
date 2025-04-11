@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"D:\毕业设计\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
+    filename=r"D:\graduate_design\example1\logs\record.log",        # 输出到文件（不指定则默认输出到控制台）
     filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
 )
 def action_insert_useless_data_to_end(input_file_,string_list_,enable_log=False):
@@ -22,7 +22,7 @@ def action_insert_useless_data_to_end(input_file_,string_list_,enable_log=False)
         m1.update(bytez)
         logging.info("action_insert_useless_data_to_end before file:" + m1.hexdigest())
 
-    append_to_pe(input_file=input_file_,append_data=get_random_string(string_list=string_list_))
+    append_to_pe(input_file=input_file_,append_data=get_random_string(string_list=string_list_)*256)
 
     if enable_log:
         with open(input_file_, "rb") as f2:
@@ -34,5 +34,5 @@ def action_insert_useless_data_to_end(input_file_,string_list_,enable_log=False)
 
 if __name__ == "__main__":
     init_environment()
-    input_file = r"D:\毕业设计\example1\source_file\sample1.exe"
+    input_file = r"D:\graduate_design\example1\source_file\sample1.exe"
     action_insert_useless_data_to_end(input_file_=input_file,string_list_=strings_4096bytes,enable_log=True)

@@ -19,7 +19,7 @@ from string_generator.generated_strings.strings_length_4096 import strings_4096b
 
 def fun_test_and_output(input_file,output_file):
     init_environment()
-    clear_directory(r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\debug_result")
+    clear_directory(r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\debug_result")
     # use for testing/debugging actions
     with open(input_file, "rb") as f:
         bytez = f.read()
@@ -36,7 +36,7 @@ def fun_test_and_output(input_file,output_file):
     print(f"modified hash: {m.hexdigest()}")
 def fun_test(input_file):
     init_environment()
-    clear_directory(r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\debug_result")
+    clear_directory(r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\debug_result")
     # use for testing/debugging actions
     with open(input_file, "rb") as f:
         bytez = f.read()
@@ -63,7 +63,7 @@ def fun_test(input_file):
     temp_name = temp_name + "-modified-" + file_name
     # print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\temp" + "\\" + temp_name
+    address1 = r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp" + "\\" + temp_name
 
     with open(address1, "wb+") as f1:
         f1.write(bytez1)
@@ -73,8 +73,8 @@ def fun_test(input_file):
     #os.remove(address1)
     print(f"modified hash: {m.hexdigest()}")
 if __name__ == "__main__":
-    input_file1 = r"D:\毕业设计\example1\source_file\sample1.exe"
-    output_file1=r"D:\毕业设计\example1\operation_modules\process_remaster\example_debug\debug_result\sample1_result.exe"
+    input_file1 = r"D:\graduate_design\example1\source_file\sample1.exe"
+    output_file1=r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\debug_result\sample1_result.exe"
     """
     fun_test_and_output(input_file=input_file1,
                         output_file=output_file1)

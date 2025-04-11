@@ -31,7 +31,7 @@ def fun1(file):
     append_to_pe(input_file=file, append_data=get_random_string(string_list=strings_4096bytes))
     create_fake_signature(input_file=file)
 if __name__=="__main__":
-    print(clamScanner(r"D:\毕业设计\example1\source_file\sample1.exe"))
-    fun1(file = r"D:\毕业设计\example1\source_file\beta6.66TEST31.exe")
+    print(clamScanner(r"D:\graduate_design\example1\source_file\sample1.exe"))
+    fun1(file = r"D:\graduate_design\example1\source_file\beta6.66TEST31.exe")
 
 

@@ -17,19 +17,19 @@ def create_fake_signature(input_file):
     temp_name = temp_name + "-create_fake_signatures-" + file_name
     # print(temp_name)
     # 保存修改后的文件
-    address1 = r"D:\毕业设计\example1\temp" + "\\" + temp_name
+    address1 = r"D:\graduate_design\example1\temp" + "\\" + temp_name
 
-    all_signatures = get_all_file_paths(target_dir=r"D:\毕业设计\example1\signatures")
+    all_signatures = get_all_file_paths(target_dir=r"D:\graduate_design\example1\signatures")
     """
         for path in all_signatures:
         print(path)
     """
     signature = random.choice(all_signatures)
     # print(signature)
-    log1 = "D:\\毕业设计\\example1\\logs\\%s-%s" % (
+    log1 = "D:\\graduate_design\\example1\\logs\\%s-%s" % (
     "FakeSignatureProcess", time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
     log1 = log1 + ".log"
-    command = "python D:\\毕业设计\\example1\\sigthief.py -s %s -t %s -o %s > %s" % (
+    command = "python D:\\graduate_design\\example1\\sigthief.py -s %s -t %s -o %s > %s" % (
     signature, input_file, address1, log1)
     # print(command)
     os.system(command)
@@ -38,20 +38,20 @@ def create_fake_signature(input_file):
     os.remove(address1)
 # 添加伪造的签名 但是最后会放置在目标位置
 def create_fake_signature_and_output(input_file,output_file):
-    all_signatures = get_all_file_paths(target_dir=r"D:\毕业设计\example1\signatures")
+    all_signatures = get_all_file_paths(target_dir=r"D:\graduate_design\example1\signatures")
     """
         for path in all_signatures:
         print(path)
     """
     signature = random.choice(all_signatures)
     #print(signature)
-    log1 = "D:\\毕业设计\\example1\\logs\\%s-%s" % ("FakeSignatureProcess",time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
+    log1 = "D:\\graduate_design\\example1\\logs\\%s-%s" % ("FakeSignatureProcess",time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
     log1 = log1+".log"
-    command = "python D:\\毕业设计\\example1\\sigthief.py -s %s -t %s -o %s > %s" % (signature,input_file,output_file,log1)
+    command = "python D:\\graduate_design\\example1\\sigthief.py -s %s -t %s -o %s > %s" % (signature,input_file,output_file,log1)
     #print(command)
     os.system(command)
 
 if __name__ == "__main__":
-    #create_fake_signature_and_output(r"/sample/sample1.exe", r"D:\毕业设计\example1\sample\sample1_m1.exe")
+    #create_fake_signature_and_output(r"/sample/sample1.exe", r"D:\graduate_design\example1\sample\sample1_m1.exe")
     init_environment()
-    create_fake_signature(r"D:\毕业设计\example1\source_file\sample1.exe")
+    create_fake_signature(r"D:\graduate_design\example1\source_file\sample1.exe")
