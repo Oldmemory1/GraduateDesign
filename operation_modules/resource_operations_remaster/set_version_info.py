@@ -9,7 +9,7 @@ def generate_random_string(length):
     return random_string
 
 def set_version_info(input_file):
-    rcedit_path = "rcedit-x64.exe"
+    rcedit_path = r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\rcedit-x64.exe"
     FileDescription = generate_random_string(50)
     CompanyName = generate_random_string(50)
     LegalCopyright = generate_random_string(50)

@@ -20,6 +20,7 @@ def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = Fal
     # use for testing/debugging actions
     with open(input_file_, "rb") as f1:
         bytez = f1.read()
+    f1.close()
     if enable_log:
         m1 = hashlib.sha256()
         m1.update(bytez)
@@ -35,7 +36,7 @@ def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = Fal
 
     with open(address1, "wb+") as f2:
         f2.write(bytez1)
-    f1.close()
+    f2.close()
     os.remove(input_file_)
     copy_file(source_address=address1, destination_address=input_file_)
     #os.remove(address1)

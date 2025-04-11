@@ -6,6 +6,7 @@ import random
 
 from PIL import Image
 def create_ico(source_folder,destination_folder):
+    #print(destination_folder)
     file_list = os.listdir(destination_folder)
     for file_name in file_list:
         os.remove(os.path.join(destination_folder, file_name))

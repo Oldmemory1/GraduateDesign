@@ -16,7 +16,8 @@ def add_resources(input_file,icon_folder):
     # print(temp_name)
     # 保存修改后的文件
     address1 = r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp" + "\\" + temp_name1
-    print(address1)
+    #print("address1:"+address1)
+    #print("input_file:"+input_file)
     #savaname = generate_random_string(15)
     icon_files = os.listdir(icon_folder)
     random_icon_files = random.sample(icon_files, 2)
@@ -25,25 +26,23 @@ def add_resources(input_file,icon_folder):
     random_icon2 = random_icon_files[1]
 
     command1 = [
-        "ResourceHacker.exe",
+        r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\ResourceHacker.exe",
         "-open", input_file,
         "-save", address1,
         "-action", "addskip",
         "-res", f"{icon_folder}/{random_icon1}",
         "-mask", f"ICONGROUP,{random.choice(string.ascii_lowercase) + generate_random_string(15)}"
     ]
+
     subprocess.run(command1, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
     time.sleep(2)
-
-
     temp_name2 = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     # print(temp_name)
     temp_name2 = temp_name2 + "-add_random_resources-" + input_file_name
     address2 = r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp" + "\\" + temp_name2
-    print(address2)
+    #print("address2:"+address2)
     command2 = [
-        "ResourceHacker.exe",
+        r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\ResourceHacker.exe",
         "-open", address1,
         "-save", address2,
         "-action", "addskip",
@@ -53,9 +52,10 @@ def add_resources(input_file,icon_folder):
     subprocess.run(command2, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     set_version_info(address2)
-    #后面还要用copy_file
-    #os.remove(address1)
-    #os.remove("output.exe")
+
+    #print("start remove")
+    os.remove(input_file)
+    #print("end remove")
     copy_file(source_address=address2, destination_address=input_file)
     #os.remove(address2)
 if __name__ == '__main__':
