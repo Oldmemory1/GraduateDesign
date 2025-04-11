@@ -4,6 +4,7 @@ import string
 import subprocess
 import time
 
+from operation_modules.copy_file import copy_file
 from set_version_info import generate_random_string, set_version_info
 
 
@@ -55,6 +56,7 @@ def add_resources(input_file,icon_folder):
     #后面还要用copy_file
     os.remove(address1)
     #os.remove("output.exe")
-
+    copy_file(source_address=address2, destination_address=input_file)
+    os.remove(address2)
 if __name__ == '__main__':
     add_resources(input_file=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample\sample1.exe", icon_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data")
