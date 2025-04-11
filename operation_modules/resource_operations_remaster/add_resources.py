@@ -11,11 +11,11 @@ def add_resources(input_file,icon_folder):
     input_file_name = os.path.basename(input_file)
     temp_name1 = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     # print(temp_name)
-    temp_name1 = temp_name1 + "-add_random_icons-" + input_file_name
+    temp_name1 = temp_name1 + "-add_random_resources-" + input_file_name
     # print(temp_name)
     # 保存修改后的文件
     address1 = r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp" + "\\" + temp_name1
-
+    #print(address1)
     #savaname = generate_random_string(15)
     icon_files = os.listdir(icon_folder)
     random_icon_files = random.sample(icon_files, 2)
@@ -40,7 +40,7 @@ def add_resources(input_file,icon_folder):
     # print(temp_name)
     temp_name2 = temp_name2 + "-add_random_resources-" + input_file_name
     address2 = r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp" + "\\" + temp_name2
-
+    #print(address2)
     command2 = [
         "ResourceHacker.exe",
         "-open", address1,
@@ -57,4 +57,4 @@ def add_resources(input_file,icon_folder):
     #os.remove("output.exe")
 
 if __name__ == '__main__':
-    add_resources(input_file=r"/operation_modules/resource_operations_remaster/test_sample/sample1.exe", icon_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data")
+    add_resources(input_file=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample\sample1.exe", icon_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data")

@@ -32,4 +32,4 @@ def set_version_info(input_file):
 
     subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 if __name__ == "__main__":
-    set_version_info(r"D:\graduate_design\RingQ-main\QVM250\sample1.exe")
+    set_version_info(r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample\sample1.exe")

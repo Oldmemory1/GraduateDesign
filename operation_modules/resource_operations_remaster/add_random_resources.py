@@ -10,6 +10,6 @@ def add_random_resources(source_folder_,destination_folder_,input_file_):
     add_resources(input_file=input_file_,icon_folder=destination_folder_)
 
 if __name__ == '__main__':
-    add_random_resources(source_folder_=r"D:\graduate_design\RingQ-main\QVM250\source_data",
-                         destination_folder_=r"D:\graduate_design\RingQ-main\QVM250\destination_data",
-                         input_file_=r"D:\graduate_design\RingQ-main\QVM250\sample1.exe")
+    add_random_resources(source_folder_=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\source_data",
+                         destination_folder_=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data",
+                         input_file_=r"D:\graduate_design\example1\operation_modules\test_sample\sample1.exe")
