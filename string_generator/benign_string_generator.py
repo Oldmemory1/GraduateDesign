@@ -11,8 +11,8 @@ def generate_random_string(length):
 if __name__=="__main__":
     list1 = []
     i = 1
-    while i<=256:
-        list1.append(generate_random_string(4096))
+    while i<=8:
+        list1.append(generate_random_string(1048576))
         i = i+1
     output_str = ""
     output_str = output_str + "["
@@ -22,7 +22,7 @@ if __name__=="__main__":
         output_str = output_str + "'"
         output_str = output_str + ","
     output_str =output_str + "]"
-    file_path = "4096.txt"
+    file_path = "1048576.txt"
     with open(file_path, 'a', encoding='utf-8') as file:
         file.write(output_str)
     file.close()

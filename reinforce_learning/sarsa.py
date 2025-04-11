@@ -1,3 +1,4 @@
+import logging
 import os
 
 import numpy as np
@@ -21,6 +22,15 @@ from operation_modules.findAllSignatures import get_all_file_paths
 from string_generator.generated_strings.get_a_random_string_from_strings import get_random_string
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 from virus_scanner_module.clamScanner import clamScanner
+logging.basicConfig(
+    level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    filename=r"D:\毕业设计\example1\logs\sarsa_record.log",        # 输出到文件（不指定则默认输出到控制台）
+    filemode="a"               # 文件写入模式（'a' 追加，'w' 覆盖）
+)
+
+
 def do_action(action_name,episode,enable_log_):
     if action_name == "action_create_fake_signature":
         action_create_fake_signature(input_file_=episode,
@@ -93,7 +103,8 @@ class SARSA:
             action_name = self.actions_list[action]
             do_action(action_name=action_name,episode=episode,enable_log_=enable_log_)
             if action_name =="action_create_fake_signature":
-                count = 20
+                count = 5
+                use_signature = True
                 # 防止签名被破坏
             print(os.path.basename(episode) + " choose action:" + action_name)
             total_reward = 0
@@ -117,10 +128,10 @@ class SARSA:
                     done = True
                 else:
                     count += 1
-                    if count >= 20:
+                    if count >= 5:
                         reward = -100
                         if use_signature:
-                            reward = reward -20
+                            reward = reward -5
                         print("episode:" + os.path.basename(episode) +","+ "fail")
                         next_state = None
                         done = True
@@ -143,20 +154,21 @@ class SARSA:
                     do_action(action_name=action_name_1, episode=episode, enable_log_=enable_log_)
                     print(os.path.basename(episode) + " choose action:" + action_name_1)
                     if action_name_1 == "action_create_fake_signature":
-                        count = 20
+                        count = 5
+                        use_signature =True
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")
 
 if __name__ == "__main__":
-    n_states_ = 20  # 状态0-9（对应未成功次数）
+    n_states_ = 5  # 状态0-9（对应未成功次数）
     n_actions_ = 10  # 可用动作数量
     actions_list_ = get_random_actions(n_actions_)
     for i in actions_list_:
         print(i)
     agent = SARSA(actions_list=actions_list_,n_states=n_states_, n_actions=n_actions_)
     #train_sarsa(agent, episodes=1000)
-    agent.train(train_dataset_dir=r"D:\毕业设计\example1\sample",enable_log_=True)
+    agent.train(train_dataset_dir=r"D:\毕业设计\example1\sample",enable_log_=False)
     # 打印训练后的Q表
     print("\nTrained Q-table:")
     print(agent.q_table)
