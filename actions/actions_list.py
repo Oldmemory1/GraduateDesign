@@ -16,7 +16,8 @@ actions_list=[
     "action_modify_optional_header_1",
     "action_modify_timestamp_1",
     "action_remove_debug",
-    "action_rename_section_1"
+    "action_rename_section_1",
+    "action_add_random_resources"
 ]
 def get_random_actions(actions_num):
     return random.sample(actions_list, actions_num)

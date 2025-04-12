@@ -30,7 +30,7 @@ def action_modify_optional_header_1(input_file_,enable_log=False):
 
     with open(address1, "wb+") as f2:
         f2.write(bytez1)
-    f1.close()
+    f2.close()
     os.remove(input_file_)
     copy_file(source_address=address1, destination_address=input_file_)
     # os.remove(address1)

@@ -5,6 +5,7 @@ import numpy as np
 
 from actions.action_add_benign_data_overlay_1 import action_add_benign_data_overlay_1
 from actions.action_add_bytes_to_section_cave_1 import action_add_bytes_to_section_cave_1
+from actions.action_add_random_resources import action_add_random_resources
 from actions.action_add_section_benign_data_1 import action_add_section_benign_data_1
 from actions.action_break_optional_header_checksum_1 import action_break_optional_header_checksum_1
 from actions.action_create_fake_signature import action_create_fake_signature
@@ -68,6 +69,11 @@ def do_action(action_name,episode,enable_log_):
         action_remove_debug(input_file_=episode, enable_log=enable_log_)
     elif action_name == "action_rename_section_1":
         action_rename_section_1(input_file_=episode, enable_log=enable_log_)
+    elif action_name == "action_add_random_resources":
+        action_add_random_resources(
+            source_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\source_data",
+        destination_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data",
+        input_file=episode)
 
 class SARSA:
     def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.1,test_mode_=False):
@@ -172,11 +178,15 @@ if __name__ == "__main__":
     actions_list_ = get_random_actions(n_actions_)
     for i in actions_list_:
         print(i)
-    agent = SARSA(actions_list=actions_list_,n_states=n_states_, n_actions=n_actions_)
-    #train_sarsa(agent, episodes=1000)
-    agent.train(train_dataset_dir=r"D:\graduate_design\example1\sample",enable_log_=False)
-    # 打印训练后的Q表
-    print("\nTrained Q-table:")
-    print(agent.q_table)
+    num1 = input()
+    a = int(num1)
+    if a == 1:
+        agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
+        # train_sarsa(agent, episodes=1000)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\sample", enable_log_=False)
+        # 打印训练后的Q表
+        print("\nTrained Q-table:")
+        print(agent.q_table)
+
 
 
