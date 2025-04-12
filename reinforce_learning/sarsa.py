@@ -19,6 +19,7 @@ from actions.action_rename_random_section import action_rename_random_section
 from actions.action_rename_section_1 import action_rename_section_1
 from actions.action_upx_encryption import action_upx_encryption
 from actions.actions_list import get_random_actions
+from init.clear_directory import clear_directory
 from operation_modules.findAllSignatures import get_all_file_paths
 from string_generator.generated_strings.get_a_random_string_from_strings import get_random_string
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
@@ -99,12 +100,14 @@ class SARSA:
         self.q_table[state, action] += self.alpha * (target - current_q)
     def train(self,train_dataset_dir,enable_log_):
         episodes = get_all_file_paths(target_dir=train_dataset_dir)
+        print("episode count:"+str(len(episodes)))
+        evasion = 0
         for episode in episodes:
             use_signature = False
             state = 0  # 初始状态（未成功次数为0）
             count = 0
             done = False
-
+            reward = 0
             action = self.choose_action(state)
             action_name = self.actions_list[action]
             try:
@@ -112,7 +115,7 @@ class SARSA:
             except Exception as e:
                 print(e)
             if action_name =="action_create_fake_signature":
-                count = 5
+                count = 16
                 use_signature = True
                 # 防止签名被破坏
             print(os.path.basename(episode) + " choose action:" + action_name)
@@ -128,7 +131,8 @@ class SARSA:
                     valid = True
 
                 if valid:
-                    reward = 100
+                    evasion = evasion + 1
+                    reward = reward + 100
                     now_file_size = os.path.getsize(episode)
                     discount = np.log(now_file_size / origin_file_size)
                     reward = reward / ((1 / 3) * discount + 1)
@@ -137,15 +141,16 @@ class SARSA:
                     done = True
                 else:
                     count += 1
-                    if count >= 5:
-                        reward = -100
+                    if count >= 16:
+                        reward = 0
                         if use_signature:
-                            reward = reward -5
+                            reward = 0
                         print("episode:" + os.path.basename(episode) +","+ "fail")
                         next_state = None
                         done = True
                     else:
-                        reward = -1
+                        # 失败继续工作
+                        reward = reward + 0
                         next_state = count
                         done = False
 
@@ -166,14 +171,15 @@ class SARSA:
                         print(e)
                     print(os.path.basename(episode) + " choose action:" + action_name_1)
                     if action_name_1 == "action_create_fake_signature":
-                        count = 5
+                        count = 16
                         use_signature =True
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")
+        print("evasion count:"+str(evasion))
 
 if __name__ == "__main__":
-    n_states_ = 5  # 状态0-9（对应未成功次数）
+    n_states_ = 16  # 状态0-9（对应未成功次数）
     n_actions_ = 10  # 可用动作数量
     actions_list_ = get_random_actions(n_actions_)
     for i in actions_list_:
@@ -187,6 +193,9 @@ if __name__ == "__main__":
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)
+        clear_directory(target_dir=r"D:\graduate_design\example1\logs")
+        clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp")
+        clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp")
 
 
 
