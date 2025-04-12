@@ -77,7 +77,7 @@ def do_action(action_name,episode,enable_log_):
         input_file=episode)
 
 class SARSA:
-    def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.1,test_mode_=False):
+    def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.2,test_mode_=False):
         self.actions_list = actions_list
         self.n_actions = n_actions
         self.alpha = alpha
@@ -169,6 +169,7 @@ class SARSA:
                         do_action(action_name=action_name_1, episode=episode, enable_log_=enable_log_)
                     except Exception as e:
                         print(e)
+
                     print(os.path.basename(episode) + " choose action:" + action_name_1)
                     if action_name_1 == "action_create_fake_signature":
                         count = 16
@@ -189,13 +190,16 @@ if __name__ == "__main__":
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
         # train_sarsa(agent, episodes=1000)
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\sample", enable_log_=False)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)
         clear_directory(target_dir=r"D:\graduate_design\example1\logs")
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp")
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp")
+
+
+
 
 
 

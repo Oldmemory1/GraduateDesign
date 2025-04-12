@@ -16,4 +16,7 @@ def sample_malicious_test(dir_):
             #os.remove(sample_file)
     print("evasion:" + str(evasion))
 if __name__ == '__main__':
-    sample_malicious_test(r"D:\毕业设计\malware\sample2\sample")
+    sample_malicious_test(r"D:\graduate_design\example1\virus_share_processor\result")
+
+    #sample_malicious_test(r"D:\graduate_design\example1\samples\sample2\sample")
+    #sample_malicious_test(r"D:\graduate_design\example1\samples\sample3\sample")
