@@ -5,3 +5,7 @@
 .ebitcse
 .fbitscf
 .gbitcsg
+.hbitcsh
+.ibitcsi
+.jbitcsj
+.kbitcsk

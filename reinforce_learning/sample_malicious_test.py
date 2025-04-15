@@ -14,9 +14,31 @@ def sample_malicious_test(dir_):
         if not result:
             evasion = evasion + 1
             #os.remove(sample_file)
-    print("evasion:" + str(evasion))
-if __name__ == '__main__':
-    sample_malicious_test(r"D:\graduate_design\example1\virus_share_processor\result")
+    return evasion
 
-    #sample_malicious_test(r"D:\graduate_design\example1\samples\sample2\sample")
-    #sample_malicious_test(r"D:\graduate_design\example1\samples\sample3\sample")
+if __name__ == '__main__':
+    #before_evasion1 = sample_malicious_test(r"D:\毕业设计\malware\sample1\sample")
+    #after_evasion1 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample1\sample")
+    #before_evasion2 = sample_malicious_test(r"D:\毕业设计\malware\sample2\sample")
+    #after_evasion2 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample2\sample")
+    #before_evasion3 = sample_malicious_test(r"D:\毕业设计\malware\sample3\sample")
+    #after_evasion3 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample3\sample")
+    #before_evasion4 = sample_malicious_test(r"D:\毕业设计\malware\sample4\sample")
+    #after_evasion4 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample4\sample")
+    #print("before sample1 amount:"+str(len(get_all_file_paths(r"D:\毕业设计\malware\sample1\sample"))))
+    #print("after sample1 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample1\sample"))))
+    #print("before1:"+str(before_evasion1))
+    #print("after1:"+str(after_evasion1))
+    #print("before sample2 amount:" + str(len(get_all_file_paths(r"D:\毕业设计\malware\sample2\sample"))))
+    #print("after sample2 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample2\sample"))))
+    #print("before2:" + str(before_evasion2))
+    #print("after2:" + str(after_evasion2))
+    #print("before sample3 amount:" + str(len(get_all_file_paths(r"D:\毕业设计\malware\sample3\sample"))))
+    #print("after sample3 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample3\sample"))))
+
+    before_evasion5 = sample_malicious_test(r"D:\毕业设计\malware\sample5\sample")
+    after_evasion5 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample5\sample")
+    print("before5:" + str(before_evasion5))
+    print("after5:" + str(after_evasion5))
+    print("before sample5 amount:" + str(len(get_all_file_paths(r"D:\毕业设计\malware\sample5\sample"))))
+    print("after sample5 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample5\sample"))))

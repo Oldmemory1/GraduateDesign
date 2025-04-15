@@ -118,6 +118,8 @@ class SARSA:
                 count = 16
                 use_signature = True
                 # 防止签名被破坏
+            elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name =="add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
+                reward = 1
             print(os.path.basename(episode) + " choose action:" + action_name)
             total_reward = 0
             origin_file_size = os.path.getsize(episode)
@@ -174,6 +176,8 @@ class SARSA:
                     if action_name_1 == "action_create_fake_signature":
                         count = 16
                         use_signature =True
+                    elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name == "add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
+                        reward = 1
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")
@@ -189,14 +193,15 @@ if __name__ == "__main__":
     a = int(num1)
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
-        # train_sarsa(agent, episodes=1000)
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample", enable_log_=False)
+
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample5\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)
-        clear_directory(target_dir=r"D:\graduate_design\example1\logs")
+
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp")
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp")
+
 
 
 
