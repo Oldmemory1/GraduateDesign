@@ -194,7 +194,7 @@ if __name__ == "__main__":
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
 
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample5\sample", enable_log_=False)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample6\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)
