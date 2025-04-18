@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_15 9:55">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/resource_operations_remaster/ResourceHacker.ini" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/resource_operations_remaster/ResourceHacker.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reinforce_learning/sarsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforce_learning/sarsa.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_17 15:07">
+      <change beforePath="$PROJECT_DIR$/中期报告/论文部分模块.docx" beforeDir="false" afterPath="$PROJECT_DIR$/中期报告/论文部分模块.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,14 +301,7 @@
       <workItem from="1744678443941" duration="5764000" />
       <workItem from="1744698102593" duration="2477000" />
       <workItem from="1744775997339" duration="783000" />
-    </task>
-    <task id="LOCAL-00009" summary="2025_04_08 14:30">
-      <option name="closed" value="true" />
-      <created>1744093844415</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1744093844415</updated>
+      <workItem from="1744873461072" duration="838000" />
     </task>
     <task id="LOCAL-00010" summary="2025_04_08 15:39">
       <option name="closed" value="true" />
@@ -696,7 +687,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744682145001</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="2025_04_17 15:07">
+      <option name="closed" value="true" />
+      <created>1744873646136</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1744873646136</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +713,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py" />
@@ -739,7 +737,8 @@
     <MESSAGE value="2025_04_12 20:04" />
     <MESSAGE value="2025_04_15 9:35" />
     <MESSAGE value="2025_04_15 9:55" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_15 9:55" />
+    <MESSAGE value="2025_04_17 15:07" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_17 15:07" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
