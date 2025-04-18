@@ -1,10 +1,10 @@
 import pyclamd
 def clamScanner(file_path):
     try:
-        # 连接到ClamAV的TCP服务（默认端口3310）
+        # connect to the service
         cd = pyclamd.ClamdNetworkSocket(host='127.0.0.1', port=3310)
 
-        # 检查连接是否存活
+        # connection is alive?
         if not cd.ping():
             raise ConnectionError("Service is not alive")
 
@@ -12,11 +12,11 @@ def clamScanner(file_path):
         scan_result = cd.scan_file(file_path)
 
         if scan_result is None:
-            #print("[safe]")
+            #safe
             return False
         else:
             virus_name = scan_result[file_path][1]
-            #print(f"[malicious type]:{virus_name}")
+            #malicious
             return True
 
     except pyclamd.ConnectionError:
