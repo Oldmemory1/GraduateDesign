@@ -119,7 +119,8 @@ class SARSA:
                 use_signature = True
                 # 防止签名被破坏
             elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name =="add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
-                reward = 1
+                pass
+                #reward = 1
             print(os.path.basename(episode) + " choose action:" + action_name)
             total_reward = 0
             origin_file_size = os.path.getsize(episode)
@@ -177,7 +178,8 @@ class SARSA:
                         count = 16
                         use_signature =True
                     elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name == "add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
-                        reward = 1
+                        #reward = 1
+                        pass
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_18 9:12">
-      <change afterPath="$PROJECT_DIR$/reinforce_learning/sample_swift.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_18 16:19">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reinforce_learning/sample_malicious_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforce_learning/sample_malicious_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virus_scanner_module/clamScanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus_scanner_module/clamScanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reinforce_learning/sarsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforce_learning/sarsa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/中期报告/论文部分模块.docx" beforeDir="false" afterPath="$PROJECT_DIR$/中期报告/论文部分模块.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,15 +305,7 @@
       <workItem from="1744775997339" duration="783000" />
       <workItem from="1744873461072" duration="838000" />
       <workItem from="1744938714991" duration="48000" />
-      <workItem from="1744956128233" duration="4755000" />
-    </task>
-    <task id="LOCAL-00011" summary="2025_04_08 15:54">
-      <option name="closed" value="true" />
-      <created>1744098861939</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1744098861939</updated>
+      <workItem from="1744956128233" duration="14751000" />
     </task>
     <task id="LOCAL-00012" summary="2025_04_08 16:01">
       <option name="closed" value="true" />
@@ -701,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744938760070</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="2025_04_18 16:19">
+      <option name="closed" value="true" />
+      <created>1744964400809</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1744964400809</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 19:11 add action_remove_debug.py&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 19:16 add action_rename_section_1&#10;modify actions_list.py" />
@@ -744,7 +741,8 @@
     <MESSAGE value="2025_04_15 9:55" />
     <MESSAGE value="2025_04_17 15:07" />
     <MESSAGE value="2025_04_18 9:12" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_18 9:12" />
+    <MESSAGE value="2025_04_18 16:19" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_18 16:19" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
@@ -764,7 +762,7 @@
     <SUITE FILE_PATH="coverage/example1$random_choose_actions.coverage" NAME="random_choose_actions 覆盖结果" MODIFIED="1744198277929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744443725046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$dump_temp.coverage" NAME="dump_temp 覆盖结果" MODIFIED="1744698155964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
+    <SUITE FILE_PATH="coverage/example1$dump_temp.coverage" NAME="dump_temp 覆盖结果" MODIFIED="1744965228505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster/example_debug" />
     <SUITE FILE_PATH="coverage/example1$360sd_scanner.coverage" NAME="360sd_scanner 覆盖结果" MODIFIED="1744349949409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$add_resources.coverage" NAME="add_resources 覆盖结果" MODIFIED="1744371774435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample4.coverage" NAME="plot_draw_sample4 覆盖结果" MODIFIED="1744681932263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
