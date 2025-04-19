@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_19 10:04">
-      <change beforePath="$PROJECT_DIR$/中期报告/论文部分模块.docx" beforeDir="false" afterPath="$PROJECT_DIR$/中期报告/论文部分模块.docx" afterDir="false" />
-    </list>
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_19 13:40" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,15 +302,7 @@
       <workItem from="1744873461072" duration="838000" />
       <workItem from="1744938714991" duration="48000" />
       <workItem from="1744956128233" duration="15463000" />
-      <workItem from="1745028213939" duration="937000" />
-    </task>
-    <task id="LOCAL-00014" summary="2025_04_08 16:54">
-      <option name="closed" value="true" />
-      <created>1744102479849</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1744102479849</updated>
+      <workItem from="1745028213939" duration="1547000" />
     </task>
     <task id="LOCAL-00015" summary="2025_04_08 18:22">
       <option name="closed" value="true" />
@@ -698,7 +688,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745028282960</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="2025_04_19 13:40">
+      <option name="closed" value="true" />
+      <created>1745041249840</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1745041249840</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +714,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_09 19:16 add action_rename_section_1&#10;modify actions_list.py" />
     <MESSAGE value="2025_04_09 19:34" />
     <MESSAGE value="2025_04_09 20:07" />
     <MESSAGE value="2025_04_10 8:44" />
@@ -741,7 +738,8 @@
     <MESSAGE value="2025_04_18 16:19" />
     <MESSAGE value="2025_04_18 21:45" />
     <MESSAGE value="2025_04_19 10:04" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_19 10:04" />
+    <MESSAGE value="2025_04_19 13:40" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_19 13:40" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
