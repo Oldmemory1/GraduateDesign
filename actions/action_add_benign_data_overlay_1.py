@@ -25,15 +25,11 @@ def action_add_benign_data_overlay_1(input_file_,appended_data_,enable_log = Fal
         m1 = hashlib.sha256()
         m1.update(bytez)
         logging.info("action_add_benign_data_overlay_1 before file:" + m1.hexdigest())
-
-
     bytez1 = append_benign_data_overlay(bytez, appended_data=appended_data_)
-
     file_name = os.path.basename(input_file_)
     temp_name = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     temp_name = temp_name + "-action_add_benign_data_overlay_1-" + file_name
     address1 = r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp" + "\\" + temp_name
-
     with open(address1, "wb+") as f2:
         f2.write(bytez1)
     f2.close()
