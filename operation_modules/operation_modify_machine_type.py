@@ -22,7 +22,7 @@ def modify_pe_machine(input_file, output_file, new_machine):
 
 # 示例：将文件改为 x64 架构
 modify_pe_machine(
-    input_file="../HelloWorld1.exe",
+    input_file="HelloWorld1.exe",
     output_file="output.exe",
-    new_machine=0x8664  # x64 的 Machine 类型
+    new_machine=0x14c  # x64 的 Machine 类型
 )
