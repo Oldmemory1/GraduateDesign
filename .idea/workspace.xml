@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_21 10:08">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_04_23 16:46 论文初稿完成">
+      <change afterPath="$PROJECT_DIR$/actions/action_add_imports.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_depend_on_benign.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/operation_modify_machine_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_modify_machine_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中期报告/论文模板.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/中期报告/论文部分模块.docx" beforeDir="false" afterPath="$PROJECT_DIR$/中期报告/论文部分模块.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/action_add_section_benign_data_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action_add_section_benign_data_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/action_insert_useless_data_to_end.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action_insert_useless_data_to_end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/actions_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/actions_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_bytes_to_section_cave_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_imports_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/process_remaster/operation_add_section_benign_data_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation_modules/resource_operations_remaster/ResourceHacker.ini" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/resource_operations_remaster/ResourceHacker.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reinforce_learning/sample_malicious_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforce_learning/sample_malicious_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reinforce_learning/sarsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/reinforce_learning/sarsa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virus_scanner_module/clamScanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus_scanner_module/clamScanner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,111 +81,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python 测试.Python 测试 (operation_test.py 内).executor": "Run",
-    "Python 测试.Python 测试 (test_module.py 内).executor": "Run",
-    "Python 测试.Python 测试 (test_operations.py 内).executor": "Run",
-    "Python.360sd_scanner.executor": "Run",
-    "Python.FindAllSignatures.executor": "Run",
-    "Python.action_add_benign_data_overlay_1.executor": "Run",
-    "Python.action_add_bytes_to_section_cave_1.executor": "Run",
-    "Python.action_add_random_resources.executor": "Run",
-    "Python.action_add_section_benign_data_1.executor": "Run",
-    "Python.action_break_optional_header_checksum_1.executor": "Run",
-    "Python.action_create_fake_signature.executor": "Run",
-    "Python.action_insert_useless_data_to_end.executor": "Run",
-    "Python.action_modify_checksum.executor": "Run",
-    "Python.action_modify_optional_header_1.executor": "Run",
-    "Python.action_modify_timestamp.executor": "Run",
-    "Python.action_modify_timestamp_1.executor": "Run",
-    "Python.action_remove_debug.executor": "Run",
-    "Python.action_rename_random_section.executor": "Run",
-    "Python.action_rename_section_1.executor": "Run",
-    "Python.actions_list.executor": "Run",
-    "Python.add_random_resources.executor": "Run",
-    "Python.add_resources.executor": "Run",
-    "Python.benign_string_generator.executor": "Run",
-    "Python.buffer.executor": "Run",
-    "Python.clamScanner.executor": "Run",
-    "Python.commons.executor": "Run",
-    "Python.copy_file.executor": "Run",
-    "Python.create_ico.executor": "Run",
-    "Python.dump_logs.executor": "Run",
-    "Python.dump_temp.executor": "Run",
-    "Python.findAllSignatures.executor": "Run",
-    "Python.find_latest_log.executor": "Run",
-    "Python.fun_for_test1.executor": "Run",
-    "Python.getCheckSum.executor": "Run",
-    "Python.get_360_sd_scanner_result.executor": "Run",
-    "Python.get_a_random_string_from_strings.executor": "Run",
-    "Python.get_all_sections_name.executor": "Run",
-    "Python.get_data_section.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.maliciousCodeAvoid1.executor": "Run",
-    "Python.modifier.executor": "Run",
-    "Python.operation_create_fake_signature.executor": "Run",
-    "Python.operation_insert_useless_data_to_end.executor": "Run",
-    "Python.operation_modify_checksum.executor": "Run",
-    "Python.operation_modify_language.executor": "Run",
-    "Python.operation_modify_machine_type.executor": "Run",
-    "Python.operation_modify_timeStamp.executor": "Run",
-    "Python.operation_rename_random_section.executor": "Run",
-    "Python.operation_test.executor": "Run",
-    "Python.operation_upx_encryption.executor": "Run",
-    "Python.operations_fun.executor": "Run",
-    "Python.plot_draw.executor": "Run",
-    "Python.plot_draw_sample1.executor": "Run",
-    "Python.plot_draw_sample2.executor": "Run",
-    "Python.plot_draw_sample3.executor": "Run",
-    "Python.plot_draw_sample4.executor": "Run",
-    "Python.plot_draw_sample5.executor": "Run",
-    "Python.random.executor": "Run",
-    "Python.random_choose_actions.executor": "Run",
-    "Python.reset_test_enviroment.executor": "Run",
-    "Python.sample_malicious_test.executor": "Run",
-    "Python.sarsa.executor": "Run",
-    "Python.set_version_info.executor": "Run",
-    "Python.string2.executor": "Run",
-    "Python.strings_length_1024.executor": "Run",
-    "Python.strings_length_128.executor": "Run",
-    "Python.strings_length_2048.executor": "Run",
-    "Python.strings_length_256.executor": "Run",
-    "Python.strings_length_512.executor": "Run",
-    "Python.strings_length_64.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test1.executor": "Run",
-    "Python.testCode1.executor": "Run",
-    "Python.testTimeStamp.executor": "Run",
-    "Python.timestamp_generator.executor": "Run",
-    "Python.virusTotalScanner.executor": "Run",
-    "Python.virus_share_processor.executor": "Run",
-    "Python.virus_total_scan_result.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/graduate_design/example1/operation_modules/process_remaster",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python 测试.Python 测试 (operation_test.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_module.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_operations.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python.360sd_scanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FindAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_benign_data_overlay_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_bytes_to_section_cave_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_random_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_section_benign_data_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_break_optional_header_checksum_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_create_fake_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_checksum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_optional_header_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_timestamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_timestamp_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_remove_debug.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_rename_random_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_rename_section_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.actions_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_random_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benign_string_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.buffer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clamScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.copy_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_ico.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dump_logs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dump_temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.findAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.find_latest_log.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fun_for_test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getCheckSum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_360_sd_scanner_result.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_a_random_string_from_strings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_all_sections_name.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maliciousCodeAvoid1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.modifier.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_create_fake_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_checksum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_language.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_machine_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_timeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_rename_random_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_upx_encryption.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operations_fun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random_choose_actions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reset_test_enviroment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sample_malicious_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sarsa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.set_version_info.executor&quot;: &quot;Run&quot;,
+    &quot;Python.string2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_1024.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_128.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_2048.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_256.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_512.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_64.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testCode1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testTimeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timestamp_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virusTotalScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virus_share_processor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virus_total_scan_result.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/graduate_design/example1/samples&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\graduate_design\example1\operation_modules\process_remaster" />
       <recent name="D:\graduate_design\example1\samples" />
-      <recent name="D:\graduate_design\example1\amber" />
       <recent name="D:\graduate_design\example1\virus_share_processor" />
-      <recent name="D:\graduate_design\example1" />
+      <recent name="D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample" />
+      <recent name="D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data" />
+      <recent name="D:\graduate_design\example1\operation_modules\process_remaster" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\graduate_design\example1\operation_modules" />
@@ -311,14 +325,21 @@
       <workItem from="1745061767407" duration="51000" />
       <workItem from="1745201309648" duration="46000" />
       <workItem from="1745370800550" duration="787000" />
-    </task>
-    <task id="LOCAL-00019" summary="2025_04_08 18:56">
-      <option name="closed" value="true" />
-      <created>1744109782897</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1744109782897</updated>
+      <workItem from="1745397954937" duration="2047000" />
+      <workItem from="1745455226101" duration="2621000" />
+      <workItem from="1745504368714" duration="656000" />
+      <workItem from="1745646562439" duration="1850000" />
+      <workItem from="1745648439699" duration="997000" />
+      <workItem from="1745649806670" duration="4492000" />
+      <workItem from="1745710986482" duration="1027000" />
+      <workItem from="1745712836195" duration="325000" />
+      <workItem from="1745713309458" duration="5136000" />
+      <workItem from="1745718660433" duration="3252000" />
+      <workItem from="1745722127231" duration="2665000" />
+      <workItem from="1745727036046" duration="2577000" />
+      <workItem from="1745738103007" duration="11633000" />
+      <workItem from="1745750760081" duration="1819000" />
+      <workItem from="1745799704244" duration="1384000" />
     </task>
     <task id="LOCAL-00020" summary="2025_04_08 19:06">
       <option name="closed" value="true" />
@@ -704,7 +725,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745201340404</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="2025_04_23 16:46 论文初稿完成">
+      <option name="closed" value="true" />
+      <created>1745397990749</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1745397990749</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_10 9:07 delete useless data of sarsa.py" />
     <MESSAGE value="2025_04_10 9:13 modify operation_modify_timeStamp.py" />
     <MESSAGE value="2025_04_10 11：57" />
     <MESSAGE value="2025_04_11 09:34" />
@@ -747,35 +775,36 @@
     <MESSAGE value="2025_04_19 15:17 修复引用" />
     <MESSAGE value="2025_04_19 19:23 修复引用" />
     <MESSAGE value="2025_04_21 10:08" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_04_21 10:08" />
+    <MESSAGE value="2025_04_23 16:46 论文初稿完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_04_23 16:46 论文初稿完成" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$action_add_bytes_to_section_cave_1.coverage" NAME="action_add_bytes_to_section_cave_1 覆盖结果" MODIFIED="1744186945637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_insert_useless_data_to_end.coverage" NAME="action_insert_useless_data_to_end 覆盖结果" MODIFIED="1744174672152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_benign_data_overlay_1.coverage" NAME="action_add_benign_data_overlay_1 覆盖结果" MODIFIED="1744186979637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_timestamp.coverage" NAME="action_modify_timestamp 覆盖结果" MODIFIED="1744178918188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1744681916972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1745800039351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_remove_debug.coverage" NAME="action_remove_debug 覆盖结果" MODIFIED="1744196975905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_break_optional_header_checksum_1.coverage" NAME="action_break_optional_header_checksum_1 覆盖结果" MODIFIED="1744188225031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$find_latest_log.coverage" NAME="find_latest_log 覆盖结果" MODIFIED="1744343288211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$operations_fun.coverage" NAME="operations_fun 覆盖结果" MODIFIED="1744247571095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules" />
     <SUITE FILE_PATH="coverage/example1$set_version_info.coverage" NAME="set_version_info 覆盖结果" MODIFIED="1744361833511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
-    <SUITE FILE_PATH="coverage/example1$add_random_resources.coverage" NAME="add_random_resources 覆盖结果" MODIFIED="1744372826635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
+    <SUITE FILE_PATH="coverage/example1$add_random_resources.coverage" NAME="add_random_resources 覆盖结果" MODIFIED="1745648280922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$action_rename_random_section.coverage" NAME="action_rename_random_section 覆盖结果" MODIFIED="1744179182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_random_resources.coverage" NAME="action_add_random_resources 覆盖结果" MODIFIED="1744373221149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_modify_timestamp_1.coverage" NAME="action_modify_timestamp_1 覆盖结果" MODIFIED="1744196723148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$random_choose_actions.coverage" NAME="random_choose_actions 覆盖结果" MODIFIED="1744198277929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
-    <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1744443725046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$dump_temp.coverage" NAME="dump_temp 覆盖结果" MODIFIED="1744965228505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster/example_debug" />
+    <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1745722208467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$360sd_scanner.coverage" NAME="360sd_scanner 覆盖结果" MODIFIED="1744349949409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
-    <SUITE FILE_PATH="coverage/example1$add_resources.coverage" NAME="add_resources 覆盖结果" MODIFIED="1744371774435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
-    <SUITE FILE_PATH="coverage/example1$plot_draw_sample4.coverage" NAME="plot_draw_sample4 覆盖结果" MODIFIED="1744681932263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
-    <SUITE FILE_PATH="coverage/example1$plot_draw_sample1.coverage" NAME="plot_draw_sample1 覆盖结果" MODIFIED="1744681882163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$add_resources.coverage" NAME="add_resources 覆盖结果" MODIFIED="1745648221358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
+    <SUITE FILE_PATH="coverage/example1$plot_draw_sample4.coverage" NAME="plot_draw_sample4 覆盖结果" MODIFIED="1745800124998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$operation_modify_machine_type.coverage" NAME="operation_modify_machine_type 覆盖结果" MODIFIED="1745370968799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules" />
-    <SUITE FILE_PATH="coverage/example1$virus_share_processor.coverage" NAME="virus_share_processor 覆盖结果" MODIFIED="1744457036823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_share_processor" />
+    <SUITE FILE_PATH="coverage/example1$plot_draw_sample1.coverage" NAME="plot_draw_sample1 覆盖结果" MODIFIED="1745799825411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$virus_share_processor.coverage" NAME="virus_share_processor 覆盖结果" MODIFIED="1745649007438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_share_processor" />
     <SUITE FILE_PATH="coverage/example1$action_add_section_benign_data_1.coverage" NAME="action_add_section_benign_data_1 覆盖结果" MODIFIED="1744187375632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$clamScanner.coverage" NAME="clamScanner 覆盖结果" MODIFIED="1744244574697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
+    <SUITE FILE_PATH="coverage/example1$clamScanner.coverage" NAME="clamScanner 覆盖结果" MODIFIED="1745713876751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$dump_logs.coverage" NAME="dump_logs 覆盖结果" MODIFIED="1744377167754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/init" />
     <SUITE FILE_PATH="coverage/example1$plot_draw.coverage" NAME="plot_draw 覆盖结果" MODIFIED="1744614986114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/example1$actions_list.coverage" NAME="actions_list 覆盖结果" MODIFIED="1744198428159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
@@ -783,13 +812,13 @@
     <SUITE FILE_PATH="coverage/example1$action_modify_optional_header_1.coverage" NAME="action_modify_optional_header_1 覆盖结果" MODIFIED="1744188701806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_upx_encryption.coverage" NAME="action_upx_encryption 覆盖结果" MODIFIED="1744179461382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1744632847289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
-    <SUITE FILE_PATH="coverage/example1$sarsa.coverage" NAME="sarsa 覆盖结果" MODIFIED="1744696941508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
-    <SUITE FILE_PATH="coverage/example1$sample_malicious_test.coverage" NAME="sample_malicious_test 覆盖结果" MODIFIED="1744958688083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
+    <SUITE FILE_PATH="coverage/example1$sarsa.coverage" NAME="sarsa 覆盖结果" MODIFIED="1745738141140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
+    <SUITE FILE_PATH="coverage/example1$sample_malicious_test.coverage" NAME="sample_malicious_test 覆盖结果" MODIFIED="1745749944719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
     <SUITE FILE_PATH="coverage/example1$action_rename_section_1.coverage" NAME="action_rename_section_1 覆盖结果" MODIFIED="1744197289552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$plot_draw_sample2.coverage" NAME="plot_draw_sample2 覆盖结果" MODIFIED="1744681900806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$plot_draw_sample2.coverage" NAME="plot_draw_sample2 覆盖结果" MODIFIED="1745799922982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_modify_checksum.coverage" NAME="action_modify_checksum 覆盖结果" MODIFIED="1744174884972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$plot_draw_sample5.coverage" NAME="plot_draw_sample5 覆盖结果" MODIFIED="1744682015175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$virus_total_scan_result.coverage" NAME="virus_total_scan_result 覆盖结果" MODIFIED="1744682021508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$plot_draw_sample5.coverage" NAME="plot_draw_sample5 覆盖结果" MODIFIED="1745800208735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$get_360_sd_scanner_result.coverage" NAME="get_360_sd_scanner_result 覆盖结果" MODIFIED="1744343464813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
   </component>
 </project>

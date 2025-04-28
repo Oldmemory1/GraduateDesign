@@ -5,6 +5,7 @@ import numpy as np
 
 from actions.action_add_benign_data_overlay_1 import action_add_benign_data_overlay_1
 from actions.action_add_bytes_to_section_cave_1 import action_add_bytes_to_section_cave_1
+from actions.action_add_imports import action_add_imports
 from actions.action_add_random_resources import action_add_random_resources
 from actions.action_add_section_benign_data_1 import action_add_section_benign_data_1
 from actions.action_break_optional_header_checksum_1 import action_break_optional_header_checksum_1
@@ -52,13 +53,13 @@ def do_action(action_name,episode,enable_log_):
     elif action_name == "action_add_benign_data_overlay_1":
         action_add_benign_data_overlay_1(input_file_=episode,
                                          appended_data_=get_random_string(
-                                             string_list=strings_4096bytes)*256,
+                                             string_list=strings_4096bytes),
                                          enable_log=enable_log_)
     elif action_name == "action_add_bytes_to_section_cave_1":
         action_add_bytes_to_section_cave_1(input_file_=episode, string_list_=strings_4096bytes,
                                            enable_log=enable_log_)
     elif action_name == "action_add_section_benign_data_1":
-        action_add_section_benign_data_1(input_file_=episode, string_list_=strings_4096bytes,
+        action_add_section_benign_data_1(input_file_=episode, benign_file_dir_=r"D:\graduate_design\example1\benign_software",
                                          enable_log=enable_log_)
     elif action_name == "action_break_optional_header_checksum_1":
         action_break_optional_header_checksum_1(input_file_=episode, enable_log=enable_log_)
@@ -75,6 +76,8 @@ def do_action(action_name,episode,enable_log_):
             source_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\source_data",
         destination_folder=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\destination_data",
         input_file=episode)
+    elif action_name == "action_add_imports":
+        action_add_imports(input_file_=episode, enable_log=enable_log_)
 
 class SARSA:
     def __init__(self,actions_list,n_states, n_actions, alpha=0.1, gamma=0.9, epsilon=0.2,test_mode_=False):
@@ -114,13 +117,14 @@ class SARSA:
                 do_action(action_name=action_name, episode=episode, enable_log_=enable_log_)
             except Exception as e:
                 print(e)
-            if action_name =="action_create_fake_signature":
+            """
+                        if action_name =="action_create_fake_signature":
                 count = 16
                 use_signature = True
                 # 防止签名被破坏
-            elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name =="add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
-                pass
-                #reward = 1
+            """
+            if action_name =="add_section_benign_data_1":
+                reward = 1
             print(os.path.basename(episode) + " choose action:" + action_name)
             total_reward = 0
             origin_file_size = os.path.getsize(episode)
@@ -135,7 +139,7 @@ class SARSA:
 
                 if valid:
                     evasion = evasion + 1
-                    reward = reward + 100
+                    reward = 100
                     now_file_size = os.path.getsize(episode)
                     discount = np.log(now_file_size / origin_file_size)
                     reward = reward / ((1 / 3) * discount + 1)
@@ -174,12 +178,14 @@ class SARSA:
                         print(e)
 
                     print(os.path.basename(episode) + " choose action:" + action_name_1)
+                    """
                     if action_name_1 == "action_create_fake_signature":
                         count = 16
                         use_signature =True
-                    elif action_name == "action_add_benign_data_overlay_1" or action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_random_resources" or action_name == "add_section_benign_data_1" or action_name == "insert_useless_data_to_end":
-                        #reward = 1
-                        pass
+                    """
+
+                    if action_name_1 == "add_section_benign_data_1":
+                        reward = 1
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")
@@ -187,7 +193,7 @@ class SARSA:
 
 if __name__ == "__main__":
     n_states_ = 16  # 状态0-9（对应未成功次数）
-    n_actions_ = 10  # 可用动作数量
+    n_actions_ = 16  # 可用动作数量
     actions_list_ = get_random_actions(n_actions_)
     for i in actions_list_:
         print(i)
@@ -196,7 +202,7 @@ if __name__ == "__main__":
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
 
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\sample6\sample", enable_log_=False)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\processed\sample5\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)

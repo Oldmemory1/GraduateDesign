@@ -11,9 +11,8 @@ from string_generator.generated_strings.get_a_random_string_from_strings import 
 
 # completed 已测试完成
 def add_section_benign_data(bytez,string_list):
-    begin = random.randint(0, int(len(str1) / 2))
-    end = random.randint(int(len(str1) / 2), len(str1))
-    s1 = get_random_string(string_list=string_list)*256
+
+    s1 = get_random_string(string_list=string_list)
     benign_binary_section_content = bytearray(s1, encoding="utf-8")
 
     binary = lief.PE.parse(list(bytez))

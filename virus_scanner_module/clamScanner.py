@@ -2,7 +2,7 @@ import pyclamd
 def clamScanner(file_path):
     try:
         # connect to the service
-        cd = pyclamd.ClamdNetworkSocket(host='127.0.0.1', port=3310)
+        cd = pyclamd.ClamdNetworkSocket(host='127.0.0.1', port=3435)
 
         # connection is alive?
         if not cd.ping():
@@ -16,6 +16,7 @@ def clamScanner(file_path):
             return False
         else:
             virus_name = scan_result[file_path][1]
+            #print(virus_name)
             #malicious
             return True
 

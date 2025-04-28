@@ -7,14 +7,14 @@ from virus_scanner_module.clamScanner import clamScanner
 def sample_malicious_test(dir_):
     samples_file_name= get_all_file_paths(target_dir=dir_)
     print("file amount:" + str(len(samples_file_name)))
-    evasion = 0
+    detect = 0
     for sample_file in samples_file_name:
         result = clamScanner(sample_file)
-        #print(os.path.basename(sample_file)+","+str(result))
-        if not result:
-            evasion = evasion + 1
+        print(os.path.basename(sample_file)+","+str(result))
+        if result:
+            detect = detect + 1
             #os.remove(sample_file)
-    return evasion
+    return detect
 
 if __name__ == '__main__':
     #before_evasion1 = sample_malicious_test(r"D:\毕业设计\malware\sample1\sample")
@@ -37,8 +37,8 @@ if __name__ == '__main__':
     #print("after sample3 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample3\sample"))))
 
     #before_evasion4 = sample_malicious_test(r"D:\毕业设计\malware\sample4\sample")
-    after_evasion4 = sample_malicious_test(r"D:\graduate_design\example1\samples\sample4\sample")
+    after_evasion1 = sample_malicious_test(r"D:\graduate_design\example1\samples\processed\sample2\sample")
     #print("before4:" + str(before_evasion4))
-    print("after4:" + str(after_evasion4))
+    print("detect amount:" + str(after_evasion1))
     #print("before sample4 amount:" + str(len(get_all_file_paths(r"D:\毕业设计\malware\sample4\sample"))))
-    print("after sample4 amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\sample4\sample"))))
+    print("sample amount:"+str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\processed\sample2\sample"))))

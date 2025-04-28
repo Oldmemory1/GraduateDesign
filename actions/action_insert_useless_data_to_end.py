@@ -22,7 +22,7 @@ def action_insert_useless_data_to_end(input_file_,string_list_,enable_log=False)
         m1.update(bytez)
         logging.info("action_insert_useless_data_to_end before file:" + m1.hexdigest())
 
-    append_to_pe(input_file=input_file_,append_data=get_random_string(string_list=string_list_)*256)
+    append_to_pe(input_file=input_file_,append_data=get_random_string(string_list=string_list_))
 
     if enable_log:
         with open(input_file_, "rb") as f2:

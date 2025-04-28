@@ -70,7 +70,7 @@ def add_bytes_to_section_cave(bytez,string_list):
 
         if caves:
             random_selected_cave = random.choice(caves)
-            s1=get_random_string(string_list=string_list)*256
+            s1=get_random_string(string_list=string_list)
             benign_binary_section_content = bytearray(s1, encoding="utf-8")
             add_bytes = bytearray(benign_binary_section_content)[:random_selected_cave[-1]]
 

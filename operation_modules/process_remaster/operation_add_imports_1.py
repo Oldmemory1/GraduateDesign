@@ -8,7 +8,7 @@ from operation_modules.process_remaster.commons import COMMON_IMPORTS
 
 # completed 已测试完成
 def add_imports(bytez):
-    warnings.warn("temporarily deprecated because it may break the pe file!", DeprecationWarning)
+    #warnings.warn("temporarily deprecated because it may break the pe file!", DeprecationWarning)
     binary = lief.PE.parse(list(bytez))
 
     # draw a library at random
