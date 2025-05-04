@@ -52,11 +52,10 @@ def do_action(action_name,episode,enable_log_):
         action_upx_encryption(input_file_=episode, enable_log=enable_log_)
     elif action_name == "action_add_benign_data_overlay_1":
         action_add_benign_data_overlay_1(input_file_=episode,
-                                         appended_data_=get_random_string(
-                                             string_list=strings_4096bytes),
+                                         benign_files_dir_=r"D:\graduate_design\example1\benign_software",
                                          enable_log=enable_log_)
     elif action_name == "action_add_bytes_to_section_cave_1":
-        action_add_bytes_to_section_cave_1(input_file_=episode, string_list_=strings_4096bytes,
+        action_add_bytes_to_section_cave_1(input_file_=episode, benign_files_dir_=r"D:\graduate_design\example1\benign_software",
                                            enable_log=enable_log_)
     elif action_name == "action_add_section_benign_data_1":
         action_add_section_benign_data_1(input_file_=episode, benign_file_dir_=r"D:\graduate_design\example1\benign_software",
@@ -113,6 +112,7 @@ class SARSA:
             reward = 0
             action = self.choose_action(state)
             action_name = self.actions_list[action]
+            origin_file_size = os.path.getsize(episode)
             try:
                 do_action(action_name=action_name, episode=episode, enable_log_=enable_log_)
             except Exception as e:
@@ -123,11 +123,11 @@ class SARSA:
                 use_signature = True
                 # 防止签名被破坏
             """
-            if action_name =="add_section_benign_data_1":
-                reward = 1
+            if action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_section_benign_data_1" or action_name=="action_add_benign_data_overlay_1":
+                reward = 5
             print(os.path.basename(episode) + " choose action:" + action_name)
             total_reward = 0
-            origin_file_size = os.path.getsize(episode)
+
             while not done:
                 valid = True
                 # 执行动作并获取结果
@@ -139,7 +139,7 @@ class SARSA:
 
                 if valid:
                     evasion = evasion + 1
-                    reward = 100
+                    reward = reward+300
                     now_file_size = os.path.getsize(episode)
                     discount = np.log(now_file_size / origin_file_size)
                     reward = reward / ((1 / 3) * discount + 1)
@@ -149,15 +149,11 @@ class SARSA:
                 else:
                     count += 1
                     if count >= 16:
-                        reward = 0
-                        if use_signature:
-                            reward = 0
                         print("episode:" + os.path.basename(episode) +","+ "fail")
                         next_state = None
                         done = True
                     else:
                         # 失败继续工作
-                        reward = reward + 0
                         next_state = count
                         done = False
 
@@ -184,8 +180,8 @@ class SARSA:
                         use_signature =True
                     """
 
-                    if action_name_1 == "add_section_benign_data_1":
-                        reward = 1
+                    if action_name_1 == "action_add_bytes_to_section_cave_1"  or action_name_1 == "action_add_section_benign_data_1" or action_name_1=="action_add_benign_data_overlay_1":
+                        reward = 5
                         # 防止签名被破坏
 
             print(f"Total Reward: {total_reward}")
@@ -202,7 +198,7 @@ if __name__ == "__main__":
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
 
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\processed\sample5\sample", enable_log_=False)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\processed\sample1\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)

@@ -3,8 +3,8 @@ import numpy as np
 
 # 数据准备
 software = ['ClamAV','360杀毒-开启QVM2杀毒引擎', '360杀毒-不开启QVM2杀毒引擎', '火绒']
-before = [158, 669,668, 670]
-after = [17, 511,28, 608]
+before = [211, 669,668, 670]
+after = [139, 511,28, 608]
 
 # 设置柱状图参数
 x = np.arange(len(software))  # 横坐标位置
