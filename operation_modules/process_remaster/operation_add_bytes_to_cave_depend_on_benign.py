@@ -37,7 +37,7 @@ def add_bytes_to_cave_depend_on_benign(input_bytez, benign_files_dir):
         random_selected_cave = random.choice(caves)
         benign_files = get_all_file_paths(benign_files_dir)
         select_file = random.randint(0, len(benign_files) - 1)
-        print(benign_files[select_file])
+        #print(benign_files[select_file])
         pe1 = lief.PE.parse(benign_files[select_file])
         benign_binary_section_content = pe1.get_section(
             ".text",

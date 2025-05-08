@@ -7,6 +7,8 @@ from init.reset_test_enviroment import init_environment
 from operation_modules.copy_file import copy_file
 from operation_modules.process_remaster.operation_add_benign_data_overlay_depend_on_benign import \
     add_benign_data_overlay_depend_on_benign
+from operation_modules.process_remaster.operation_add_bytes_to_cave_depend_on_benign import \
+    add_bytes_to_cave_depend_on_benign
 from operation_modules.process_remaster.operation_add_bytes_to_section_cave_1 import add_bytes_to_section_cave
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 
@@ -27,7 +29,7 @@ def action_add_bytes_to_section_cave_1(input_file_,benign_files_dir_,enable_log 
         logging.info("action_add_bytes_to_section_cave_1 before file:" + m1.hexdigest())
 
 
-    bytez1 = add_benign_data_overlay_depend_on_benign(input_bytez=bytez, benign_files_dir=benign_files_dir_)
+    bytez1 = add_bytes_to_cave_depend_on_benign(input_bytez=bytez, benign_files_dir=benign_files_dir_)
 
     file_name = os.path.basename(input_file_)
     temp_name = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
