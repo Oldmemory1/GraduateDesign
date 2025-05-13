@@ -17,7 +17,7 @@ def modify_pe_checksum(input_file,new_checksum=None):
     # 获取原始校验和
     original_checksum = pe.OPTIONAL_HEADER.CheckSum
 
-    # 设置新校验和（如果未提供，使用当前时间）
+    # 设置新校验和（如果未提供，使用0）
     if new_checksum is None:
         new_checksum = 0
     pe.OPTIONAL_HEADER.CheckSum = new_checksum

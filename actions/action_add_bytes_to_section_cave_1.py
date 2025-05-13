@@ -5,12 +5,8 @@ import time
 
 from init.reset_test_enviroment import init_environment
 from operation_modules.copy_file import copy_file
-from operation_modules.process_remaster.operation_add_benign_data_overlay_depend_on_benign import \
-    add_benign_data_overlay_depend_on_benign
 from operation_modules.process_remaster.operation_add_bytes_to_cave_depend_on_benign import \
     add_bytes_to_cave_depend_on_benign
-from operation_modules.process_remaster.operation_add_bytes_to_section_cave_1 import add_bytes_to_section_cave
-from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 
 logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
