@@ -7,6 +7,8 @@ from operation_modules.findAllSignatures import get_all_file_paths
 def virus_share_processor(input_dir,output_dir):
     samples_files = get_all_file_paths(target_dir=input_dir)
     for sample in samples_files:
+        if not os.path.isfile(sample):
+            continue
         sample_name = os.path.basename(sample)
         output_sample_dir = output_dir + "\\" +sample_name +".exe"
         copy_file(source_address=sample, destination_address=output_sample_dir)

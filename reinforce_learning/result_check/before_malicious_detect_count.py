@@ -15,6 +15,6 @@ def get_before_malicious_detect_count(directory1):
             detect = detect + 1
     return detect
 if __name__ == '__main__':
-    detect_amount = get_before_malicious_detect_count(r"D:\graduate_design\example1\samples\origin\sample5\sample")
-    print("origin sample amount:" + str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\origin\sample5\sample"))))
+    detect_amount = get_before_malicious_detect_count(r"D:\graduate_design\example1\samples\origin\sample1\sample")
+    print("origin sample amount:" + str(len(get_all_file_paths(r"D:\graduate_design\example1\samples\origin\sample1\sample"))))
     print("origin sample detect amount:" + str(detect_amount))
