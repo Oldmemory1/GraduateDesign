@@ -1,5 +1,6 @@
 import logging
 import os
+import time
 
 import numpy as np
 
@@ -195,6 +196,7 @@ if __name__ == "__main__":
         print(i)
     num1 = input()
     a = int(num1)
+    start = time.perf_counter()
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
 
@@ -205,6 +207,8 @@ if __name__ == "__main__":
 
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\resource_operations_remaster\temp")
         clear_directory(target_dir=r"D:\graduate_design\example1\operation_modules\process_remaster\example_debug\temp")
+        end = time.perf_counter()  # 结束时间
+        print(f"执行耗时: {end - start:.6f}秒")
 
 
 

@@ -9,7 +9,7 @@ def get_before_malicious_detect_count(directory1):
     samples_file_name = get_all_file_paths(target_dir=directory1)
     detect = 0
     for sample_file in samples_file_name:
-        result = check_result(clamScanner(sample_file))
+        result = clamScanner(sample_file)
         print_result1(os.path.basename(sample_file),result)
         if result:
             detect = detect + 1
