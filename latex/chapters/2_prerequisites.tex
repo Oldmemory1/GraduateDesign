@@ -104,13 +104,103 @@
 
 \textcolor{black}{（9）回合/尝试：智能体执行一个策略与环境交互的过程中，智能体从开始状态到终止状态停止的过程被称为一个回合或尝试，一般用英文episode来表示。}
 
-\textcolor{black}{（10）折扣因子：用于调整智能体对于近期奖励和远期奖励的重视程度，可以记作折扣因子为γ，γ在(0,1)的范围，且折扣因子的引入允许了无限长的轨迹.}
+\textcolor{black}{（10）折扣因子：用于调整智能体对于近期奖励和远期奖励的重视程度，可以记作折扣因子为$\gamma$，$\gamma$在(0,1)的范围，且折扣因子的引入允许了无限长的轨迹。}
 
 \textcolor{black}{（11）状态值：表达式如式（2-1）所示：}
 \begin{equation}
-V_{\pi}(s)=E[G_{t}|s_{t}=s]
+v_{\pi}(s)=E[G_{t}|s_{t}=s]
 \end{equation}
 
 \textcolor{black}{状态值说明智能体在一个状态之下，最终能获取到的回报。首先，需要了解基于时序差分策略的方法可被用于估计状态值。}
 
 \textcolor{black}{时序差分方法的表达式若式（2-2）所示：}
+\begin{equation}
+v_{t+1}(s_{t})  =v_{t}(s_{t})-\alpha_{t}(s_{t})[v_{t}(s_{t})-(r_{t+1}+\gamma v_{t}(s_{t+1}))],
+v_{t+1}(s)=v_{t}(s)(s\neq s_{t})
+\end{equation}
+
+\textcolor{black}{$v_{t}(s_{t})$代表$t$时刻对于$v_{\pi}(s_{t})$的估计,${\alpha_{t}(s_{t})}$是$t$状态下对于状态$s_{t}$的学习率。}
+
+\textcolor{black}{在$t$时刻，只有当时正在被访问的状态$s_{t}$的估计值会被更新。}
+
+\textcolor{black}{在式（2-2）中：}
+
+\textcolor{black}{$r_{t+1}+\gamma v_{t}(s_{t+1})$作为时序差分方法的目标。}
+
+\textcolor{black}{$v_{t}(s_{t})-(r_{t+1}+\gamma v_{t}(s_{t+1}))$作为时序差分方法的误差。}
+
+\textcolor{black}{$\alpha_{t}(s_{t},a_{t})$为在{t}时刻对于状态$s_{t}$的学习率}
+
+\textcolor{black}{$v_{t+1}(s_{t})$为新的$t+1$时刻对于状态值$v_{\pi}(s)$的估计值。}
+
+\textcolor{black}{$v_{t}(s_{t})$为$t$时刻对于状态$s\in\ S$的状态值$v_{\pi}(s)$的估计值。}
+
+\textcolor{black}{Sarsa（state action reward action state action）是基于时序查分方法的强化学习算法，但是该方法不是估计状态值而是估计动作值\parencite{ref29},\parencite{ref30}。}
+
+\textcolor{black}{首先要引入动作值的概念：}
+
+\textcolor{black}{对于一个状态-动作配对${(s,a)}$，动作值定义表达式如式（2-3）所示。}
+\begin{equation}
+q_{\pi}\left({s,a}\right)={E}\left[\left.{G}_{t}\right|{S}_{t}{=s,} {A}_{t}{=a} \right] 
+\end{equation}
+
+\textcolor{black}{动作值表示在一个状态采取一个动作之后获得回报的期望值。}
+
+\textcolor{black}{这里将${q}_{\pi}\left({s,a}\right)$的估计值记作${q}_{t}\left({s,a}\right)$。}
+
+\textcolor{black}{给定一个策略$\pi$，需要估计其动作值，可以从$\pi$的经验样本中，使用Sarsa算法来估计动作值，其表达式为式（2-4）,其中学习率为$\alpha _{t}(s_{t},a_{t})$。}
+\begin{equation}
+q_{t+1}(s_{t},a_{t})=q_{t}(s_{t},a_{t})-\alpha _{t}(s_{t},a_{t})[q_{t}(s_{t},a_{t})-(r_{t+1}+\gamma q_{t}(s_{t+1},a_{t+1}))]    
+\end{equation}
+
+\textcolor{black}{\ \ \ $q_{t+1}(s,a)=q_{t}(s,a) \ while \ (s,a) \neq (s_{t},a_{t})$}
+
+\textcolor{black}{在t时刻，只有$\left({s}_{t}{,} {a}_{t}\right)$的动作值被更新，其它的动作值保持不变。}
+
+\textcolor{black}{Sarsa算法主要是用于求解Bellman方程近似算法，近似算法的表达式如式（2-5）所示：}
+\begin{equation}
+{q}_{\pi}({s,a}){=E}[R+\gamma q_{\pi}(S',A')|_{(s,a)} \ for \ all \ (s,a) 
+\end{equation}
+
+\textcolor{black}{式（2-5）是一个基于动作值而不是状态值的Bellman方程。}
+
+\textcolor{black}{图\ref{fig:sarsa}中的伪代码描述了如何运用Sarsa算法学习最优策略的执行逻辑。}
+
+\begin{figure}
+  \centering
+  \includegraphics[]{images/sarsa.png}
+  \caption{sarsa}\label{fig:sarsa}
+\end{figure}
+
+\textcolor{black}{目标：学习最优策略，使智能体能从给定状态$s_{0}$到达目标状态。}
+
+\textcolor{black}{对于图2-1中的Sarsa算法描述如下所示：}
+
+\textcolor{black}{算法初始化：}
+
+\textcolor{black}{对于所有$\left({s,a}\right)$数值和所有$t$数值，选取学习率因子${\alpha}_{t}\left({s,a}\right) = {\alpha}$，贪婪因子${\epsilon}\in({0,1})$，并且设定所有$\left({s,a}\right)$的初始值为${q}_{0}\left({s,a}\right)$，从${q}_{0}$获取初始贪婪策略${\pi}_{0}$。}
+
+\textcolor{black}{算法目标：学习最优策略，使智能体能从给定的状态${s}_{0}$出发，到达目标终止状态。}
+
+\textcolor{black}{对于每个回合：}
+
+\textcolor{black}{\ \ 如果当前状态是${s}_{0}$根据$ {\pi}_{0}\left({s}_{0}\right)$,选取策略 $a ={a}_{0}$}
+
+\textcolor{black}{\ \  在时刻t，如果${s}_{t}$不是目标状态}
+
+\textcolor{black}{\ \ \ \  收集经验样本$({s}_{t}, {a}_{t}, {s}_{{t+1}}, {a}_{{t+1}})$：在${s}_{t}$通过与环境交互生成${r}_{{t+1}},{s}_{{t+1}}$。}
+
+\textcolor{black}{\ \ \ \ 再根据${\pi}_{t}\left({s}_{{t+1}}\right)$生成 ${a}_{{t+1}}$}
+
+\textcolor{black}{\ \ \ \  随后更新$({s}_{t}, {a}_{t})$的值}
+
+\textcolor{black}{Sarsa算法也存在一些推广，例如Expected Sarsa算法、n-step Sarsa算法等，尽管本实验中并未涉及到这些推广算法，但是读者在构建强化学习对抗性样本生成模型上也可以尝试使用它们。}
+
+\textcolor{black}{其中Expected Sarsa算法类似Sarsa算法，但是它们的时序差分方法目标上不同。具体实现流程上二者相似。}
+
+\textcolor{black}{已知策略$\pi$，则Expected Sarsa算法对于该策略$\pi$的动作值估计公式如式（2-6）所示：}
+\begin{equation}
+q_{t+1}(s_{t},a_{t})=q_{t}(s_{t},a_{t})-\alpha _{t}(s_{t},a_{t})[q_{t}(s_{t},a_{t})-(r_{t+1}+\gamma E[q_{t}(s_{t+1},a_{t+1})]) 
+\end{equation}
+
+\textcolor{black}{\ $q_{t+1}(s,a)=q_{t}(s,a) \ while \ (s,a) \neq (s_{t},a_{t})$}
