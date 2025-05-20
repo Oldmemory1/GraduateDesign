@@ -360,3 +360,62 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/add_resources.png}
   \caption{添加新的图标资源}\label{fig:add_resources}
 \end{figure}
+
+\textcolor{black}{图\ref{fig:reinforcement_learning_adversarial_sample_generation_module}中描述了强化学习对抗性样本生成模块的具体工作过程，对于传入样本集中的每个样本，首先设定最初奖励为0、总奖励为0、已进行操作数量为0、终态为否，再根据状态选择其执行的行为，在每次执行行为结束后，检测其是否能逃逸ClamAV的查杀，若能成功逃逸ClamAV查杀，则获取奖励后，进入终止态，并更新强化学习模型的Qtable和更新成功逃逸数量，随后处理下一个样本；若不能成功逃逸ClamAV查杀，则操作次数+1，此时再判断操作数量是否已经达到最大数量，如果已经达到了最大数量，则进入终止态，并且获取相应惩罚，并更新强化学习模型的Qtable，随后将处理下一个样本；如果没有达到最大数量，则更新强化学习模型的Qtable后，进入一个新的状态，并重复上述操作，直到传入样本集中的所有样本都被处理完为止，处理结束后，最终返回处理后能成功逃逸ClamAV查杀的样本数。同时为了提高图\ref{fig:reinforcement_learning_adversarial_sample_generation_module}中设计的强化学习对抗性样本生成模块的健壮性，我们需要考虑修正强化学习对抗性样本生成模块需要用到的行为表，先前强化学习对抗性样本生成模块关于行为表的设计是合理的，但缺乏健壮性，可能会存在一些隐患，导致某些行为被执行时可能会抛出异常进而导致整个程序崩溃。}
+
+\begin{figure}
+  \centering
+  \includegraphics[]{images/reinforcement_learning_adversarial_sample_generation_module.png}
+  \caption{强化学习对抗性样本生成模块}\label{fig:reinforcement_learning_adversarial_sample_generation_module}
+\end{figure}
+
+\textcolor{black}{原因如下：}
+
+\textcolor{black}{（1）样本筛选无法删掉一些伪装的PE可执行文件，尽管这些文件后缀名是.exe，但这些文件使用了结构化欺骗，实际上这些文件自身并不含有COFF文件头等内容，例如一个原本后缀是.sys的程序，后缀被篡改为.exe，如果action在执行时认为它们是PE可执行文件并且对其操作，就会因为PE格式解析异常报错，进而Python主程序将会抛出异常，没有被处理的异常会导致整个程序被迫终止。解决方案是通过为do\_action()函数设置异常处理的代码块来解决这个问题，即使遇到了不是正常的PE可执行文件，程序仍然因为不会抛出异常，导致强制终止整个程序。}
+
+\textcolor{black}{（2）存在一些PE可执行文件恶意软件，自身大小非常大，大约64MB到数百MB，可能是这些文件本身已经经过了一些对抗性操作导致的，笔者在测试中发现，对抗性操作在处理它们时极其缓慢，有些甚至需要数分钟的时间，这无疑严重拖累了对抗性处理操作执行的速度。其次，这些较大的PE可执行程序读取和写入操作对磁盘的损害也是巨大的，极有可能在运行中发生系统蓝屏死机的问题，甚至可能会导致数据丢失。解决方案在样本筛选模块已提出，即样本中大于4096字节的PE可执行程序在筛选样本时需要被删除，以避免后续操作出现故障导致程序强制终止。}
+
+\textcolor{black}{（3）对于（1）中的问题，在异常处理的基础上，应该额外为action配备日志系统来监控对于PE可执行文件的修改操作。同时记录修改前和修改后文件的SHA256哈希值和使用的操作名称在一个日志文件中。配备日志系统有利于进行对于单个action的黑盒测试时排查错误，以及根据文件的哈希值判断这些对抗性干扰操作是否有效。修改成功的一个必要条件是修改后文件的哈希值与修改前文件的哈希值不同。如图\ref{fig:log_module}所示，图\ref{fig:log_module}中表明是为PE文件尾部添加冗余良性字节的操作配备日志，其中使用了logging.basicConfig相关设定来指定日志格式，同时，日志系统最好设置为允许开关，否则可能会在使用较差的硬盘时导致IO时间浪费在日志输出上。}
+
+\textcolor{black}{（4）部分action可能会造成原有恶意程序被破坏，例如修改机器码操作，实际测试证明它会损坏恶意程序，所以在操作集中不应该包含它。}
+
+\textcolor{black}{（5）部分action如UPX加壳，调用resource hacker加资源，sigthief仿造签名等操作，是通过cmd调用已有应用程序实现，可能会存在进程同步异步问题，可以利用Python自身time库的sleep函数来解决。}
+
+\begin{figure}
+  \centering
+  \includegraphics[]{images/log_module.png}
+  \caption{日志系统}\label{fig:log_module}
+\end{figure}
+
+\textcolor{black}{随后，如图\ref{fig:init_pramameter}所示，在运行前，需要调整Sarsa算法的初始参数中的学习率alpha，探索率gamma，折扣因子epsilon。}
+
+\begin{figure}
+  \centering
+  \includegraphics[]{images/init_pramameter.png}
+  \caption{日志系统}\label{fig:init_pramameter}
+\end{figure}
+
+\textcolor{black}{本实验在强化学习对抗性样本生成模块中实际构建中额外引入了惩罚因子，它与恶意PE可执行文件处理前后的大小有一定关系，式3-1定义了文件大小改变比：}
+\begin{equation}
+    k=size_{after}/size_{before}
+\end{equation}
+
+\textcolor{black}{式3-2定义惩罚因子$\sigma_{1}$：}
+\begin{equation}
+    \sigma_{1}=1/((1/3)*lnk+1)
+\end{equation}
+
+\textcolor{black}{因此，成功达到最终状态获取的奖励$reward$会被再次修正为$reward=reward*\sigma_{1}$。}
+
+\textcolor{black}{看似能尽量促进智能体选择尽量不过分扩大原恶意PE可执行文件的大小，然而实行运行时很小概率下会发生问题，这表现在使用UPX加壳后，$size_{after}$过于小，导致惩罚因子$\sigma_{1}$变成负数，理论上本该因为达成了逃逸效果，被Clam AV检测为良性程序，应该获取的是正数的奖励，但实际上获取的是负值奖励，这与达成逃逸获取正数奖励的设定矛盾。}
+
+\textcolor{black}{因此，最好修正惩罚因子，修正后的惩罚因子在式3-3中定义为$\sigma_{2}$。}
+\begin{equation}
+    \sigma_2=(1/k)^2
+\end{equation}
+
+\textcolor{black}{这样可以避免使惩罚因子变为负数，从而影响智能体做出更优的决策的意外。}
+
+\section{本章小结}
+
+\textcolor{black}{本章首先介绍了实现强化学习的静态对抗性样本生成系统的设计与实现，将其分为三个模块，并描述需要各个模块的大致设计和需要实现的功能，介绍了对抗性样本生成的算法，恶意程序扫描模块，恶意程序样本筛选的方法。}
