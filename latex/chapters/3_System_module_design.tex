@@ -54,20 +54,6 @@
   \caption{样本筛选模块}\label{fig:sample_swift_module}
 \end{figure}
 
-\textcolor{black}{实验中的已设计好的样本筛选模块如图\ref{fig:configuration_of_sample_swift_module1}，图\ref{fig:configuration_of_sample_swift_module2}，图\ref{fig:configuration_of_sample_swift_module1}中对应的代码实现了对于来源于VirusShare的样本筛选，图\ref{fig:configuration_of_sample_swift_module2}中对应的代码实现了对于来源于VirusShare的样本二次筛选以及对于来源于国内安全软件论坛的样本筛选：}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/configuration_of_sample_swift_module1.png}
-  \caption{样本筛选模块配置1}\label{fig:configuration_of_sample_swift_module1}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/configuration_of_sample_swift_module2.png}
-  \caption{样本筛选模块配置2}\label{fig:configuration_of_sample_swift_module2}
-\end{figure}
-
 \textcolor{black}{为了考虑样本筛选模块的完备性，需要配备异常处理应对可能出现的一些异常情况：}
 
 \textcolor{black}{（1）	传入的样本文件夹中包含子文件夹，筛选中需要忽略掉这些子文件夹。}
@@ -104,13 +90,7 @@
 
 \textcolor{black}{随后，打开cmd手动更新ClamAV病毒库，通过命令freshclam –config-file=./freshclam.conf实现对于ClamAV病毒库的更新操作，随后，ClamAV会从云端上下载病毒库。}
 
-\textcolor{black}{更新数据库成功后。需要在Windows服务中重启ClamAV服务。这需要在服务的服务列表中选中ClamAV的ClamD服务左侧点击重启动该服务，或选中该服务右键，也可以达到重启该服务的目的。随后使用pyclamed库搭建恶意程序扫描模块，如图\ref{fig:configuration_of_malware_scan_module}所示，它的作用是检测传入的绝对路径指代的文件是否为恶意软件。需要输入待检测文件的绝对路径，随后会判断ClamAV服务是否处于活动状态，若不处于，则会抛出异常。随后执行文件扫描操作，判断文件是否为恶意软件，这是通过检测scanresult中的内容实现的。}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/configuration_of_malware_scan_module.png}
-  \caption{恶意程序扫描模块配置}\label{fig:configuration_of_malware_scan_module}
-\end{figure}
+\textcolor{black}{更新数据库成功后。需要在Windows服务中重启ClamAV服务。这需要在服务的服务列表中选中ClamAV的ClamD服务左侧点击重启动该服务，或选中该服务右键，也可以达到重启该服务的目的。随后使用pyclamed库搭建恶意程序扫描模块，它的作用是检测传入的绝对路径指代的文件是否为恶意软件。需要输入待检测文件的绝对路径，随后会判断ClamAV服务是否处于活动状态，若不处于，则会抛出异常。随后执行文件扫描操作，判断文件是否为恶意软件，这是通过检测scanresult中的内容实现的。}
 
 \textcolor{black}{模块功能需要考虑模块运行的完备性，在恶意软件扫描模块中需要处理一些可能存在的异常情况：}
 
@@ -203,9 +183,12 @@
 \textcolor{black}{算法伪代码：}
 
 \begin{lstlisting}[language=Python, caption={code for main alogrithm}, label={lst:pythonfile1}]
-def alogrithm_generate_controversy_samples(sample_directory,actions_list,Sarsa_model):  
-	Sarsa_model.init(actions_list,gamma,alpha,epsilon) #init
-	evasion_count = train(Sarsa_model,sample_directory)
+#---对抗性样本生成函数---
+#Input: 样本目录sample_directory,强化学习模型Sarsa_model 
+#OutPut: 生成的对抗性样本
+def alogrithm_generate_controversy_samples(sample_directory,actions_list,Sarsa_model):
+    Sarsa_model.init(actions_list,gamma,alpha,epsilon) #初始化强化学习Sarsa模型，传入待训练的样本集路径，行为集，学习率，探索率，折扣因子
+    evasion_count = train(Sarsa_model,sample_directory) #训练强化学习Sarsa模型
 \end{lstlisting}
 
 \textcolor{black}{主算法实现了对于强化学习模型的初始化和样本训练结束后统计成功逃逸的样本数量}
@@ -221,28 +204,31 @@ def alogrithm_generate_controversy_samples(sample_directory,actions_list,Sarsa_m
 \textcolor{black}{算法伪代码：}
 
 \begin{lstlisting}[language=Python, caption={code for sub alogrithm 1}, label={lst:pythonfile2}]
-def train(Sarsa_model,sample_directory):  
-    episodes = get_episodes_for_training(sample_directory)   #get samples
-    evasion_count = 0   
-    for episode in episodes:  
-        count = 0   #init
-        state = 0  
-        total_reward = 0   
-        status_done = False   
-        reward = 0   
-        action = choose_action(state)   #choose action
-        do_action(action,episode)   
-        while not status_done:
-      #total reward update
-      total_reward=update_total_reward(episode,total_reward)
-            if status_done: #not final state
-                Sarsa_model.update(state,action,reward,next_state=None,next_action=None)   
-            else:   # final state
-                next_action = choose_action(next_state)   
-                Sarsa_model.update(state,action,reward,next_state,next_action)   
-                action = next_action   
-                do_action(action,state,enable_log)   
-    return evasion_count
+#---训练函数---
+#Input: 样本目录sample_directory,强化学习模型Sarsa_model 
+#OutPut: 成功逃逸的对抗性样本数量
+def train(Sarsa_model,sample_directory):
+    episodes = get_episodes_for_training(sample_directory) #从待训练的样本集路径中获取所有待训练样本
+    evasion_count = 0 #经处理后逃逸查杀成功的样本数，一开始设置为0
+    for episode in episodes:
+        #---首次操作---
+        count = 0 #已经进行了几次操作
+        state = 0 #目前状态
+        total_reward = 0 #总奖励
+        status_done = False #是否是终止态
+        reward = 0 #奖励
+        action = choose_action(state) #选择当前应该执行的操作
+        do_action(action,episode) #对该回合的样本，执行该操作
+        while not status_done:#非终态时，进行下列操作
+            total_reward=update_total_reward(episode,total_reward);
+            if status_done: #若已经达到终止态
+                Sarsa_model.update(state,action,reward,next_state=None,next_action=None) #更新Sarsa强化学习模型
+            else:#不是终止态
+                next_action = choose_action(next_state) #选择当前应该执行的操作
+                Sarsa_model.update(state,action,reward,next_state,next_action) #更新Sarsa强化学习模型
+                action = next_action #更新行为
+                do_action(action,state,enable_log) #对该回合的样本，执行该操作
+    return evasion_count #返回本次训练中，能成功逃逸的样本数
 \end{lstlisting}
 
 \textcolor{black}{子算法1实现了对于样本集中的每个样本，根据当前状态在行为表中选择操作并且执行，若当前状态为终止态，则更新强化学习模型并对下一个样本进行操作，否则继续选择操作并且予以执行。}
@@ -258,23 +244,26 @@ def train(Sarsa_model,sample_directory):
 \textcolor{black}{算法伪代码：}
 
 \begin{lstlisting}[language=Python, caption={code for sub alogrithm 2}, label={lst:pythonfile3}]
-def update_total_reward(episode,total_reward):  
-    judgement = can_evasion(episode)   
-        if judgement == True :    # can evade detect
-            evasion_count++   
-            next_state = None  # reach final state
-            reward = SUCCESS_REWARD   
-            status_done = True   
-        else:  
-            count++   
-            if count >= Max_Count:  # operations amount run out
-                reward = FAIL_REWARD   
-                next_state = None   
-                status_done = True   # reach final state
-            else:  # operations amount do not run out
-                next_state = count   
-    total_reward+=reward   # update total reward
-    return total_reward  
+#---更新总奖励的函数---
+#Input: 当前的样本episode,更新前的总奖励total_reward
+#OutPut: 更新后的总奖励total_reward
+def update_total_reward(episode,total_reward):
+    judgement = can_evasion(episode) #判断处理后的样本是否能逃逸反病毒软件的查杀
+        if judgement == True : #成功逃逸
+            evasion_count++ #更新逃逸数量
+            next_state = None #更新状态
+            reward = SUCCESS_REWARD #获取的奖励为SUCCESS_REWARD
+            status_done = True #达到终止态
+        else:
+            count++ #更新操作数
+            if count >= Max_Count: #若操作数大于允许的最大操作数
+                reward = FAIL_REWARD #获取的奖励为FAIL_REWARD
+                next_state = None #更新状态
+                status_done = True #达到终止态
+            else:
+                next_state = count #更新状态
+    total_reward+=reward #更新总奖励
+    return total_reward; 
 \end{lstlisting}
 
 \textcolor{black}{子算法2实现了对于总奖励和状态的更新，当能成功逃逸恶意软件扫描模块的检测时，进入终止态并且获得奖励，若不能逃逸，进行判断，如果次数已经达到最大次数，则进入终止态并且获取奖励，否则更新状态。最后返回总奖励。}
@@ -375,25 +364,13 @@ def update_total_reward(episode,total_reward):
 
 \textcolor{black}{（2）存在一些PE可执行文件恶意软件，自身大小非常大，大约64MB到数百MB，可能是这些文件本身已经经过了一些对抗性操作导致的，笔者在测试中发现，对抗性操作在处理它们时极其缓慢，有些甚至需要数分钟的时间，这无疑严重拖累了对抗性处理操作执行的速度。其次，这些较大的PE可执行程序读取和写入操作对磁盘的损害也是巨大的，极有可能在运行中发生系统蓝屏死机的问题，甚至可能会导致数据丢失。解决方案在样本筛选模块已提出，即样本中大于4096字节的PE可执行程序在筛选样本时需要被删除，以避免后续操作出现故障导致程序强制终止。}
 
-\textcolor{black}{（3）对于（1）中的问题，在异常处理的基础上，应该额外为action配备日志系统来监控对于PE可执行文件的修改操作。同时记录修改前和修改后文件的SHA256哈希值和使用的操作名称在一个日志文件中。配备日志系统有利于进行对于单个action的黑盒测试时排查错误，以及根据文件的哈希值判断这些对抗性干扰操作是否有效。修改成功的一个必要条件是修改后文件的哈希值与修改前文件的哈希值不同。如图\ref{fig:log_module}所示，图\ref{fig:log_module}中表明是为PE文件尾部添加冗余良性字节的操作配备日志，其中使用了logging.basicConfig相关设定来指定日志格式，同时，日志系统最好设置为允许开关，否则可能会在使用较差的硬盘时导致IO时间浪费在日志输出上。}
+\textcolor{black}{（3）对于（1）中的问题，在异常处理的基础上，应该额外为action配备日志系统来监控对于PE可执行文件的修改操作。同时记录修改前和修改后文件的SHA256哈希值和使用的操作名称在一个日志文件中。配备日志系统有利于进行对于单个action的黑盒测试时排查错误，以及根据文件的哈希值判断这些对抗性干扰操作是否有效。修改成功的一个必要条件是修改后文件的哈希值与修改前文件的哈希值不同。可以使用logging.basicConfig相关设定来指定日志格式，同时，日志系统最好设置为允许开关，否则可能会在使用较差的硬盘时导致IO时间浪费在日志输出上。}
 
 \textcolor{black}{（4）部分action可能会造成原有恶意程序被破坏，例如修改机器码操作，实际测试证明它会损坏恶意程序，所以在操作集中不应该包含它。}
 
 \textcolor{black}{（5）部分action如UPX加壳，调用resource hacker加资源，sigthief仿造签名等操作，是通过cmd调用已有应用程序实现，可能会存在进程同步异步问题，可以利用Python自身time库的sleep函数来解决。}
 
-\begin{figure}
-  \centering
-  \includegraphics[]{images/log_module.png}
-  \caption{日志系统}\label{fig:log_module}
-\end{figure}
-
-\textcolor{black}{随后，如图\ref{fig:init_pramameter}所示，在运行前，需要调整Sarsa算法的初始参数中的学习率alpha，探索率gamma，折扣因子epsilon。}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/init_pramameter.png}
-  \caption{日志系统}\label{fig:init_pramameter}
-\end{figure}
+\textcolor{black}{随后，在运行前，需要调整Sarsa算法的初始参数中的学习率alpha，探索率gamma，折扣因子epsilon。}
 
 \textcolor{black}{本实验在强化学习对抗性样本生成模块中实际构建中额外引入了惩罚因子，它与恶意PE可执行文件处理前后的大小有一定关系，式3-1定义了文件大小改变比：}
 \begin{equation}

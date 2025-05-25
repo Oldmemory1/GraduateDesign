@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_05_13 10:53 第三版初始化">
-      <change afterPath="$PROJECT_DIR$/reinforce_learning/result_check/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reinforce_learning/result_check/util/utils.py" afterDir="false" />
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_05_20 14:17 word版论文修改完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/action_add_bytes_to_section_cave_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/action_add_bytes_to_section_cave_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_modules/operation_modify_checksum.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_modules/operation_modify_checksum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/论文修改/1120213139论文-第三版.docx" beforeDir="false" afterPath="$PROJECT_DIR$/samples/论文修改/1120213139论文-第三版.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,114 +64,117 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python 测试.Python 测试 (operation_test.py 内).executor": "Run",
-    "Python 测试.Python 测试 (test_module.py 内).executor": "Run",
-    "Python 测试.Python 测试 (test_operations.py 内).executor": "Run",
-    "Python.360sd_scanner.executor": "Run",
-    "Python.FindAllSignatures.executor": "Run",
-    "Python.action_add_benign_data_overlay_1.executor": "Run",
-    "Python.action_add_bytes_to_section_cave_1.executor": "Run",
-    "Python.action_add_random_resources.executor": "Run",
-    "Python.action_add_section_benign_data_1.executor": "Run",
-    "Python.action_break_optional_header_checksum_1.executor": "Run",
-    "Python.action_create_fake_signature.executor": "Run",
-    "Python.action_insert_useless_data_to_end.executor": "Run",
-    "Python.action_modify_checksum.executor": "Run",
-    "Python.action_modify_optional_header_1.executor": "Run",
-    "Python.action_modify_timestamp.executor": "Run",
-    "Python.action_modify_timestamp_1.executor": "Run",
-    "Python.action_remove_debug.executor": "Run",
-    "Python.action_rename_random_section.executor": "Run",
-    "Python.action_rename_section_1.executor": "Run",
-    "Python.actions_list.executor": "Run",
-    "Python.add_random_resources.executor": "Run",
-    "Python.add_resources.executor": "Run",
-    "Python.after_malicious_detect_count.executor": "Run",
-    "Python.before_malicious_detect_count.executor": "Run",
-    "Python.benign_string_generator.executor": "Run",
-    "Python.buffer.executor": "Run",
-    "Python.clamScanner.executor": "Run",
-    "Python.commons.executor": "Run",
-    "Python.copy_file.executor": "Run",
-    "Python.create_ico.executor": "Run",
-    "Python.dll_swift.executor": "Run",
-    "Python.draw1.executor": "Run",
-    "Python.dump_logs.executor": "Run",
-    "Python.dump_temp.executor": "Run",
-    "Python.findAllSignatures.executor": "Run",
-    "Python.find_latest_log.executor": "Run",
-    "Python.fun_for_test1.executor": "Run",
-    "Python.getCheckSum.executor": "Run",
-    "Python.get_360_sd_scanner_result.executor": "Run",
-    "Python.get_a_random_string_from_strings.executor": "Run",
-    "Python.get_all_sections_name.executor": "Run",
-    "Python.get_data_section.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.maliciousCodeAvoid1.executor": "Run",
-    "Python.modifier.executor": "Run",
-    "Python.operation_add_benign_data_overlay_depend_on_benign.executor": "Run",
-    "Python.operation_add_bytes_to_cave_depend_on_benign.executor": "Run",
-    "Python.operation_add_section_benign_data_depend_on_benign.executor": "Run",
-    "Python.operation_create_fake_signature.executor": "Run",
-    "Python.operation_insert_useless_data_to_end.executor": "Run",
-    "Python.operation_modify_checksum.executor": "Run",
-    "Python.operation_modify_language.executor": "Run",
-    "Python.operation_modify_machine_type.executor": "Run",
-    "Python.operation_modify_timeStamp.executor": "Run",
-    "Python.operation_rename_random_section.executor": "Run",
-    "Python.operation_test.executor": "Run",
-    "Python.operation_upx_encryption.executor": "Run",
-    "Python.operations_fun.executor": "Run",
-    "Python.origin_sample_and_processed_sample_check.executor": "Run",
-    "Python.plot_draw.executor": "Run",
-    "Python.plot_draw_sample1.executor": "Run",
-    "Python.plot_draw_sample2.executor": "Run",
-    "Python.plot_draw_sample3.executor": "Run",
-    "Python.plot_draw_sample4.executor": "Run",
-    "Python.plot_draw_sample5.executor": "Run",
-    "Python.psp-mal.executor": "Run",
-    "Python.random.executor": "Run",
-    "Python.random_choose_actions.executor": "Run",
-    "Python.reset_test_enviroment.executor": "Run",
-    "Python.sample_malicious_test.executor": "Run",
-    "Python.sarsa.executor": "Run",
-    "Python.set_version_info.executor": "Run",
-    "Python.sigthief.executor": "Run",
-    "Python.string2.executor": "Run",
-    "Python.strings_length_1024.executor": "Run",
-    "Python.strings_length_128.executor": "Run",
-    "Python.strings_length_2048.executor": "Run",
-    "Python.strings_length_256.executor": "Run",
-    "Python.strings_length_512.executor": "Run",
-    "Python.strings_length_64.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test1.executor": "Run",
-    "Python.testCode1.executor": "Run",
-    "Python.testTimeStamp.executor": "Run",
-    "Python.timestamp_generator.executor": "Run",
-    "Python.virusTotalScanner.executor": "Run",
-    "Python.virus_share_processor.executor": "Run",
-    "Python.virus_total_scan_result.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/graduate_design/example1/benign_software",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python 测试.Python 测试 (operation_test.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_module.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_operations.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python.360sd_scanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FindAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_benign_data_overlay_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_bytes_to_section_cave_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_random_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_add_section_benign_data_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_break_optional_header_checksum_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_create_fake_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_checksum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_optional_header_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_timestamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_modify_timestamp_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_remove_debug.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_rename_random_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.action_rename_section_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.actions_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_random_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_resources.executor&quot;: &quot;Run&quot;,
+    &quot;Python.after_malicious_detect_count.executor&quot;: &quot;Run&quot;,
+    &quot;Python.before_malicious_detect_count.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benign_string_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.buffer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clamScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commons.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compare_size_change.executor&quot;: &quot;Run&quot;,
+    &quot;Python.copy_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_ico.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dll_swift.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draw1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draw2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draw_scatter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dump_logs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dump_temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.findAllSignatures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.find_latest_log.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fun_for_test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getCheckSum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_360_sd_scanner_result.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_a_random_string_from_strings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_all_sections_name.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maliciousCodeAvoid1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.modifier.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_add_benign_data_overlay_depend_on_benign.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_add_bytes_to_cave_depend_on_benign.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_add_section_benign_data_depend_on_benign.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_create_fake_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_insert_useless_data_to_end.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_checksum.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_language.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_machine_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_modify_timeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_rename_random_section.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operation_upx_encryption.executor&quot;: &quot;Run&quot;,
+    &quot;Python.operations_fun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.origin_sample_and_processed_sample_check.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_draw_sample5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.psp-mal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random_choose_actions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reset_test_enviroment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sample_malicious_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sarsa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.set_version_info.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sigthief.executor&quot;: &quot;Run&quot;,
+    &quot;Python.string2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_1024.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_128.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_2048.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_256.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_512.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings_length_64.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testCode1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testTimeStamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timestamp_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virusTotalScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virus_share_processor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.virus_total_scan_result.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/graduate_design/example1/benign_software&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\graduate_design\example1\benign_software" />
@@ -193,7 +191,7 @@
       <recent name="D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sigthief">
+  <component name="RunManager" selected="Python.action_create_fake_signature">
     <configuration name="action_create_fake_signature" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="example1" />
       <option name="ENV_FILES" value="" />
@@ -372,183 +370,18 @@
       <workItem from="1746933358999" duration="24000" />
       <workItem from="1746933391617" duration="4212000" />
       <workItem from="1747098696918" duration="1646000" />
-      <workItem from="1747101085187" duration="10281000" />
-    </task>
-    <task id="LOCAL-00033" summary="2025_04_09 16:24 add action_add_section_benign_data_1.py&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744187441647</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1744187441647</updated>
-    </task>
-    <task id="LOCAL-00034" summary="2025_04_09 16:45 add action_break_optional_header_checksum_1.py&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744188307815</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1744188307815</updated>
-    </task>
-    <task id="LOCAL-00035" summary="2025_04_09 16:52 add action_modify_optional_header_1.py&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744188780766</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1744188780766</updated>
-    </task>
-    <task id="LOCAL-00036" summary="2025_04_09 19:06 add action_modify_timestamp_1.py&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744196786026</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1744196786026</updated>
-    </task>
-    <task id="LOCAL-00037" summary="2025_04_09 19:11 add action_remove_debug.py&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744197078793</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1744197078793</updated>
-    </task>
-    <task id="LOCAL-00038" summary="2025_04_09 19:16 add action_rename_section_1&#10;modify actions_list.py">
-      <option name="closed" value="true" />
-      <created>1744197372830</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1744197372830</updated>
-    </task>
-    <task id="LOCAL-00039" summary="2025_04_09 19:34">
-      <option name="closed" value="true" />
-      <created>1744198456119</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1744198456119</updated>
-    </task>
-    <task id="LOCAL-00040" summary="2025_04_09 20:07">
-      <option name="closed" value="true" />
-      <created>1744200429922</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1744200429922</updated>
-    </task>
-    <task id="LOCAL-00041" summary="2025_04_10 8:44">
-      <option name="closed" value="true" />
-      <created>1744245880811</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1744245880811</updated>
-    </task>
-    <task id="LOCAL-00042" summary="2025_04_10 9:01">
-      <option name="closed" value="true" />
-      <created>1744246899211</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1744246899211</updated>
-    </task>
-    <task id="LOCAL-00043" summary="2025_04_10 9:07 delete useless data of sarsa.py">
-      <option name="closed" value="true" />
-      <created>1744247253111</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1744247253111</updated>
-    </task>
-    <task id="LOCAL-00044" summary="2025_04_10 9:13 modify operation_modify_timeStamp.py">
-      <option name="closed" value="true" />
-      <created>1744247618757</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1744247618757</updated>
-    </task>
-    <task id="LOCAL-00045" summary="2025_04_10 11：57">
-      <option name="closed" value="true" />
-      <created>1744257472411</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1744257472411</updated>
-    </task>
-    <task id="LOCAL-00046" summary="2025_04_11 09:34">
-      <option name="closed" value="true" />
-      <created>1744335286624</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1744335286624</updated>
-    </task>
-    <task id="LOCAL-00047" summary="2025_04_11 16:54">
-      <option name="closed" value="true" />
-      <created>1744361697511</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1744361697512</updated>
-    </task>
-    <task id="LOCAL-00048" summary="2025_04_11 17:01 fix resource_operation_master library">
-      <option name="closed" value="true" />
-      <created>1744362137590</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1744362137590</updated>
-    </task>
-    <task id="LOCAL-00049" summary="2025_04_11 19:00">
-      <option name="closed" value="true" />
-      <created>1744369229164</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1744369229164</updated>
-    </task>
-    <task id="LOCAL-00050" summary="2025_04_11 19:17 add_random_resources.py debug complete">
-      <option name="closed" value="true" />
-      <created>1744370239838</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1744370239839</updated>
-    </task>
-    <task id="LOCAL-00051" summary="2025_04_11 20:07 fix action_add_random_resources.py">
-      <option name="closed" value="true" />
-      <created>1744373253015</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1744373253015</updated>
-    </task>
-    <task id="LOCAL-00052" summary="2025_04_12 8:14">
-      <option name="closed" value="true" />
-      <created>1744416849730</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1744416849730</updated>
-    </task>
-    <task id="LOCAL-00053" summary="2025_04_12 8:22">
-      <option name="closed" value="true" />
-      <created>1744417367708</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1744417367708</updated>
-    </task>
-    <task id="LOCAL-00054" summary="2025_04_12 15:47 add dir clear in sarsa.py">
-      <option name="closed" value="true" />
-      <created>1744444045792</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1744444045792</updated>
+      <workItem from="1747101085187" duration="11866000" />
+      <workItem from="1747274396842" duration="7906000" />
+      <workItem from="1747359371954" duration="2907000" />
+      <workItem from="1747448161188" duration="2289000" />
+      <workItem from="1747451612996" duration="1751000" />
+      <workItem from="1747540047096" duration="14256000" />
+      <workItem from="1747557681367" duration="1045000" />
+      <workItem from="1747614650034" duration="997000" />
+      <workItem from="1747649115282" duration="689000" />
+      <workItem from="1747696816154" duration="5591000" />
+      <workItem from="1747738660124" duration="734000" />
+      <workItem from="1747999059013" duration="47000" />
     </task>
     <task id="LOCAL-00055" summary="2025_04_12 20:04">
       <option name="closed" value="true" />
@@ -766,7 +599,183 @@
       <option name="project" value="LOCAL" />
       <updated>1747104855430</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="2025_05_13 17:59 第三版 修改1">
+      <option name="closed" value="true" />
+      <created>1747130396092</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1747130396092</updated>
+    </task>
+    <task id="LOCAL-00083" summary="2025_05_13 18:50 第三版 修改2">
+      <option name="closed" value="true" />
+      <created>1747133418409</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1747133418409</updated>
+    </task>
+    <task id="LOCAL-00084" summary="2025_05_15 11:36 第四版 init">
+      <option name="closed" value="true" />
+      <created>1747280215832</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1747280215833</updated>
+    </task>
+    <task id="LOCAL-00085" summary="2025_05_15 18:08 第四版 update">
+      <option name="closed" value="true" />
+      <created>1747303694088</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1747303694088</updated>
+    </task>
+    <task id="LOCAL-00086" summary="2025_05_15 18:42 第四版 update">
+      <option name="closed" value="true" />
+      <created>1747305758824</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1747305758824</updated>
+    </task>
+    <task id="LOCAL-00087" summary="2025_05_16 9:42 第四版 update">
+      <option name="closed" value="true" />
+      <created>1747359757230</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1747359757231</updated>
+    </task>
+    <task id="LOCAL-00088" summary="2025_05_16 12:23 第四版 update">
+      <option name="closed" value="true" />
+      <created>1747369433582</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1747369433582</updated>
+    </task>
+    <task id="LOCAL-00089" summary="2025_05_17 10:43 第五版">
+      <option name="closed" value="true" />
+      <created>1747449838000</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1747449838000</updated>
+    </task>
+    <task id="LOCAL-00090" summary="2025_05_17 11:22 第五版">
+      <option name="closed" value="true" />
+      <created>1747452136043</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1747452136044</updated>
+    </task>
+    <task id="LOCAL-00091" summary="2025_05_17 15:25 第五版">
+      <option name="closed" value="true" />
+      <created>1747466736804</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1747466736804</updated>
+    </task>
+    <task id="LOCAL-00092" summary="2025_05_18 16:41 第六版 complete">
+      <option name="closed" value="true" />
+      <created>1747557732089</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1747557732089</updated>
+    </task>
+    <task id="LOCAL-00093" summary="2025_05_19 8:31 第七版 第八版 complete">
+      <option name="closed" value="true" />
+      <created>1747614704697</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1747614704697</updated>
+    </task>
+    <task id="LOCAL-00094" summary="2025_05_19 18:05 latex版论文 modify1">
+      <option name="closed" value="true" />
+      <created>1747649157827</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1747649157827</updated>
+    </task>
+    <task id="LOCAL-00095" summary="2025_05_19 19:40 latex版论文 modify2">
+      <option name="closed" value="true" />
+      <created>1747654809936</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1747654809936</updated>
+    </task>
+    <task id="LOCAL-00096" summary="2025_05_20 7:20 latex版论文 modify3">
+      <option name="closed" value="true" />
+      <created>1747696838299</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1747696838300</updated>
+    </task>
+    <task id="LOCAL-00097" summary="2025_05_20 8:13 latex版论文 第二章完成">
+      <option name="closed" value="true" />
+      <created>1747700019225</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1747700019225</updated>
+    </task>
+    <task id="LOCAL-00098" summary="2025_05_20 9:32 3.4.1完成">
+      <option name="closed" value="true" />
+      <created>1747704764057</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1747704764057</updated>
+    </task>
+    <task id="LOCAL-00099" summary="2025_05_20 9:51 第三章完成">
+      <option name="closed" value="true" />
+      <created>1747705919290</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1747705919290</updated>
+    </task>
+    <task id="LOCAL-00100" summary="2025_05_20 10:11 4.1.4完成">
+      <option name="closed" value="true" />
+      <created>1747707094266</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1747707094266</updated>
+    </task>
+    <task id="LOCAL-00101" summary="2025_05_20 11:09 4.2.3完成">
+      <option name="closed" value="true" />
+      <created>1747710569655</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1747710569655</updated>
+    </task>
+    <task id="LOCAL-00102" summary="2025_05_20 13:44 latex版本论文完成">
+      <option name="closed" value="true" />
+      <created>1747719847625</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1747719847625</updated>
+    </task>
+    <task id="LOCAL-00103" summary="2025_05_20 14:17 word版论文修改完成">
+      <option name="closed" value="true" />
+      <created>1747721876085</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1747721876085</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,32 +793,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_04_15 9:55" />
-    <MESSAGE value="2025_04_17 15:07" />
-    <MESSAGE value="2025_04_18 9:12" />
-    <MESSAGE value="2025_04_18 16:19" />
-    <MESSAGE value="2025_04_18 21:45" />
-    <MESSAGE value="2025_04_19 10:04" />
-    <MESSAGE value="2025_04_19 13:40" />
-    <MESSAGE value="2025_04_19 15:17 论文内容已完成，等待修改格式" />
-    <MESSAGE value="2025_04_19 15:17 修复引用" />
-    <MESSAGE value="2025_04_19 19:23 修复引用" />
-    <MESSAGE value="2025_04_21 10:08" />
-    <MESSAGE value="2025_04_23 16:46 论文初稿完成" />
-    <MESSAGE value="2025_04_28 8:56 modify1" />
-    <MESSAGE value="2025_05_04 9:25" />
-    <MESSAGE value="2025_05_08 fix action_add_bytes_to_section_cave_1.py" />
-    <MESSAGE value="2025_05_09 11:12 最初版本" />
-    <MESSAGE value="2025_05_09 20:10 论文修改-1" />
-    <MESSAGE value="2025_05_10 11:51 论文修改-2" />
-    <MESSAGE value="2025_05_10 20:56 论文修改-3" />
-    <MESSAGE value="2025_05_11 9:30 论文修改-4" />
-    <MESSAGE value="2025_05_11 11:16 论文修改-5" />
-    <MESSAGE value="2025_05_11 11:59 论文修改-6" />
     <MESSAGE value="2025_05_11 12:50 论文修改-7" />
     <MESSAGE value="2025_05_13 9:51 论文修改-8" />
     <MESSAGE value="2025_05_13 10:53 第三版初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_05_13 10:53 第三版初始化" />
+    <MESSAGE value="2025_05_13 17:59 第三版 修改1" />
+    <MESSAGE value="2025_05_13 18:50 第三版 修改2" />
+    <MESSAGE value="2025_05_15 11:36 第四版 init" />
+    <MESSAGE value="2025_05_15 18:08 第四版 update" />
+    <MESSAGE value="2025_05_15 18:42 第四版 update" />
+    <MESSAGE value="2025_05_16 9:42 第四版 update" />
+    <MESSAGE value="2025_05_16 12:23 第四版 update" />
+    <MESSAGE value="2025_05_17 10:43 第五版" />
+    <MESSAGE value="2025_05_17 11:22 第五版" />
+    <MESSAGE value="2025_05_17 15:25 第五版" />
+    <MESSAGE value="2025_05_18 16:41 第六版 complete" />
+    <MESSAGE value="2025_05_19 8:31 第七版 第八版 complete" />
+    <MESSAGE value="2025_05_19 18:05 latex版论文 modify1" />
+    <MESSAGE value="2025_05_19 19:40 latex版论文 modify2" />
+    <MESSAGE value="2025_05_20 7:20 latex版论文 modify3" />
+    <MESSAGE value="2025_05_20 8:13 latex版论文 第二章完成" />
+    <MESSAGE value="2025_05_20 9:32 3.4.1完成" />
+    <MESSAGE value="2025_05_20 9:51 第三章完成" />
+    <MESSAGE value="2025_05_20 10:11 4.1.4完成" />
+    <MESSAGE value="2025_05_20 11:09 4.2.3完成" />
+    <MESSAGE value="2025_05_20 13:44 latex版本论文完成" />
+    <MESSAGE value="2025_05_20 14:17 word版论文修改完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_05_20 14:17 word版论文修改完成" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1745829705203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
@@ -820,19 +829,20 @@
     <SUITE FILE_PATH="coverage/example1$add_random_resources.coverage" NAME="add_random_resources 覆盖结果" MODIFIED="1745648280922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$action_rename_random_section.coverage" NAME="action_rename_random_section 覆盖结果" MODIFIED="1744179182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_random_resources.coverage" NAME="action_add_random_resources 覆盖结果" MODIFIED="1744373221149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1745722208467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
     <SUITE FILE_PATH="coverage/example1$360sd_scanner.coverage" NAME="360sd_scanner 覆盖结果" MODIFIED="1744349949409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$virus_share_processor.coverage" NAME="virus_share_processor 覆盖结果" MODIFIED="1745649007438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_share_processor" />
     <SUITE FILE_PATH="coverage/example1$action_add_section_benign_data_1.coverage" NAME="action_add_section_benign_data_1 覆盖结果" MODIFIED="1744187375632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$clamScanner.coverage" NAME="clamScanner 覆盖结果" MODIFIED="1745713876751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
-    <SUITE FILE_PATH="coverage/example1$operation_add_benign_data_overlay_depend_on_benign.coverage" NAME="operation_add_benign_data_overlay_depend_on_benign 覆盖结果" MODIFIED="1745802048866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$origin_sample_and_processed_sample_check.coverage" NAME="origin_sample_and_processed_sample_check 覆盖结果" MODIFIED="1745827953609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
+    <SUITE FILE_PATH="coverage/example1$operation_add_benign_data_overlay_depend_on_benign.coverage" NAME="operation_add_benign_data_overlay_depend_on_benign 覆盖结果" MODIFIED="1745802048866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$plot_draw.coverage" NAME="plot_draw 覆盖结果" MODIFIED="1744614986114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/example1$draw_scatter.coverage" NAME="draw_scatter 覆盖结果" MODIFIED="1747555372056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$operation_add_section_benign_data_depend_on_benign.coverage" NAME="operation_add_section_benign_data_depend_on_benign 覆盖结果" MODIFIED="1746767096229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$operation_add_bytes_to_cave_depend_on_benign.coverage" NAME="operation_add_bytes_to_cave_depend_on_benign 覆盖结果" MODIFIED="1745802837029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
-    <SUITE FILE_PATH="coverage/example1$after_malicious_detect_count.coverage" NAME="after_malicious_detect_count 覆盖结果" MODIFIED="1746935294557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
-    <SUITE FILE_PATH="coverage/example1$sarsa.coverage" NAME="sarsa 覆盖结果" MODIFIED="1745808628522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
+    <SUITE FILE_PATH="coverage/example1$after_malicious_detect_count.coverage" NAME="after_malicious_detect_count 覆盖结果" MODIFIED="1747553934540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
+    <SUITE FILE_PATH="coverage/example1$sarsa.coverage" NAME="sarsa 覆盖结果" MODIFIED="1747540171527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
     <SUITE FILE_PATH="coverage/example1$sample_malicious_test.coverage" NAME="sample_malicious_test 覆盖结果" MODIFIED="1745818841282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample2.coverage" NAME="plot_draw_sample2 覆盖结果" MODIFIED="1745829163332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_modify_checksum.coverage" NAME="action_modify_checksum 覆盖结果" MODIFIED="1744174884972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
@@ -848,15 +858,17 @@
     <SUITE FILE_PATH="coverage/example1$action_modify_timestamp_1.coverage" NAME="action_modify_timestamp_1 覆盖结果" MODIFIED="1744196723148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$add_resources.coverage" NAME="add_resources 覆盖结果" MODIFIED="1745648221358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$dll_swift.coverage" NAME="dll_swift 覆盖结果" MODIFIED="1747100972232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dll_swift" />
+    <SUITE FILE_PATH="coverage/example1$compare_size_change.coverage" NAME="compare_size_change 覆盖结果" MODIFIED="1747553440767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample4.coverage" NAME="plot_draw_sample4 覆盖结果" MODIFIED="1745834012892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$operation_modify_machine_type.coverage" NAME="operation_modify_machine_type 覆盖结果" MODIFIED="1745370968799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules" />
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample1.coverage" NAME="plot_draw_sample1 覆盖结果" MODIFIED="1745828491230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
-    <SUITE FILE_PATH="coverage/example1$before_malicious_detect_count.coverage" NAME="before_malicious_detect_count 覆盖结果" MODIFIED="1747100110582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
+    <SUITE FILE_PATH="coverage/example1$before_malicious_detect_count.coverage" NAME="before_malicious_detect_count 覆盖结果" MODIFIED="1747555260995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
     <SUITE FILE_PATH="coverage/example1$draw1.coverage" NAME="draw1 覆盖结果" MODIFIED="1746878256274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$dump_logs.coverage" NAME="dump_logs 覆盖结果" MODIFIED="1744377167754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/init" />
     <SUITE FILE_PATH="coverage/example1$actions_list.coverage" NAME="actions_list 覆盖结果" MODIFIED="1744198428159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$create_ico.coverage" NAME="create_ico 覆盖结果" MODIFIED="1744371243415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$action_modify_optional_header_1.coverage" NAME="action_modify_optional_header_1 覆盖结果" MODIFIED="1744188701806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$draw2.coverage" NAME="draw2 覆盖结果" MODIFIED="1747451913636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_upx_encryption.coverage" NAME="action_upx_encryption 覆盖结果" MODIFIED="1744179461382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1744632847289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_rename_section_1.coverage" NAME="action_rename_section_1 覆盖结果" MODIFIED="1744197289552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />

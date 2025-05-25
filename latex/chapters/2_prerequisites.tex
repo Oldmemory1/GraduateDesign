@@ -135,7 +135,7 @@ v_{t+1}(s)=v_{t}(s)(s\neq s_{t})
 
 \textcolor{black}{$v_{t}(s_{t})$为$t$时刻对于状态$s\in\ S$的状态值$v_{\pi}(s)$的估计值。}
 
-\textcolor{black}{Sarsa（state action reward action state action）是基于时序查分方法的强化学习算法，但是该方法不是估计状态值而是估计动作值\parencite{ref29},\parencite{ref30}。}
+\textcolor{black}{Sarsa（state action reward action state action）是基于时序查分方法的强化学习算法，但是该方法不是估计状态值而是估计动作值\cite{ref29}\cite{ref30}。}
 
 \textcolor{black}{首先要引入动作值的概念：}
 
@@ -214,7 +214,7 @@ q_{t+1}(s_{t},a_{t})=q_{t}(s_{t},a_{t})-\alpha _{t}(s_{t},a_{t})[q_{t}(s_{t},a_{
 
 \textcolor{black}{不同于Sarsa算法的目标是求出$r_{t+1}+\gamma q_{t}(s_{t+1},a_{t+1})$，Expected Sarsa算法的目标是求出$r_{t+1}+\gamma E[q_{t}(s_{t+1},a_{t+1})]$。}
 
-\textcolor{black}{引入期望值会增加计算复杂度，但是会减小所求目标的方差，Expected Sarsa的涉及的随机变量是${{s}_{t}{,}a_t,r_{t+1},s_{t+1}}$，相比Sarsa算法的${s_t,a_t,r_{t+1},s_{t+1},a_{t+1}}$，减少了一项，因此对于减少估计方差是有正面作用的\parencite{ref30},\parencite{ref31},\parencite{ref32}。}
+\textcolor{black}{Sutton等人提出，引入期望值会增加计算复杂度，但是会减小所求目标的方差\cite{ref30}\cite{ref31}\cite{ref32}，Expected Sarsa的涉及的随机变量是${{s}_{t}{,}a_t,r_{t+1},s_{t+1}}$，相比Sarsa算法的${s_t,a_t,r_{t+1},s_{t+1},a_{t+1}}$，减少了一项，因此对于减少估计方差是有正面作用的。}
 
 \subsection{恶意软件种类}
 
