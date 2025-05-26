@@ -23,9 +23,9 @@ from actions.action_upx_encryption import action_upx_encryption
 from actions.actions_list import get_random_actions
 from init.clear_directory import clear_directory
 from operation_modules.findAllSignatures import get_all_file_paths
-from string_generator.generated_strings.get_a_random_string_from_strings import get_random_string
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
 from virus_scanner_module.clamScanner import clamScanner
+
 logging.basicConfig(
     level=logging.DEBUG,       # 设置最低日志级别（DEBUG 及以上均输出）
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
