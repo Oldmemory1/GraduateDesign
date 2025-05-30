@@ -127,7 +127,7 @@ class SARSA:
             if action_name == "action_add_bytes_to_section_cave_1" or action_name == "action_add_section_benign_data_1" or action_name=="action_add_benign_data_overlay_1":
                 reward = 5
             print(os.path.basename(episode) + " choose action:" + action_name)
-            total_reward = 0
+            total_reward = 0+reward
 
             while not done:
                 valid = True
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     if a == 1:
         agent = SARSA(actions_list=actions_list_, n_states=n_states_, n_actions=n_actions_)
 
-        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\processed\sample1\sample", enable_log_=False)
+        agent.train(train_dataset_dir=r"D:\graduate_design\example1\samples\processed\testsample\sample", enable_log_=False)
         # 打印训练后的Q表
         print("\nTrained Q-table:")
         print(agent.q_table)
