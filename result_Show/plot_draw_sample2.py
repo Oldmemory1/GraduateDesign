@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 数据准备
-software = ['ClamAV','360杀毒-开启QVM2杀毒引擎', '360杀毒-不开启QVM2杀毒引擎', '火绒']
+software = ['ClamAV','360 antivirus with QVM', '360 antivirus without QVM', 'HuoRong']
 before = [163, 436,436, 439]
 after = [96, 295,34, 399]
 
@@ -16,11 +16,11 @@ rects1 = ax.bar(x - width/2, before, width, label='before process', color='#1f77
 rects2 = ax.bar(x + width/2, after, width, label='after process', color='#ff7f0e', edgecolor='black')
 
 # 添加标签和标题
-ax.set_xlabel('杀毒软件', fontsize=12,fontproperties='FangSong')
-ax.set_ylabel('样本查杀数量', fontsize=12,fontproperties='FangSong')
-ax.set_title('样本集sample2免杀处理前后的查杀数量', fontsize=14, pad=20,fontproperties='FangSong')
+ax.set_xlabel('antivirus software', fontsize=12,fontproperties='Times New Roman')
+ax.set_ylabel('detect amount', fontsize=12,fontproperties='Times New Roman')
+ax.set_title('sample2 detect amount compare', fontsize=14, pad=20,fontproperties='Times New Roman')
 ax.set_xticks(x)
-ax.set_xticklabels(software,fontproperties='FangSong')
+ax.set_xticklabels(software,fontproperties='Times New Roman')
 ax.legend()
 
 # 在柱子上方显示数值
