@@ -17,19 +17,16 @@
   \includegraphics[]{images/system_design1.png}
   \caption{系统总体设计-1}\label{fig:system_design1}
 \end{figure}
-
 \begin{figure}[htbp]
   \centering
-  \includegraphics[]{images/system_design2.png}
+  \includegraphics[scale=0.80]{images/system_design2.png}
   \caption{系统总体设计-2}\label{fig:system_design2}
 \end{figure}
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[]{images/system_design3.png}
   \caption{系统总体设计-3}\label{fig:system_design3}
 \end{figure}
-
 \section{样本筛选模块的设计与实现}
 
 \subsection{设计思路}
@@ -53,7 +50,6 @@
   \includegraphics[]{images/sample_swift_module.png}
   \caption{样本筛选模块}\label{fig:sample_swift_module}
 \end{figure}
-
 \textcolor{black}{为了考虑样本筛选模块的完备性，需要配备异常处理应对可能出现的一些异常情况：}
 
 \textcolor{black}{（1）	传入的样本文件夹中包含子文件夹，筛选中需要忽略掉这些子文件夹。}
@@ -79,7 +75,6 @@
   \includegraphics[]{images/malware_scan_module.png}
   \caption{恶意程序扫描模块}\label{fig:malware_scan_module}
 \end{figure}
-
 \textcolor{black}{为完成恶意程序扫描模块的视线，本实验需要在主机配置ClamAV服务环境，首先需要在主机上安装ClamAV，并且修改安装目录下的clamd.conf文件，指定ClamAV服务的端口号。}
 
 \textcolor{black}{为指定ClamAV服务的端口号，需要修改的是clamd.conf文件中TCP Socket的设置，因为是在本地配置ClamAV服务，clamd.conf中的TCPAddr，即TCP地址按照默认的localhost即可，无需修改。这一步需要注意端口号的冲突问题，最好事先检测主机已经使用的端口号，否则会影响恶意程序扫描模块的正常运行。}
@@ -109,7 +104,6 @@
   \includegraphics[]{images/certification_fabrication.png}
   \caption{伪造签名}\label{fig:certification_fabrication}
 \end{figure}
-
 \textcolor{black}{首先，需要设计强化学习模型可能对PE可执行程序修改采取的action，应包括如下内容：}
 
 \textcolor{black}{（1）使用sigthief，将一个从良性软件中提取出的数字签名附加在恶意软件上，通过修改ImportTable中的CertTableLOC，CertLOC，CertSize等内容实现，操作后的结果如图\ref{fig:certification_fabrication}所示，可以发现恶意程序被附加了一个可信任的CA证书，该证书由Xing Wang发行，从Xilinx的软件安装包上剥落而来。}
@@ -170,105 +164,63 @@
 
 \textcolor{black}{这些action的传入参数应包含待修改的可执行文件，经过对抗性操作修改后生成对抗性样本，随后，这些对抗性样本需要被移动到原路径以完成修改。}
 
-\textcolor{black}{对于对抗性样本生成的强化学习算法设计如下，其包含三个算法模块，主算法实现对抗性样本生成的功能，子算法2和子算法3实现训练，总奖励更新的功能。主算法用于强化学习对抗性样本生成模块运行。}
+\textcolor{black}{对于对抗性样本生成的强化学习算法设计如算法\ref{alg1}所示：}
 
-\textcolor{black}{主算法：}
+\begin{algorithm}
+	\caption{主算法：对抗性样本生成}
+	\label{alg1}
+	\textbf{Input:} \\
+	\hspace*{1cm} $sample\_directory$: 样本集目录 \\
+	\hspace*{1cm} $Sarsa\_model$: 强化学习模型 \\
+	\textbf{Output:} \\
+	\hspace*{1cm} $processed\_samples,evasion\_count$: 生成的对抗性样本和处理后成功逃逸检测的样本数量
+	\begin{algorithmic}[1]
+		\Function{generate\_samples}{$sample\_directory$, $Sarsa\_model$}
+            \State $Sarsa\_model \gets \Call{Init}{actions\_list,states,actions, alpha,gamma,epsilon,QTable}$
+            \State $episodes \gets \Call{get\_episodes}{sample\_directory}$
 
-\textcolor{black}{功能：对抗性样本生成函数}
+		\For{each $episode \in episodes$}
+      	\State $count \gets 0$
+            \State $current\_state \gets start\_state$
+            \State $status\_done \gets False$
+            \State $reward \gets 0$
+            \State $operations\_count \gets 0$
+            \State $action \gets \Call{choose\_action}{current\_state,QTable}$
+            \State $do\_action(action)$
+            \While{$status\_done == False$}  
+            \State $judgement \gets \Call{can\_evasion}{episode}$
+            \If{$judgement == True$} 
+            \State $evasion\_count \gets evasion\_count++$
+            \State $next\_state \gets FINAL\_STATE$
+            \State $reward \gets SUCCESS\_REWARD$
+            \State $status\_done \gets True$
+            \Else
+            \State $operation\_count \gets operation\_count++$
+            \If{$operation\_count >= MAX\_OPERATION\_COUNT$}
+            \State $reward \gets FAIL\_REWARD$
+            \State $next\_state \gets FINAL\_STATE$
+            \Else
+            \State $next\_state \gets \Call{update\_state}{operation\_count}$
+            \EndIf
+            \EndIf
+            \State $total\_reward \gets total\_reward+reward$
 
-\textcolor{black}{输入: 样本集目录sample\_directory,强化学习模型Sarsa\_model }
-
-\textcolor{black}{输出: 生成的对抗性样本}
-
-\textcolor{black}{算法伪代码：}
-
-\begin{lstlisting}[language=Python, caption={}, label={lst:pythonfile1}]
-#---对抗性样本生成函数---
-#Input: 样本目录sample_directory,强化学习模型Sarsa_model 
-#OutPut: 生成的对抗性样本
-def alogrithm_generate_controversy_samples(sample_directory,actions_list,Sarsa_model):
-    Sarsa_model.init(actions_list,gamma,alpha,epsilon) #初始化强化学习Sarsa模型，传入待训练的样本集路径，行为集，学习率，探索率，折扣因子
-    evasion_count = train(Sarsa_model,sample_directory) #训练强化学习Sarsa模型
-\end{lstlisting}
-
-\textcolor{black}{主算法实现了对于强化学习模型的初始化和样本训练结束后统计成功逃逸的样本数量}
-
-\textcolor{black}{子算法1：}
-
-\textcolor{black}{功能：完成主算法中的训练操作（train）}
-
-\textcolor{black}{输入：样本集目录sample\_directory,强化学习模型Sarsa\_model}
-
-\textcolor{black}{输出：成功逃逸的对抗性样本数量}
-
-\textcolor{black}{算法伪代码：}
-
-\begin{lstlisting}[language=Python, caption={}, label={lst:pythonfile2}]
-#---训练函数---
-#Input: 样本目录sample_directory,强化学习模型Sarsa_model 
-#OutPut: 成功逃逸的对抗性样本数量
-def train(Sarsa_model,sample_directory):
-    episodes = get_episodes_for_training(sample_directory) #从待训练的样本集路径中获取所有待训练样本
-    evasion_count = 0 #经处理后逃逸查杀成功的样本数，一开始设置为0
-    for episode in episodes:
-        #---首次操作---
-        count = 0 #已经进行了几次操作
-        state = 0 #目前状态
-        total_reward = 0 #总奖励
-        status_done = False #是否是终止态
-        reward = 0 #奖励
-        action = choose_action(state) #选择当前应该执行的操作
-        do_action(action,episode) #对该回合的样本，执行该操作
-        while not status_done:#非终态时，进行下列操作
-            total_reward=update_total_reward(episode,total_reward);
-            if status_done: #若已经达到终止态
-                Sarsa_model.update(state,action,reward,next_state=None,next_action=None) #更新Sarsa强化学习模型
-            else:#不是终止态
-                next_action = choose_action(next_state) #选择当前应该执行的操作
-                Sarsa_model.update(state,action,reward,next_state,next_action) #更新Sarsa强化学习模型
-                action = next_action #更新行为
-                do_action(action,state,enable_log) #对该回合的样本，执行该操作
-    return evasion_count #返回本次训练中，能成功逃逸的样本数
-\end{lstlisting}
-
-\textcolor{black}{子算法1实现了对于样本集中的每个样本，根据当前状态在行为表中选择操作并且执行，若当前状态为终止态，则更新强化学习模型并对下一个样本进行操作，否则继续选择操作并且予以执行。}
-
-\textcolor{black}{子算法2：}
-
-\textcolor{black}{功能：完成子算法1中的对total\_reward的更新操作}
-
-\textcolor{black}{输入: 当前的样本episode,更新前的总奖励total\_reward}
-
-\textcolor{black}{输出: 更新后的总奖励total\_reward}
-
-\textcolor{black}{算法伪代码：}
-
-\begin{lstlisting}[language=Python, caption={}, label={lst:pythonfile3}]
-#---更新总奖励的函数---
-#Input: 当前的样本episode,更新前的总奖励total_reward
-#OutPut: 更新后的总奖励total_reward
-def update_total_reward(episode,total_reward):
-    judgement = can_evasion(episode) #判断处理后的样本是否能逃逸反病毒软件的查杀
-        if judgement == True : #成功逃逸
-            evasion_count++ #更新逃逸数量
-            next_state = None #更新状态
-            reward = SUCCESS_REWARD #获取的奖励为SUCCESS_REWARD
-            status_done = True #达到终止态
-        else:
-            count++ #更新操作数
-            if count >= Max_Count: #若操作数大于允许的最大操作数
-                reward = FAIL_REWARD #获取的奖励为FAIL_REWARD
-                next_state = None #更新状态
-                status_done = True #达到终止态
-            else:
-                next_state = count #更新状态
-    total_reward+=reward #更新总奖励
-    return total_reward; 
-\end{lstlisting}
-
-\textcolor{black}{子算法2实现了对于总奖励和状态的更新，当能成功逃逸恶意软件扫描模块的检测时，进入终止态并且获得奖励，若不能逃逸，进行判断，如果次数已经达到最大次数，则进入终止态并且获取奖励，否则更新状态。最后返回总奖励。}
-
-\textcolor{black}{强化学习算法的总工作流程如下描述：}
+            \If{$status\_done == True$}
+            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state,next\_action=None)$
+            \Else
+            \State $next\_action \gets \Call{choose\_action}{next\_state,QTable}$
+            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state,next\_action=None)$
+            \State $action \gets next\_action$
+            \State $do\_action(next\_action)$
+            \EndIf
+            
+            \EndWhile
+     	\EndFor       
+            \State \textbf{return} $evasion\_count$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+\textcolor{black}{算法实现了对于强化学习模型的初始化和样本训练结束后统计成功逃逸的样本数量,强化学习算法的总工作流程如下描述：}
 
 \textcolor{black}{Step1：传入恶意样本集的目录和其它参数，先将恶意样本的绝对目录存储，以备后续Sarsa智能体模型使用，同时预加载Sarsa模型（Sarsa\_model）。}
 
@@ -276,7 +228,7 @@ def update_total_reward(episode,total_reward):
 
 \textcolor{black}{Step3：根据状态当前选择一个行为，episode经由处理后，经由前文中封装的恶意程序扫描模块，检测是否成功逃逸反病毒软件的扫描。}
 
-\textcolor{black}{Step4：如果成功，则直接进入终止态，获取奖励SUCCESS\_REWARD并且更新Sarsa模型的Qtable，否则进入下一个状态}
+\textcolor{black}{Step4：如果成功，则直接进入终止态，获取奖励SUCCESS\_REWARD并且更新Sarsa模型的Qtable，否则进入下一个状态。}
 
 \textcolor{black}{Step5：如果失败，但是次数没有达到Max\_Count，则更新Sarsa模型的Qtable，并且重复Step3的过程。如果失败且次数达到了Max\_Count，进入终止状态，并获取奖励FAIL\_REWARD（可以设置为负数，也可以设置为0）和更新Sarsa模型的Qtable。}
 

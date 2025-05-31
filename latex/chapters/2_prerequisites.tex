@@ -9,13 +9,6 @@
 \section{实验预备知识}
 
 \subsection{PE文件}
-
-\textcolor{black}{PE文件是Windows操作系统下的可执行文件形式，包括EXE（可执行文件），DLL（动态链接库），SYS（系统文件）等类型。}
-
-\textcolor{black}{PE文件中包含PE文件头（IMAGE\_NT\_HEADERS），其中的COFF文件头（IMAGE\_FILE\_HEADER）和可选首部（IMAGE\_OPTIONAL\_HEADER）中的有些部分是本实验中需要修改的目标。}]
-
-\textcolor{black}{COFF文件头（IMAGE\_FILE\_HEADER）包含如下关键字段，如表\ref{coff_chart}所示：}
-
 \begin{table}[htbp]
   \centering
   \caption{COFF文件头关键字段}\label{coff_chart}
@@ -27,87 +20,90 @@
     Characteristics &     文件的类型，是动态链接库，还是可执行文件等类型。\\ \bottomrule
     \end{tabular}
 \end{table}
-\textcolor{black}{可选首部（IMAGE\_OPTIONAL\_HEADER）包含如下字段，可选首部指明了当PE程序被载入内存后的一些情况：}
+\begin{table}[htbp]
+  \centering
+  \caption{可选首部关键字段}\label{optional_header_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    Magic     &     魔法位，包含PE信息，一定要和COFF文件头中的Machine对应，否则就会报错导致程序无法启动。\\ \midrule
+    AddressOfEntryPoint   &     程序入口点，即相对虚拟地址。\\ \midrule
+    ImageBase &     加载机制。\\  \midrule
+    SectionAlignment &     内存中节区的对齐粒度，不建议修改，否则程序可能无法启动。\\  \midrule
+    FileAlignment &     文件中节区的对齐粒度，不建议修改，否则程序将无法启动。\\  \midrule
+    SizeOfImage &     加载到内存后的总大小。\\  \midrule
+    SubSystem &     子系统类型。\\  \midrule
+    DataDirectory &     据目录表，记录某些数据的位置及其大小。\\ \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}[htbp]
+  \centering
+  \caption{节表关键属性字段}\label{section_table_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    Name     &     节区的名字。\\ \midrule
+    VirtualAddress   &     虚拟地址中的起始相对位置。\\ \midrule
+    SizeOfRawData &     节区中数据的大小。\\  \midrule
+    PointerToRawData &     节区偏移量。\\  \midrule
+    Characteristics &     节区属性。\\ \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}[htbp]
+  \centering
+  \caption{节区数据内容}\label{section_data_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    .data     &     已经完成初始化的某些数据。\\ \midrule
+    .text   &     代码节，存放该PE程序执行的指令。\\ \midrule
+    .rdata &     只读（Read Only）的数据。\\  \midrule
+    .rsrc &     资源节，存放PE文件的图标等信息。\\  \midrule
+    .reloc &     重定位信息，可以用于动态链接库的装载过程。\\  \midrule
+    .idata &     import data，即导入函数信息。\\ \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}[htbp]
+  \centering
+  \caption{数据目录表内容}\label{data_dictionary_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    Import Table     &     导入表，用于存放该PE文件依赖的动态链接库和调用的某些函数。\\ \midrule
+    Export Table   &     导出表，可以用于存放这个PE文件封装好的函数，多半运用于动态链接库封装函数供其余PE程序调用使用。\\ \midrule
+    Relocation Table &     重定位表，修复地址偏移相关问题。\\  \midrule
+    TLS &     线程存储表，与多线程程序有关，存储线程初始化数据。\\  \midrule
+    Debug Directory &     存放该PE程序的调试信息。\\ \bottomrule
+    \end{tabular}
+\end{table}
+\textcolor{black}{PE文件是Windows操作系统下的可执行文件形式，包括EXE（可执行文件），DLL（动态链接库），SYS（系统文件）等类型。}
 
-\textcolor{black}{（1）Magic：魔法位，包含PE信息，一定要和COFF文件头中的Machine对应，否则就会报错导致程序无法启动。}
+\textcolor{black}{PE文件中包含PE文件头（IMAGE\_NT\_HEADERS），其中的COFF文件头（IMAGE\_FILE\_HEADER）和可选首部（IMAGE\_OPTIONAL\_HEADER）中的有些部分是本实验中需要修改的目标。}]
 
-\textcolor{black}{（2）AddressOfEntryPoint：程序入口点，即相对虚拟地址。}
+\textcolor{black}{COFF文件头（IMAGE\_FILE\_HEADER）包含如下关键字段，如表\ref{coff_chart}所示：}
 
-\textcolor{black}{（3）ImageBase：加载机制。}
+\textcolor{black}{可选首部（IMAGE\_OPTIONAL\_HEADER）包含如下关键字段，可选首部指明了当PE程序被载入内存后的一些情况，如表\ref{optional_header_chart}所示：}
 
-\textcolor{black}{（4）SectionAlignment：内存中节区的对齐粒度，不建议修改，否则程序可能无法启动。}
 
-\textcolor{black}{（5）FileAlignment：文件中节区的对齐粒度，不建议修改，否则程序将无法启动。}
+\textcolor{black}{PE文件中的节表（Section table）描述了每个节的属性，由多个IMAGE\_SECTION\_HEADER组成，每个条目对应一个节区，包括下列关键属性字段，如表\ref{section_table_chart}所示：}
 
-\textcolor{black}{（6）SizeOfImage：加载到内存后的总大小。}
+\textcolor{black}{节区数据正常情况下应包含如下内容，如表\ref{section_data_chart}所示：}
 
-\textcolor{black}{（7）SubSystem：子系统类型。}
-
-\textcolor{black}{（8）DataDirectory：数据目录表，记录某些数据的位置及其大小。}
-
-\textcolor{black}{PE文件中的节表（Section table）描述了每个节的属性，由多个IMAGE\_SECTION\_HEADER组成，每个条目对应一个节区，包括下列关键属性：}
-
-\textcolor{black}{（1）Name：节区的名字。}
-
-\textcolor{black}{（2）VirtualAddress：虚拟地址中的起始相对位置。}
-
-\textcolor{black}{（3）SizeOfRawData：节区中数据的大小。}
-
-\textcolor{black}{（4）PointerToRawData：节区偏移量。}
-
-\textcolor{black}{（5）Characteristics：节区属性。}
-
-\textcolor{black}{节区数据正常情况下应包含如下内容：}
-
-\textcolor{black}{（1）.text：代码节，存放该PE程序执行的指令。}
-
-\textcolor{black}{（2）.data：已经完成初始化的某些数据。}
-
-\textcolor{black}{（3）.rdata：只读（Read Only）的数据。}
-
-\textcolor{black}{（4）.rsrc：资源节，存放PE文件的图标等信息。}
-
-\textcolor{black}{（5）.reloc：重定位信息，可以用于动态链接库的装载过程。}
-
-\textcolor{black}{（6）.idata：import data，即导入函数信息。}
-
-\textcolor{black}{数据目录表中包含的内容如下：}
-
-\textcolor{black}{（1）Import Table：导入表，用于存放该PE文件依赖的动态链接库和调用的某些函数。}
-
-\textcolor{black}{（2）Export Table：导出表，可以用于存放这个PE文件封装好的函数，多半运用于动态链接库封装函数供其余PE程序调用使用。}
-
-\textcolor{black}{（3）Relocation Table：重定位表，修复地址偏移相关问题。}
-
-\textcolor{black}{（4）TLS：线程存储表，与多线程程序有关，存储线程初始化数据。}
-
-\textcolor{black}{（5）Debug Directory：存放该PE程序的调试信息。}
+\textcolor{black}{数据目录表中包含的内容如表\ref{data_dictionary_chart}所示：}
 
 \subsection{强化学习}
 
-\textcolor{black}{基本概念相关：}
+\textcolor{black}{基本概念相关如表\ref{reinforce_learning_chart}所示：}
 
-\textcolor{black}{（1）智能体：在强化学习中决策，行动，学习。智能体是一个感知者，能感知并且理解当前的状态，智能体是一个决策者，能够知道在一个状态下应该采取什么行动，智能体是一个执行者，通过改变状态从而获取奖励。}
-
-\textcolor{black}{（2）状态：描述了智能体与环境的相对状况。}
-
-\textcolor{black}{（3）状态空间：所有状态的集合。}
-
-\textcolor{black}{（4）动作：智能体在某一状态下能选择的操作。}
-
-\textcolor{black}{（5）动作空间：所有动作的集合。}
-
-\textcolor{black}{（6）状态转移：当执行一个动作时，智能体可能从一个状态转移到另一个状态的过程。}
-
-\textcolor{black}{（7）策略：智能体在每一个状态下应该采取什么样的动作，允许分为确定性策略和随机性策略。}
-
-\textcolor{black}{（8）奖励：作为人机交互的一个重要手段，可以设置合适的奖励来引导智能体按照预期选择正确的决策，正数奖励表明鼓励智能体执行该行动，负数奖励表明不鼓励智能体执行该行动。}
-
-\textcolor{black}{（9）回合/尝试：智能体执行一个策略与环境交互的过程中，智能体从开始状态到终止状态停止的过程被称为一个回合或尝试，一般用英文episode来表示。}
-
-\textcolor{black}{（10）折扣因子：用于调整智能体对于近期奖励和远期奖励的重视程度，可以记作折扣因子为$\gamma$，$\gamma$在(0,1)的范围，且折扣因子的引入允许了无限长的轨迹。}
-
-\textcolor{black}{（11）状态值：表达式如式（2-1）所示：}
+\begin{table}[htbp]
+  \centering
+  \caption{强化学习基本概念}\label{reinforce_learning_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    智能体     &     在强化学习中决策，行动，学习。智能体是一个感知者，能感知并且理解当前的状态，智能体是一个决策者，能够知道在一个状态下应该采取什么行动，智能体是一个执行者，通过改变状态从而获取奖励。\\ \midrule
+    状态   &     描述了智能体与环境的相对状况。\\ \midrule
+    状态空间 &     所有状态的集合。\\  \midrule
+    动作 &     智能体在某一状态下能选择的操作。\\  \midrule
+    动作空间 &     所有动作的集合。\\  \midrule
+    状态转移 &     当执行一个动作时，智能体可能从一个状态转移到另一个状态的过程。\\  \midrule
+    策略 &     智能体在每一个状态下应该采取什么样的动作，允许分为确定性策略和随机性策略。\\  \midrule
+    奖励 &     作为人机交互的一个重要手段，可以设置合适的奖励来引导智能体按照预期选择正确的决策，正数奖励表明鼓励智能体执行该行动，负数奖励表明不鼓励智能体执行该行动。\\  \midrule
+    回合/尝试 &     智能体执行一个策略与环境交互的过程中，智能体从开始状态到终止状态停止的过程被称为一个回合或尝试，一般用英文episode来表示。\\  \midrule
+    折扣因子 &     用于调整智能体对于近期奖励和远期奖励的重视程度，可以记作折扣因子为$\gamma$，$\gamma$在(0,1)的范围，且折扣因子的引入允许了无限长的轨迹。\\  \midrule
+    状态值 &     表达式如式（2-1）所示。\\ \bottomrule
+    \end{tabular}
+\end{table}
 \begin{equation}
 v_{\pi}(s)=E[G_{t}|s_{t}=s]
 \end{equation}
@@ -126,16 +122,11 @@ v_{t+1}(s)=v_{t}(s)(s\neq s_{t})
 
 \textcolor{black}{在式（2-2）中：}
 
-\textcolor{black}{$r_{t+1}+\gamma v_{t}(s_{t+1})$作为时序差分方法的目标。}
-
-\textcolor{black}{$v_{t}(s_{t})-(r_{t+1}+\gamma v_{t}(s_{t+1}))$作为时序差分方法的误差。}
-
-\textcolor{black}{$\alpha_{t}(s_{t},a_{t})$为在{t}时刻对于状态$s_{t}$的学习率}
-
-\textcolor{black}{$v_{t+1}(s_{t})$为新的$t+1$时刻对于状态值$v_{\pi}(s)$的估计值。}
-
-\textcolor{black}{$v_{t}(s_{t})$为$t$时刻对于状态$s\in\ S$的状态值$v_{\pi}(s)$的估计值。}
-
+\textcolor{black}{$r_{t+1}+\gamma v_{t}(s_{t+1})$作为时序差分方法的目标；}
+\textcolor{black}{$v_{t}(s_{t})-(r_{t+1}+\gamma v_{t}(s_{t+1}))$作为时序差分方法的误差；}
+\textcolor{black}{$\alpha_{t}(s_{t},a_{t})$为在{t}时刻对于状态$s_{t}$的学习率；}
+\textcolor{black}{$v_{t+1}(s_{t})$为新的$t+1$时刻对于状态值$v_{\pi}(s)$的估计值；}
+\textcolor{black}{$v_{t}(s_{t})$为$t$时刻对于状态$s\in\ S$的状态值$v_{\pi}(s)$的估计值；}
 \textcolor{black}{Sarsa（state action reward action state action）是基于时序查分方法的强化学习算法，但是该方法不是估计状态值而是估计动作值\cite{ref29}\cite{ref30}。}
 
 \textcolor{black}{首先要引入动作值的概念：}
