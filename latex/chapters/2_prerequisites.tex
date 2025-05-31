@@ -14,18 +14,19 @@
 
 \textcolor{black}{PE文件中包含PE文件头（IMAGE\_NT\_HEADERS），其中的COFF文件头（IMAGE\_FILE\_HEADER）和可选首部（IMAGE\_OPTIONAL\_HEADER）中的有些部分是本实验中需要修改的目标。}]
 
-\textcolor{black}{COFF文件头（IMAGE\_FILE\_HEADER）包含如下关键字段：}
+\textcolor{black}{COFF文件头（IMAGE\_FILE\_HEADER）包含如下关键字段，如表\ref{coff_chart}所示：}
 
-\textcolor{black}{（1）Machine：目标CPU架构，指明了能运行这个程序的机器码，可以指明支持程序运行的机器架构是x86、x64、PowerPC、ARM等。}
-
-\textcolor{black}{（2）NumberOfSections：指明所有节区的数量。}
-
-\textcolor{black}{（3）TimeDateStamp：时间戳，指明了这个文件被编译生成的时间。}
-
-\textcolor{black}{（4）SizeOfOptionalHeader：可选首部的大小。}
-
-\textcolor{black}{（5）Characteristics：文件的类型，是动态链接库，还是可执行文件等类型。}
-
+\begin{table}[htbp]
+  \centering
+  \caption{COFF文件头关键字段}\label{coff_chart}
+  \begin{tabular}{*{2}{>{\centering\arraybackslash}p{5cm}}} \toprule
+    Machine     &     能运行这个程序的计算机的机器码。\\ \midrule
+    NumberOfSections   &     指明所有节区的数量。\\ \midrule
+    TimeDateStamp &     时间戳，指明了这个文件被编译生成的时间。\\  \midrule
+    SizeOfOptionalHeader &     可选首部的大小。\\  \midrule
+    Characteristics &     文件的类型，是动态链接库，还是可执行文件等类型。\\ \bottomrule
+    \end{tabular}
+\end{table}
 \textcolor{black}{可选首部（IMAGE\_OPTIONAL\_HEADER）包含如下字段，可选首部指明了当PE程序被载入内存后的一些情况：}
 
 \textcolor{black}{（1）Magic：魔法位，包含PE信息，一定要和COFF文件头中的Machine对应，否则就会报错导致程序无法启动。}

@@ -98,7 +98,7 @@ x = list(range(len(data)))
 y = data
 
 # 绘制散点图
-plt.figure(figsize=(14, 7))
+plt.figure(figsize=(10, 8))
 plt.scatter(x, y, s=15, alpha=0.6, edgecolors='w', linewidth=0.5)
 
 # 使用对数坐标轴（y轴）
