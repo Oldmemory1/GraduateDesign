@@ -42,16 +42,16 @@ for entry in data:
 x = range(len(malwares))  # x轴位置
 width = 0.35  # 柱子宽度
 
-fig, ax = plt.subplots(figsize=(12, 6))
+fig, ax = plt.subplots(figsize=(8, 8))
 rects1 = ax.bar([i - width / 2 for i in x], before, width, label='Before Process', color='#1f77b4')
 rects2 = ax.bar([i + width / 2 for i in x], after, width, label='After Process', color='#ff7f0e')
 
 # 添加标签和标题
-ax.set_xlabel('malwares', fontsize=12)
-ax.set_ylabel('Virus Total Engine Detection Amount', fontsize=12)
-ax.set_title('Detection Results Before and After Processing', fontsize=14, pad=20)
+ax.set_xlabel('malwares', fontsize=12,fontproperties='Times New Roman')
+ax.set_ylabel('Virus Total Engine Detection Amount', fontsize=12,fontproperties='Times New Roman')
+ax.set_title('Detection Results Before and After Processing', fontsize=14, pad=20,fontproperties='Times New Roman')
 ax.set_xticks(x)
-ax.set_xticklabels(malwares, rotation=45, ha='right')
+ax.set_xticklabels(malwares, rotation=0, ha='right',fontproperties='Times New Roman')
 ax.legend()
 
 

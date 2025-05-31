@@ -8,17 +8,17 @@ after = [96, 295,34, 399]
 
 # 设置柱状图参数
 x = np.arange(len(software))  # 横坐标位置
-width = 0.35  # 柱状图宽度
+width = 0.25  # 柱状图宽度
 
 # 绘制柱状图
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(8, 6))
 rects1 = ax.bar(x - width/2, before, width, label='before process', color='#1f77b4', edgecolor='black')
 rects2 = ax.bar(x + width/2, after, width, label='after process', color='#ff7f0e', edgecolor='black')
 
 # 添加标签和标题
-ax.set_xlabel('antivirus software', fontsize=12,fontproperties='Times New Roman')
-ax.set_ylabel('detect amount', fontsize=12,fontproperties='Times New Roman')
-ax.set_title('sample2 detect amount compare', fontsize=14, pad=20,fontproperties='Times New Roman')
+ax.set_xlabel('antivirus software', fontsize=10,fontproperties='Times New Roman')
+ax.set_ylabel('detect amount', fontsize=10,fontproperties='Times New Roman')
+ax.set_title('sample2 detect amount compare', fontsize=10, pad=20,fontproperties='Times New Roman')
 ax.set_xticks(x)
 ax.set_xticklabels(software,fontproperties='Times New Roman')
 ax.legend()
