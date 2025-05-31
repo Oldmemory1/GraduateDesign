@@ -12,6 +12,7 @@ from actions.action_add_section_benign_data_1 import action_add_section_benign_d
 from actions.action_break_optional_header_checksum_1 import action_break_optional_header_checksum_1
 from actions.action_create_fake_signature import action_create_fake_signature
 from actions.action_insert_useless_data_to_end import action_insert_useless_data_to_end
+from actions.action_list import get_random_actions
 from actions.action_modify_checksum import action_modify_checksum
 from actions.action_modify_optional_header_1 import action_modify_optional_header_1
 from actions.action_modify_timestamp import action_modify_timestamp
@@ -20,7 +21,7 @@ from actions.action_remove_debug import action_remove_debug
 from actions.action_rename_random_section import action_rename_random_section
 from actions.action_rename_section_1 import action_rename_section_1
 from actions.action_upx_encryption import action_upx_encryption
-from actions.actions_list import get_random_actions
+
 from init.clear_directory import clear_directory
 from operation_modules.findAllSignatures import get_all_file_paths
 from string_generator.generated_strings.strings_length_4096 import strings_4096bytes
