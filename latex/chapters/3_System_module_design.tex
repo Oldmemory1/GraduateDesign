@@ -291,7 +291,6 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/peel_signature.png}
   \caption{剥落签名}\label{fig:peel_signature}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:peel_signature}描述了SigThief获取良性程序签名的过程，需要预备一些良性应用程序，首先SigTheif会检测与数字签名相关的ImportTable中的CertTableLoc，CertSize条目，如果不存在，则SigThief认为该良性文件不能获取到签名，直接跳过改文件，如果存在，则在CertLoc位置截取CertSize大小的字符，即为数字签名对应的字符串，并将其保存至一个.exe\_sig扩展名的文件，作为从良性文件上剥落的签名，以备后续为恶意软件添加数字签名。}
 
 \begin{figure}[htbp]
@@ -299,7 +298,6 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/append_signature.png}
   \caption{附加签名}\label{fig:append_signature}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:append_signature}描述了SigThief将从良性文件上剥落的签名（格式为.exe\_sig）附加在恶意软件上的过程，需要前一步生成的.exe\_sig文件作为签名内容，具体过程为修改输入的恶意软件中的CertTableLoc等内容，并将输入中剥落下的良性签名的内容追加在恶意软件末尾，随后将修改后的恶意软件输出至指定的绝对路径下。}
 
 \begin{figure}[htbp]
@@ -307,7 +305,6 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/get_benign_strings.png}
   \caption{获取良性字符串}\label{fig:get_benign_strings}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:get_benign_strings}描述了良性字符串的获取过程，需要预备一些良性文件（可以是PE可执行程序、动态链接库、系统文件）,此过程首先会判断良性文件的内容，如果不含.text节（实际上也可以指定为.data节或其他节），则直接跳过该良性文件，如果含有，则将.text节中全部内容保存在一个字符串中，以备后续过程使用。}
 
 \begin{figure}[htbp]
@@ -315,7 +312,6 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/append_strings.png}
   \caption{尾部追加无意义字节}\label{fig:append_strings}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:append_strings}描述了恶意软件尾部追加无意义字节的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后从获取到的良性字符串中随机选取一个，使用字符串拼接操作加在待处理的恶意程序二进制字符串尾部，最后，将拼接后的二进制字符串写入指定的目录下完成对恶意软件进行无意义字节的追加操作。}
 
 \begin{figure}[htbp]
@@ -323,7 +319,6 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/modify_checksum.png}
   \caption{修改校验和}\label{fig:modify_checksum}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:modify_checksum}描述了恶意软件修改校验和的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后会修改可选首部的CheckSum字段为目标校验和，最后，将修改后的二进制字符串写入指定的目录下完成对恶意软件进行修改校验和的操作。}
 
 \begin{figure}[htbp]
@@ -331,15 +326,13 @@ def update_total_reward(episode,total_reward):
   \includegraphics[]{images/modify_timestamp.png}
   \caption{修改时间戳}\label{fig:modify_timestamp}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:modify_timestamp}描述了恶意软件修改时间戳的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后会修改首部的TimeDateStamp字段为目标校验和，最后，将修改后的二进制字符串写入指定的目录下完成对恶意软件进行修改时间戳的操作。}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[]{images/append_benign_sections.png}
+  \includegraphics[scale=0.8]{images/append_benign_sections.png}
   \caption{尾部追加无意义资源节}\label{fig:append_benign_sections}
 \end{figure}
-
 \textcolor{black}{图\ref{fig:append_benign_sections}描述了恶意软件尾部增加无意义资源节的具体过程，最开始完成的操作是决定新增加节的名称，需要获取恶意软件中所有节的名称，并且与所有预先设定好的备选节名称做差集，得到的结果为可用的备选节名称，在其中随机选取一个座位新增加的节的名称。新增加的节中的内容可从良性字符串集合中任选一个。在选取新增节的名称和新增节的内容后，使用lief库的add\_section操作即可对恶意软件进行新增节的操作。}
 
 \begin{figure}[htbp]
@@ -354,7 +347,7 @@ def update_total_reward(episode,total_reward):
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[]{images/reinforcement_learning_adversarial_sample_generation_module.png}
+  \includegraphics[scale=0.70]{images/reinforcement_learning_adversarial_sample_generation_module.png}
   \caption{强化学习对抗性样本生成模块}\label{fig:reinforcement_learning_adversarial_sample_generation_module}
 \end{figure}
 
