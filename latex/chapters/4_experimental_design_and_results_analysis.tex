@@ -75,57 +75,45 @@ P_{detect\_rate}=m_{detect\_engine\_amount}/m_{total\_engine\_amount}
 
 \section{实验结果}
 
-\textcolor{black}{在本次实验中，一共使用了五组样本集，合计大约2000个样本来进行测试，测试结果如下所示。对于处理前的原始样本集和处理后的样本集，分别使用前文中配置好的恶意程序扫描模块和手动上传至虚拟机使用火绒杀毒和360杀毒扫描，并且随机选取一些原始样本和对应的处理后样本上传VirusTotal进行分析。值得注意的是，获取实验结果数据时，在虚拟机中使用360杀毒和火绒对样本扫描之前，需要关闭虚拟机中的反病毒软件，再在主机上使用XFTP等软件或VMwareTools拖拽向虚拟机中发送样本集，防止样本集发送过程中受到反病毒软件的干扰和潜在的数据污染问题，例如360杀毒会默认禁止存在风险的远程主机向本主机的FTP协议，在本次实验中对于虚拟机我们不需要这个防御功能。且在主机和虚拟机的FTP协议或VMWareTools拖拽完成文件传输后，虚拟机接收到文件后，360杀毒会自动扫描文件，这是不应该被允许的。因为会导致后续检出率偏高以及360杀毒等反病毒软件会直接隔离虚拟机接收到的样本集中的一些样本，对后续统计查杀数量带来了不便。}
+\textcolor{black}{在本次实验中，一共使用了五组样本集，合计大约2000个样本来进行测试，测试结果如下所示。对于处理前的原始样本集和处理后的样本集，分别使用前文中配置好的恶意程序扫描模块和手动上传至虚拟机使用火绒杀毒和360杀毒扫描，并且随机选取一些原始样本和对应的处理后样本上传VirusTotal进行分析。值得注意的是，获取实验结果数据时，在虚拟机中使用360杀毒和火绒对样本扫描之前，需要关闭虚拟机中的反病毒软件，再在主机上使用XFTP等软件或VMwareTools拖拽向虚拟机中发送样本集，防止样本集发送过程中受到反病毒软件的干扰和潜在的数据污染问题，例如360杀毒会默认禁止存在风险的远程主机向本主机的FTP协议，在本次实验中对于虚拟机不需要这个防御功能。且在主机和虚拟机的FTP协议或VMWareTools拖拽完成文件传输后，虚拟机接收到文件后，360杀毒会自动扫描文件，这是不应该被允许的。因为会导致后续检出率偏高以及360杀毒等反病毒软件会直接隔离虚拟机接收到的样本集中的一些样本，对后续统计查杀数量带来了不便。}
 
 \subsection{实验结果的数据图示}
 
 \textcolor{black}{五组样本集处理前后的扫描结果图\ref{fig:sample1}、图\ref{fig:sample2}、图\ref{fig:sample3}、图\ref{fig:sample4}、图\ref{fig:sample5}、图\ref{fig:Virus_Total}、图\ref{fig:compare_with_different_model}所示，对其具体分析将在后续章节中进行。}
 
-\begin{figure}
-  \centering
-  \includegraphics[]{images/sample1.png}
+\begin{figure}[htbp]
+  \includegraphics[scale=0.60]{images/sample1.png}
   \caption{sample1}\label{fig:sample1}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/sample2.png}
+\begin{figure}[htbp]
+  \includegraphics[scale=0.60]{images/sample2.png}
   \caption{sample2}\label{fig:sample2}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/sample3.png}
+\begin{figure}[htbp]
+  \includegraphics[scale=0.60]{images/sample3.png}
   \caption{sample3}\label{fig:sample3}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/sample4.png}
+\begin{figure}[htbp]
+  \includegraphics[scale=0.60]{images/sample4.png}
   \caption{sample4}\label{fig:sample4}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[]{images/sample5.png}
+\begin{figure}[htbp]
+  \includegraphics[scale=0.60]{images/sample5.png}
   \caption{sample5}\label{fig:sample5}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[htbp]
   \centering
-  \includegraphics[]{images/Virus_Total.png}
+  \includegraphics[scale=0.6]{images/Virus_Total.png}
   \caption{Virus Total}\label{fig:Virus_Total}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[htbp]
   \centering
-  \includegraphics[]{images/compare_with_different_model.png}
-  \caption{不同模型ClamAV检出对比}\label{fig:compare_with_different_model}
+  \includegraphics[scale=0.6]{images/compare_with_different_model.png}
+  \caption{detect comparison of different models}\label{fig:compare_with_different_model}
 \end{figure}
-
 \subsection{检出率及其变化的计算}
 
-\textcolor{black}{首先，对于某组样本中的随机抽样的部分程序，笔者使用了Virus Total来进行上传扫描。}
+\textcolor{black}{首先，对于某组样本中的随机抽样的部分程序，本实验中使用了Virus Total来进行上传扫描。}
 
 \textcolor{black}{经过对图\ref{fig:sample1}，图\ref{fig:sample2}，图\ref{fig:sample3}，图\ref{fig:sample4}，图\ref{fig:sample5}中的数据进行计算，可以发现：}
 
@@ -211,7 +199,7 @@ P_{detect\_rate}=m_{detect\_engine\_amount}/m_{total\_engine\_amount}
 
 \subsection{不同反病毒软件对于检出率变化的影响}
 
-\textcolor{black}{处理后的样本对于火绒杀毒来说，表\ref{chart1}中数据计算出的逃逸概率低的原因是火绒有一定的反扰动能力，处理后的样本很多都会判断为：病毒类型-代码混淆器，火绒认为处理后的样本的某些特征是为了规避静态检测过程。说明有一部分反病毒软件的静态特征分析能力，能识别出对抗样本中的扰动。这也是为什么采用Sarsa算法不宜设置过大的state数值的原因，一方面是处理前后的PE程序反复读写，当程序大小因为新增节，新增无意义尾部内容，用无意义字节填充空洞等操作多次使用后变的过于庞大（在某次样本处理时，笔者观察到了一个PE程序处理前后，变为原大小大约6.6倍，从2.67 MB变成了17.6MB），如果不限制state值，程序中途会变得很大，不但导致后续的对抗性样本生成的干扰操作极其缓慢，因为要先读取原文件，然后再加以修改，最后写入磁盘中，Python对于文件的操作是很缓慢的。而且会导致根据查杀结果获取result的速度相当慢，因为Clam AV反病毒软件扫描一个样本的时间也和样本大小正相关，当样本很大的时候，判断查杀结果会相当的慢。另一方面，就是当无意义尾部内容过多，会被反病毒软件认为是疑似恶意程序刻意扰动，从而直接判定此程序为为了绕过反病毒软件检查的恶意程序。而从火绒杀毒对于样本的描述也可以看到这一点，火绒杀毒认为经过处理后的某些恶意程序是代码混淆器。同时，火绒查杀结果总数量会略高于样本数量，原因目前未知。}
+\textcolor{black}{处理后的样本对于火绒杀毒来说，表\ref{chart1}中数据计算出的逃逸概率低的原因是火绒有一定的反扰动能力，处理后的样本很多都会判断为：病毒类型-代码混淆器，火绒认为处理后的样本的某些特征是为了规避静态检测过程。说明有一部分反病毒软件的静态特征分析能力，能识别出对抗样本中的扰动。这也是为什么采用Sarsa算法不宜设置过大的state数值的原因，一方面是处理前后的PE程序反复读写，当程序大小因为新增节，新增无意义尾部内容，用无意义字节填充空洞等操作多次使用后变的过于庞大（在某次样本处理时，发现一个PE程序处理前后，变为原大小大约6.6倍，从2.67 MB变成了17.6MB），如果不限制state值，程序中途会变得很大，不但导致后续的对抗性样本生成的干扰操作极其缓慢，因为要先读取原文件，然后再加以修改，最后写入磁盘中，Python对于文件的操作是很缓慢的。而且会导致根据查杀结果获取result的速度相当慢，因为Clam AV反病毒软件扫描一个样本的时间也和样本大小正相关，当样本很大的时候，判断查杀结果会相当的慢。另一方面，就是当无意义尾部内容过多，会被反病毒软件认为是疑似恶意程序刻意扰动，从而直接判定此程序为为了绕过反病毒软件检查的恶意程序。而从火绒杀毒对于样本的描述也可以看到这一点，火绒杀毒认为经过处理后的某些恶意程序是代码混淆器。同时，火绒查杀结果总数量会略高于样本数量，原因目前未知。}
 
 \textcolor{black}{同样对于Clam AV，可知它的部分检测也能识别对抗样本中的扰动性操作，尽管经过处理后的恶意程序中有大量良性内容，但Clam AV仍然会查杀这些恶意程序。}
 
@@ -221,7 +209,7 @@ P_{detect\_rate}=m_{detect\_engine\_amount}/m_{total\_engine\_amount}
 
 \subsection{与psp-mal模型的对比}
 
-\textcolor{black}{如图\ref{fig:compare_with_different_model}，我们可以发现本实验强化学习模型处理后的样本集，相比psp-mal模型，能更好规避ClamAV反病毒软件的查杀，原因可能是新增的伪造签名操作，增加无关资源操作，和UPX加壳等操作导致的。检出率的变化对比如表\ref{chart4}所示，值得注意的，不同于本实验中使用了Sarsa强化学习算法，psp-mal模型使用的方法是沙普利先验，检验是否逃逸成功使用的是SOREL-20M和EMBER反病毒模型，遗憾的是，通过对图\ref{fig:compare_with_different_model}的分析，我们可以知道psp-mal模型的可迁移性较差，尽管psp-mal模型生成的对抗性样本能逃脱EMBER反病毒模型，但是对于ClamAV的查杀来说，规避性能较差，甚至检出率变化不足20\%。由此可见，本实验设计的创新点有利于对抗性样本的迁移，能达到对不同反病毒软件的静态检测逃逸效果。}
+\textcolor{black}{如图\ref{fig:compare_with_different_model}，可以发现本实验强化学习模型处理后的样本集，相比psp-mal模型，能更好规避ClamAV反病毒软件的查杀，原因可能是新增的伪造签名操作，增加无关资源操作，和UPX加壳等操作导致的。检出率的变化对比如表\ref{chart4}所示，值得注意的，不同于本实验中使用了Sarsa强化学习算法，psp-mal模型使用的方法是沙普利先验，检验是否逃逸成功使用的是SOREL-20M和EMBER反病毒模型，遗憾的是，通过对图\ref{fig:compare_with_different_model}的分析，可以知道psp-mal模型的可迁移性较差，尽管psp-mal模型生成的对抗性样本能逃脱EMBER反病毒模型，但是对于ClamAV的查杀来说，规避性能较差，甚至检出率变化不足20\%。由此可见，本实验设计的创新点有利于对抗性样本的迁移，能达到对不同反病毒软件的静态检测逃逸效果。}
 
 \begin{table}[htbp]
   \centering
@@ -240,7 +228,7 @@ P_{detect\_rate}=m_{detect\_engine\_amount}/m_{total\_engine\_amount}
 
 \textcolor{black}{相对于传统的对抗性样本需要恶意攻击者手动修改自身的恶意程序二进制代码，繁琐低效，而且可能因为修改失误导致恶意程序受损，产生对抗型样本的数量少，基于人工手动修改的对抗性样本难以对抗反病毒软件的云查杀，人工手动修改的变种终究只有少量。而本实验基于强化学习的Sarsa模型自动生成对抗型样本，对于单个恶意程序，能产生的对抗性样本数量较大，当变种数量足够多时，在有限的时间内，反病毒软件的云查杀系统未必能全部识别出。大量的对抗型样本对云查杀的压力也是较大的。}
 
-\textcolor{black}{为了研究云查杀对于检出率的影响，需要在VMware创建的Windows7虚拟机中使用360杀毒进行测试静态检测规避对抗性样本的查杀情况且在360杀毒的设置中打开了自动上传发现的可疑文件。在结果中发现尽管部分处理后的样本逃逸了360杀毒的自定义查杀的检出，但是360杀毒仍然将这些逃逸样本归类为可疑文件。虽然这些逃逸样本不会报为高危风险项，但是360杀毒仍然会将这些样本上传到360云安全中心来进行检验，在可疑样本被360杀毒上传之后的一段时间，再次启动自定义查杀扫描剩余的逃逸样本，有部分样本被360杀毒检出判定为高危风险项。说明对于开启未知程序上报的云查杀（笔者后续得知360云安全中心是有动态行为检测的，并不完全只有静态检测）的安全软件来说，对抗性样本攻击虽然有一定危害，但大多数仍然最终会被检出是恶意程序。同时，360杀毒也具有动态检测功能，例如Behavioral脚本引擎、主动防御模块这些基于动态行为分析的检测，如果用户执行了恶意程序，360杀毒会拦截并且隔离恶意程序。当反病毒软件具有动态检测功能，则静态对抗性样本攻击的效果是有限的，但仍然不可以忽视。究其原因，是因为某些具有反虚拟化策略、反沙箱、识别监控进程的功能的病毒已经被指出可以逃逸动态检测。\cite{ref33}\cite{ref34}\cite{ref35}\cite{ref36}}
+\textcolor{black}{为了研究云查杀对于检出率的影响，需要在VMware创建的Windows7虚拟机中使用360杀毒进行测试静态检测规避对抗性样本的查杀情况且在360杀毒的设置中打开了自动上传发现的可疑文件。在结果中发现尽管部分处理后的样本逃逸了360杀毒的自定义查杀的检出，但是360杀毒仍然将这些逃逸样本归类为可疑文件。虽然这些逃逸样本不会报为高危风险项，但是360杀毒仍然会将这些样本上传到360云安全中心来进行检验，在可疑样本被360杀毒上传之后的一段时间，再次启动自定义查杀扫描剩余的逃逸样本，有部分样本被360杀毒检出判定为高危风险项。说明对于开启未知程序上报的云查杀（360云安全中心具有有动态行为检测的，并不完全只有静态检测）的安全软件来说，对抗性样本攻击虽然有一定危害，但大多数仍然最终会被检出是恶意程序。同时，360杀毒也具有动态检测功能，例如Behavioral脚本引擎、主动防御模块这些基于动态行为分析的检测，如果用户执行了恶意程序，360杀毒会拦截并且隔离恶意程序。当反病毒软件具有动态检测功能，则静态对抗性样本攻击的效果是有限的，但仍然不可以忽视。究其原因，是因为某些具有反虚拟化策略、反沙箱、识别监控进程的功能的病毒已经被指出可以逃逸动态检测。\cite{ref33}\cite{ref34}\cite{ref35}\cite{ref36}}
 
 \textcolor{black}{云查杀技术对这些病毒来说未必有效，因为在被上传到云端沙箱（例如Cuckoo Sandbox）中之后，恶意软件不会表现出预期的恶意行为，从而阻碍了恶意软件行为分类和恶意行为的自动识别检测。过度依赖云查杀仍然可能会存在潜在的威胁，同时，云查杀需要联网访问云端恶意软件样本数据库的问题也是一大安全隐患，对抗性恶意程序可能在自己被运行时，因为反病毒软件因为对抗性恶意程序自身的扰动导致判断该恶意程序是未知安全性，判断后需要上传到云端服务器，来利用云查杀技术进行分析，而这时的恶意程序自身可能会通过修改网络设置导致计算机无法连接到互联网，或利用Windows防火墙规则，本地Hosts文件篡改反病毒软件请求服务器地址到本地环回地址127.0.0.1等方式，使反病毒软件无法连接到互联网，从而阻止了反病毒软件从云端服务器获取云端沙箱检测等传回来的信息，这就导致反病毒软件对于对抗性恶意程序无法进行精确地判断是否具有恶意性。更糟的情况是当云查杀技术面对未来可能出现的感染型病毒变种对抗性样本和蠕虫对抗性样本。}
 
@@ -256,7 +244,7 @@ P_{detect\_rate}=m_{detect\_engine\_amount}/m_{total\_engine\_amount}
   \caption{攻击过程}\label{fig:attack}
 \end{figure}
 
-\begin{lstlisting}[language=C++, caption={code for attack}, label={lst:cppfile1}]
+\begin{lstlisting}[language=C++, caption={}, label={lst:cppfile1}]
 /*
 功能：感染型病毒变种入侵系统并感染可以感染的文件，在感染新文件时执行对抗性操作，被感染的新文件会受到静态规避操作的修改。
 输入：无
