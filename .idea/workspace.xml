@@ -4,21 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_05_30 23:22 modify sarsa.py">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_05_31 11:05 update result_show">
+      <change afterPath="$PROJECT_DIR$/benign_software/FLAC++.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/FLAC.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/avcodec-58.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/avfilter-7.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/avformat-58.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/avutil-56.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/bi_log_wrapper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/bscommon.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/chrome_elf.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/cloudmusic.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/cronet.72.0.3626.122.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/cssdk64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/d3dcompiler_47.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/dbghelp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/h_available.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libEGL.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libGLESv2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libcef.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libcrypto-1_1-x64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libcurl.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/libeay32.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/msvcp120.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/msvcr120.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/neaudioaiif.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/neaudioeffects.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/nertc_sdk.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/nim.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/nim_chatroom.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/nim_core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/nim_wrapper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/protoopp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/swresample-3.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/swscale-5.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/benign_software/xyvodsdk.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/Anaconda3-2024.10-1-Windows-x86_64.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/FPGAs_AdaptiveSoCs_Unified_2024.1_0522_2023_Win64.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/InfinityNikkiBiliLauncher_1.0.9.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/MemTest64.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/NeteaseCloudMusic_Music_official_3.1.2.203359_64.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/XunLeiWebSetup_pan.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/bitcomet_setup.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/pycharm-community-2024.1.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/qt-online-installer-windows-x64-4.8.0.exe_sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signatures/setupbeta_jisu.exe_sig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/actions_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
+  <component name="ChangesViewManager" show_ignored="true">
     <option name="groupingKeys">
       <option value="directory" />
     </option>
@@ -390,15 +428,7 @@
       <workItem from="1747999059013" duration="47000" />
       <workItem from="1748162111494" duration="799000" />
       <workItem from="1748221264675" duration="1726000" />
-      <workItem from="1748657587552" duration="1622000" />
-    </task>
-    <task id="LOCAL-00058" summary="2025_04_17 15:07">
-      <option name="closed" value="true" />
-      <created>1744873646136</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1744873646136</updated>
+      <workItem from="1748657587552" duration="3179000" />
     </task>
     <task id="LOCAL-00059" summary="2025_04_18 9:12">
       <option name="closed" value="true" />
@@ -784,7 +814,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748618596159</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="2025_05_31 11:05 update result_show">
+      <option name="closed" value="true" />
+      <created>1748660766363</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1748660766364</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -802,7 +840,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_05_13 17:59 第三版 修改1" />
     <MESSAGE value="2025_05_13 18:50 第三版 修改2" />
     <MESSAGE value="2025_05_15 11:36 第四版 init" />
     <MESSAGE value="2025_05_15 18:08 第四版 update" />
@@ -827,7 +864,8 @@
     <MESSAGE value="2025_05_20 16:35 latex版论文调整" />
     <MESSAGE value="2025_05_25 18:18 latex版论文调整" />
     <MESSAGE value="2025_05_30 23:22 modify sarsa.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_05_30 23:22 modify sarsa.py" />
+    <MESSAGE value="2025_05_31 11:05 update result_show" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_05_31 11:05 update result_show" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1748658207969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
