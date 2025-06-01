@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_05_31 11:50 update data">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_06_01 1:02 latex版论文修复完成">
       <change afterPath="$PROJECT_DIR$/benign_software/FLAC++.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/benign_software/FLAC.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/benign_software/avcodec-58.dll" afterDir="false" />
@@ -40,13 +40,6 @@
       <change afterPath="$PROJECT_DIR$/benign_software/swscale-5.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/benign_software/xyvodsdk.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/draw1.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/draw1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/plot_draw_sample5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_Show/virus_total_scan_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_Show/virus_total_scan_result.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +194,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/graduate_design/example1/benign_software&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/graduate_design/example1/latex&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -218,11 +211,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\graduate_design\example1\latex" />
       <recent name="D:\graduate_design\example1\benign_software" />
       <recent name="D:\graduate_design\example1\samples\processed" />
       <recent name="D:\graduate_design\example1\samples" />
       <recent name="D:\graduate_design\example1\virus_share_processor" />
-      <recent name="D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\graduate_design\example1\reinforce_learning\result_check" />
@@ -426,55 +419,8 @@
       <workItem from="1748162111494" duration="799000" />
       <workItem from="1748221264675" duration="1726000" />
       <workItem from="1748657587552" duration="4378000" />
-      <workItem from="1748681069344" duration="2679000" />
-    </task>
-    <task id="LOCAL-00060" summary="2025_04_18 16:19">
-      <option name="closed" value="true" />
-      <created>1744964400809</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1744964400809</updated>
-    </task>
-    <task id="LOCAL-00061" summary="2025_04_18 21:45">
-      <option name="closed" value="true" />
-      <created>1744983915457</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1744983915457</updated>
-    </task>
-    <task id="LOCAL-00062" summary="2025_04_19 10:04">
-      <option name="closed" value="true" />
-      <created>1745028282960</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1745028282960</updated>
-    </task>
-    <task id="LOCAL-00063" summary="2025_04_19 13:40">
-      <option name="closed" value="true" />
-      <created>1745041249840</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1745041249840</updated>
-    </task>
-    <task id="LOCAL-00064" summary="2025_04_19 15:17 论文内容已完成，等待修改格式">
-      <option name="closed" value="true" />
-      <created>1745047044133</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1745047044134</updated>
-    </task>
-    <task id="LOCAL-00065" summary="2025_04_19 15:17 修复引用">
-      <option name="closed" value="true" />
-      <created>1745061798289</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1745061798289</updated>
+      <workItem from="1748681069344" duration="7161000" />
+      <workItem from="1748702524651" duration="3508000" />
     </task>
     <task id="LOCAL-00066" summary="2025_04_19 19:23 修复引用">
       <option name="closed" value="true" />
@@ -820,7 +766,55 @@
       <option name="project" value="LOCAL" />
       <updated>1748663441191</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="2025_05_31 19:00 修复绘图部分">
+      <option name="closed" value="true" />
+      <created>1748689225220</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1748689225220</updated>
+    </task>
+    <task id="LOCAL-00110" summary="2025_05_31 19:01 修复部分论文中的程序流程图">
+      <option name="closed" value="true" />
+      <created>1748689292127</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1748689292127</updated>
+    </task>
+    <task id="LOCAL-00111" summary="2025_05_31 19:45 修复部分论文中的程序流程图">
+      <option name="closed" value="true" />
+      <created>1748691907585</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1748691907585</updated>
+    </task>
+    <task id="LOCAL-00112" summary="2025_05_31 22:00 修复部分论文中的程序流程图">
+      <option name="closed" value="true" />
+      <created>1748700037647</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1748700037647</updated>
+    </task>
+    <task id="LOCAL-00113" summary="2025_05_31 22:53 修复预备知识中PE文件部分的部分内容">
+      <option name="closed" value="true" />
+      <created>1748703198179</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1748703198179</updated>
+    </task>
+    <task id="LOCAL-00114" summary="2025_06_01 1:02 latex版论文修复完成">
+      <option name="closed" value="true" />
+      <created>1748710946536</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1748710946536</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -838,12 +832,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_05_15 11:36 第四版 init" />
-    <MESSAGE value="2025_05_15 18:08 第四版 update" />
-    <MESSAGE value="2025_05_15 18:42 第四版 update" />
-    <MESSAGE value="2025_05_16 9:42 第四版 update" />
-    <MESSAGE value="2025_05_16 12:23 第四版 update" />
-    <MESSAGE value="2025_05_17 10:43 第五版" />
     <MESSAGE value="2025_05_17 11:22 第五版" />
     <MESSAGE value="2025_05_17 15:25 第五版" />
     <MESSAGE value="2025_05_18 16:41 第六版 complete" />
@@ -863,27 +851,33 @@
     <MESSAGE value="2025_05_30 23:22 modify sarsa.py" />
     <MESSAGE value="2025_05_31 11:05 update result_show" />
     <MESSAGE value="2025_05_31 11:50 update data" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_05_31 11:50 update data" />
+    <MESSAGE value="2025_05_31 19:00 修复绘图部分" />
+    <MESSAGE value="2025_05_31 19:01 修复部分论文中的程序流程图" />
+    <MESSAGE value="2025_05_31 19:45 修复部分论文中的程序流程图" />
+    <MESSAGE value="2025_05_31 22:00 修复部分论文中的程序流程图" />
+    <MESSAGE value="2025_05_31 22:53 修复预备知识中PE文件部分的部分内容" />
+    <MESSAGE value="2025_06_01 1:02 latex版论文修复完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_06_01 1:02 latex版论文修复完成" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1748682181724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$action_remove_debug.coverage" NAME="action_remove_debug 覆盖结果" MODIFIED="1744196975905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$psp_mal.coverage" NAME="psp-mal 覆盖结果" MODIFIED="1746767103463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
-    <SUITE FILE_PATH="coverage/example1$find_latest_log.coverage" NAME="find_latest_log 覆盖结果" MODIFIED="1744343288211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$action_break_optional_header_checksum_1.coverage" NAME="action_break_optional_header_checksum_1 覆盖结果" MODIFIED="1744188225031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$find_latest_log.coverage" NAME="find_latest_log 覆盖结果" MODIFIED="1744343288211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
+    <SUITE FILE_PATH="coverage/example1$psp_mal.coverage" NAME="psp-mal 覆盖结果" MODIFIED="1746767103463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
     <SUITE FILE_PATH="coverage/example1$add_random_resources.coverage" NAME="add_random_resources 覆盖结果" MODIFIED="1745648280922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/resource_operations_remaster" />
     <SUITE FILE_PATH="coverage/example1$action_rename_random_section.coverage" NAME="action_rename_random_section 覆盖结果" MODIFIED="1744179182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$action_add_random_resources.coverage" NAME="action_add_random_resources 覆盖结果" MODIFIED="1744373221149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
-    <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
     <SUITE FILE_PATH="coverage/example1$action_create_fake_signature.coverage" NAME="action_create_fake_signature 覆盖结果" MODIFIED="1745722208467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
+    <SUITE FILE_PATH="coverage/example1$benign_string_generator.coverage" NAME="benign_string_generator 覆盖结果" MODIFIED="1744283390700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/string_generator" />
     <SUITE FILE_PATH="coverage/example1$360sd_scanner.coverage" NAME="360sd_scanner 覆盖结果" MODIFIED="1744349949409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
     <SUITE FILE_PATH="coverage/example1$virus_share_processor.coverage" NAME="virus_share_processor 覆盖结果" MODIFIED="1745649007438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_share_processor" />
     <SUITE FILE_PATH="coverage/example1$action_add_section_benign_data_1.coverage" NAME="action_add_section_benign_data_1 覆盖结果" MODIFIED="1744187375632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/actions" />
     <SUITE FILE_PATH="coverage/example1$clamScanner.coverage" NAME="clamScanner 覆盖结果" MODIFIED="1745713876751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/virus_scanner_module" />
-    <SUITE FILE_PATH="coverage/example1$operation_add_benign_data_overlay_depend_on_benign.coverage" NAME="operation_add_benign_data_overlay_depend_on_benign 覆盖结果" MODIFIED="1745802048866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$origin_sample_and_processed_sample_check.coverage" NAME="origin_sample_and_processed_sample_check 覆盖结果" MODIFIED="1745827953609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning" />
+    <SUITE FILE_PATH="coverage/example1$operation_add_benign_data_overlay_depend_on_benign.coverage" NAME="operation_add_benign_data_overlay_depend_on_benign 覆盖结果" MODIFIED="1745802048866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$plot_draw.coverage" NAME="plot_draw 覆盖结果" MODIFIED="1744614986114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/example1$draw_scatter.coverage" NAME="draw_scatter 覆盖结果" MODIFIED="1747555372056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
+    <SUITE FILE_PATH="coverage/example1$draw_scatter.coverage" NAME="draw_scatter 覆盖结果" MODIFIED="1748702558812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
     <SUITE FILE_PATH="coverage/example1$operation_add_section_benign_data_depend_on_benign.coverage" NAME="operation_add_section_benign_data_depend_on_benign 覆盖结果" MODIFIED="1746767096229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$operation_add_bytes_to_cave_depend_on_benign.coverage" NAME="operation_add_bytes_to_cave_depend_on_benign 覆盖结果" MODIFIED="1745802837029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/operation_modules/process_remaster" />
     <SUITE FILE_PATH="coverage/example1$after_malicious_detect_count.coverage" NAME="after_malicious_detect_count 覆盖结果" MODIFIED="1747553934540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reinforce_learning/result_check" />
