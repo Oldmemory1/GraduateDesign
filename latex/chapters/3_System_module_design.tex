@@ -12,17 +12,17 @@
 
 \textcolor{black}{其中，样本筛选模块的功能是，对于VirusShare网站上收集到的样本，其后缀名加上.exe，因为下载VirusShare原始样本时，该网站为了避免危害用户计算机，会默认去除恶意软件的后缀名。对于国内反病毒软件论坛上收集到的样本，需要去除非exe后缀的文件或文件大小较大的文件。强化学习对抗性样本生成模块只允许输入经由样本筛选模块后得到的筛选后样本。恶意程序扫描模块的功能是，使用ClamAV对收集到的原始恶意样本进行扫描，得到原始恶意样本检出率，以及对处理后的恶意样本进行扫描，得到处理后恶意样本检出率，以及供强化学习对抗性样本生成模块判定处理后的样本能否逃逸静态检测。强化学习对抗性样本生成模块是使用不同的action处理原始样本以生成对抗性样本，最终输出对抗性样本以及Qtable。总体设计图如\ref{fig:system_design1}，\ref{fig:system_design2}，\ref{fig:system_design3}所示，其中图\ref{fig:system_design1}表明样本筛选模块在样本筛选部分（Part1）起到作用，最终获取到筛选后的恶意程序原始样本集，并保留其以备后续操作使用。图\ref{fig:system_design2}表明强化学习对抗性样本生成模块在对抗性样本生成部分（Part2）起到作用，其所需的操作集中包含资源扰动操作和其它PE文件扰动操作，资源扰动操作的实现则需要从良性文件中提取资源。强化学习模型的初始参数由用户设置，待处理的样本集来源是样本筛选模块生成的筛选后的恶意程序原始样本集，强化学习对抗性样本生成模块会训练生成对抗性样本集以备后续操作使用。图\ref{fig:system_design3}表明恶意程序扫描模块在比对与分析部分（Part3）中起到作用，它负责检验与分析生成的对抗性样本集与原始样本集的区别，通过扫描提供的样本集得到查杀结果。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/system_design1.png}
   \caption{系统总体设计-1}\label{fig:system_design1}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[scale=0.80]{images/system_design2.png}
   \caption{系统总体设计-2}\label{fig:system_design2}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/system_design3.png}
   \caption{系统总体设计-3}\label{fig:system_design3}
@@ -45,7 +45,7 @@
 
 \textcolor{black}{样本筛选模块的具体实现思路如图\ref{fig:sample_swift_module}。图\ref{fig:sample_swift_module}是实现对于来源于Virus Share的样本进行筛选，对传入的绝对路径下的所有文件添加.exe文件扩展名，并且忽略传入的绝对路径下的文件夹，将添加扩展名后的样本与指定的输出路径拼接成输出文件名，之后进行拷贝操作，将原样本文件内容复制到新文件中，进而生成筛选后的样本。实现对于来源于国内安全软件论坛的样本筛选和VirusShare处理后的样本的二次筛选是通过对于传入的绝对路径，忽略路径下的文件夹，只考虑所有文件，会删除非PE可执行文件，即文件扩展名不为.exe的文件和大于4096字节大小的文件，最终保留下来的文件为符合条件的样本。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/sample_swift_module.png}
   \caption{样本筛选模块}\label{fig:sample_swift_module}
@@ -70,7 +70,7 @@
 
 \textcolor{black}{恶意程序扫描模块的具体实现思路如图\ref{fig:malware_scan_module}，需要传入待检测程序的绝对路径。图\ref{fig:malware_scan_module}对应的过程为：在模块运行前，用户通过命令手动更新本地ClamAV病毒库使其同步云端病毒库。模块运行时，主程序向主机的ClamAV服务发送TCP请求，如果这一步能成功，则ClamAV服务会查询其本地病毒库，如果这一步不成功，出现了TCP连接的超时问题，则会返回TCP连接错误，提示用户需要修复ClamAV服务。随后，ClamAV服务会依赖于本地病毒库对待检测程序进行扫描，再将扫描的结果通过TCP连接传递给主程序，主程序根据ClamAV服务的返回结果判断待检测程序是否是恶意软件。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/malware_scan_module.png}
   \caption{恶意程序扫描模块}\label{fig:malware_scan_module}
@@ -99,7 +99,7 @@
 
 \subsection{设计思路}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/certification_fabrication.png}
   \caption{伪造签名}\label{fig:certification_fabrication}
@@ -206,10 +206,10 @@
             \State $total\_reward \gets total\_reward+reward$
 
             \If{$status\_done == True$}
-            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state,next\_action=None)$
+            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state=None,next\_action=None)$
             \Else
             \State $next\_action \gets \Call{choose\_action}{next\_state,QTable}$
-            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state,next\_action=None)$
+            \State $Sarsa\_model \gets update(current\_state,action,reward,next\_state,next\_action)$
             \State $action \gets next\_action$
             \State $do\_action(next\_action)$
             \EndIf
@@ -238,56 +238,56 @@
 
 \textcolor{black}{行为表中的部分action的具体实现思路如图\ref{fig:peel_signature}，图\ref{fig:append_signature}，图\ref{fig:get_benign_strings}，图\ref{fig:append_strings}，图\ref{fig:modify_checksum}，图\ref{fig:modify_timestamp}，图\ref{fig:append_benign_sections}，图\ref{fig:add_resources}所示。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/peel_signature.png}
   \caption{剥落签名}\label{fig:peel_signature}
 \end{figure}
 \textcolor{black}{图\ref{fig:peel_signature}描述了SigThief获取良性程序签名的过程，需要预备一些良性应用程序，首先SigTheif会检测与数字签名相关的ImportTable中的CertTableLoc，CertSize条目，如果不存在，则SigThief认为该良性文件不能获取到签名，直接跳过改文件，如果存在，则在CertLoc位置截取CertSize大小的字符，即为数字签名对应的字符串，并将其保存至一个.exe\_sig扩展名的文件，作为从良性文件上剥落的签名，以备后续为恶意软件添加数字签名。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/append_signature.png}
   \caption{附加签名}\label{fig:append_signature}
 \end{figure}
 \textcolor{black}{图\ref{fig:append_signature}描述了SigThief将从良性文件上剥落的签名（格式为.exe\_sig）附加在恶意软件上的过程，需要前一步生成的.exe\_sig文件作为签名内容，具体过程为修改输入的恶意软件中的CertTableLoc等内容，并将输入中剥落下的良性签名的内容追加在恶意软件末尾，随后将修改后的恶意软件输出至指定的绝对路径下。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/get_benign_strings.png}
   \caption{获取良性字符串}\label{fig:get_benign_strings}
 \end{figure}
 \textcolor{black}{图\ref{fig:get_benign_strings}描述了良性字符串的获取过程，需要预备一些良性文件（可以是PE可执行程序、动态链接库、系统文件）,此过程首先会判断良性文件的内容，如果不含.text节（实际上也可以指定为.data节或其他节），则直接跳过该良性文件，如果含有，则将.text节中全部内容保存在一个字符串中，以备后续过程使用。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/append_strings.png}
   \caption{尾部追加无意义字节}\label{fig:append_strings}
 \end{figure}
 \textcolor{black}{图\ref{fig:append_strings}描述了恶意软件尾部追加无意义字节的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后从获取到的良性字符串中随机选取一个，使用字符串拼接操作加在待处理的恶意程序二进制字符串尾部，最后，将拼接后的二进制字符串写入指定的目录下完成对恶意软件进行无意义字节的追加操作。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/modify_checksum.png}
   \caption{修改校验和}\label{fig:modify_checksum}
 \end{figure}
 \textcolor{black}{图\ref{fig:modify_checksum}描述了恶意软件修改校验和的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后会修改可选首部的CheckSum字段为目标校验和，最后，将修改后的二进制字符串写入指定的目录下完成对恶意软件进行修改校验和的操作。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/modify_timestamp.png}
   \caption{修改时间戳}\label{fig:modify_timestamp}
 \end{figure}
 \textcolor{black}{图\ref{fig:modify_timestamp}描述了恶意软件修改时间戳的具体过程，首先会将待处理的恶意程序读取为二进制字符串，随后会修改首部的TimeDateStamp字段为目标校验和，最后，将修改后的二进制字符串写入指定的目录下完成对恶意软件进行修改时间戳的操作。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[scale=0.8]{images/append_benign_sections.png}
   \caption{尾部追加无意义资源节}\label{fig:append_benign_sections}
 \end{figure}
 \textcolor{black}{图\ref{fig:append_benign_sections}描述了恶意软件尾部增加无意义资源节的具体过程，最开始完成的操作是决定新增加节的名称，需要获取恶意软件中所有节的名称，并且与所有预先设定好的备选节名称做差集，得到的结果为可用的备选节名称，在其中随机选取一个座位新增加的节的名称。新增加的节中的内容可从良性字符串集合中任选一个。在选取新增节的名称和新增节的内容后，使用lief库的add\_section操作即可对恶意软件进行新增节的操作。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[]{images/add_resources.png}
   \caption{添加新的图标资源}\label{fig:add_resources}
@@ -297,7 +297,7 @@
 
 \textcolor{black}{图\ref{fig:reinforcement_learning_adversarial_sample_generation_module}中描述了强化学习对抗性样本生成模块的具体工作过程，对于传入样本集中的每个样本，首先设定最初奖励为0、总奖励为0、已进行操作数量为0、终态为否，再根据状态选择其执行的行为，在每次执行行为结束后，检测其是否能逃逸ClamAV的查杀，若能成功逃逸ClamAV查杀，则获取奖励后，进入终止态，并更新强化学习模型的Qtable和更新成功逃逸数量，随后处理下一个样本；若不能成功逃逸ClamAV查杀，则操作次数+1，此时再判断操作数量是否已经达到最大数量，如果已经达到了最大数量，则进入终止态，并且获取相应惩罚，并更新强化学习模型的Qtable，随后将处理下一个样本；如果没有达到最大数量，则更新强化学习模型的Qtable后，进入一个新的状态，并重复上述操作，直到传入样本集中的所有样本都被处理完为止，处理结束后，最终返回处理后能成功逃逸ClamAV查杀的样本数。同时为了提高图\ref{fig:reinforcement_learning_adversarial_sample_generation_module}中设计的强化学习对抗性样本生成模块的健壮性，需要考虑修正强化学习对抗性样本生成模块需要用到的行为表，先前强化学习对抗性样本生成模块关于行为表的设计是合理的，但缺乏健壮性，可能会存在一些隐患，导致某些行为被执行时可能会抛出异常进而导致整个程序崩溃。}
 
-\begin{figure}[htbp]
+\begin{figure}
   \centering
   \includegraphics[scale=0.70]{images/reinforcement_learning_adversarial_sample_generation_module.png}
   \caption{强化学习对抗性样本生成模块}\label{fig:reinforcement_learning_adversarial_sample_generation_module}
