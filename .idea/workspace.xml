@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_06_01 1:02 latex版论文修复完成">
+    <list default="true" id="36459660-5958-4f7c-bb6b-52c98bd28025" name="更改" comment="2025_06_03 15:16 修正原创性声明">
       <change afterPath="$PROJECT_DIR$/benign_software/FLAC++.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/benign_software/FLAC.dll" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/benign_software/avcodec-58.dll" afterDir="false" />
@@ -225,7 +225,7 @@
       <recent name="D:\graduate_design\example1\operation_modules\resource_operations_remaster\test_sample" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.action_create_fake_signature">
     <configuration name="action_create_fake_signature" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="example1" />
       <option name="ENV_FILES" value="" />
@@ -421,30 +421,11 @@
       <workItem from="1748657587552" duration="4378000" />
       <workItem from="1748681069344" duration="7161000" />
       <workItem from="1748702524651" duration="3508000" />
-    </task>
-    <task id="LOCAL-00066" summary="2025_04_19 19:23 修复引用">
-      <option name="closed" value="true" />
-      <created>1745061811006</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1745061811006</updated>
-    </task>
-    <task id="LOCAL-00067" summary="2025_04_21 10:08">
-      <option name="closed" value="true" />
-      <created>1745201340403</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1745201340404</updated>
-    </task>
-    <task id="LOCAL-00068" summary="2025_04_23 16:46 论文初稿完成">
-      <option name="closed" value="true" />
-      <created>1745397990749</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1745397990749</updated>
+      <workItem from="1748740413183" duration="1078000" />
+      <workItem from="1748754784223" duration="391000" />
+      <workItem from="1748844867226" duration="70000" />
+      <workItem from="1748934926616" duration="77000" />
+      <workItem from="1749101784073" duration="1508000" />
     </task>
     <task id="LOCAL-00069" summary="2025_04_28 8:56 modify1">
       <option name="closed" value="true" />
@@ -814,7 +795,31 @@
       <option name="project" value="LOCAL" />
       <updated>1748710946536</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="2025_06_01 9:14 quickfix">
+      <option name="closed" value="true" />
+      <created>1748740462470</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1748740462471</updated>
+    </task>
+    <task id="LOCAL-00116" summary="2025_06_02 14:15 quickfix">
+      <option name="closed" value="true" />
+      <created>1748844918571</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1748844918571</updated>
+    </task>
+    <task id="LOCAL-00117" summary="2025_06_03 15:16 修正原创性声明">
+      <option name="closed" value="true" />
+      <created>1748934988385</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1748934988385</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,9 +837,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2025_05_17 11:22 第五版" />
-    <MESSAGE value="2025_05_17 15:25 第五版" />
-    <MESSAGE value="2025_05_18 16:41 第六版 complete" />
     <MESSAGE value="2025_05_19 8:31 第七版 第八版 complete" />
     <MESSAGE value="2025_05_19 18:05 latex版论文 modify1" />
     <MESSAGE value="2025_05_19 19:40 latex版论文 modify2" />
@@ -857,7 +859,10 @@
     <MESSAGE value="2025_05_31 22:00 修复部分论文中的程序流程图" />
     <MESSAGE value="2025_05_31 22:53 修复预备知识中PE文件部分的部分内容" />
     <MESSAGE value="2025_06_01 1:02 latex版论文修复完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025_06_01 1:02 latex版论文修复完成" />
+    <MESSAGE value="2025_06_01 9:14 quickfix" />
+    <MESSAGE value="2025_06_02 14:15 quickfix" />
+    <MESSAGE value="2025_06_03 15:16 修正原创性声明" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025_06_03 15:16 修正原创性声明" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/example1$plot_draw_sample3.coverage" NAME="plot_draw_sample3 覆盖结果" MODIFIED="1748682181724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/result_Show" />
